@@ -1,0 +1,6 @@
+builddir
+
+.direnv
+.envrc
+result
+result-*

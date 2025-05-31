@@ -1,0 +1,1 @@
+lib_qt_res_src = files('assets.qrc')
