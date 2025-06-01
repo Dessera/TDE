@@ -1,6 +1,7 @@
 lib_src = files(
+  'widgets/appitem.cpp',
+  'widgets/applist.cpp',
   'widgets/desktop.cpp',
-  'widgets/desktopitem.cpp',
   'widgets/dock.cpp',
   'application.cpp',
   'settings.cpp',

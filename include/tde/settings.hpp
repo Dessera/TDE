@@ -2,9 +2,11 @@
 
 #include <qcolor.h>
 #include <qsettings.h>
+#include <qsize.h>
 #include <qstring.h>
 #include <qtclasshelpermacros.h>
 #include <qtmetamacros.h>
+#include <qurl.h>
 
 #define SETTINGS_GETTER(type, name, key)                                       \
   [[nodiscard]] constexpr auto name() const                                    \
@@ -34,13 +36,9 @@ public:
 
   SETTINGS_GETTER_DEFAULT(int, desktop_width, "desktop/width", 800)
   SETTINGS_GETTER_DEFAULT(int, desktop_height, "desktop/height", 480)
-  SETTINGS_GETTER_DEFAULT(QString, desktop_class, "desktop/class", "tde")
   SETTINGS_GETTER_DEFAULT(QString, desktop_title, "desktop/title", "TDE")
-  SETTINGS_GETTER_DEFAULT(QColor,
-                          desktop_background_color,
-                          "desktop/background_color",
-                          QColor(0, 0, 0))
-  SETTINGS_GETTER_DEFAULT(QColor, dock_color, "dock/color", QColor(0xFFFFFF))
+  SETTINGS_GETTER_DEFAULT(QSize, desktop_grid, "desktop/grid", QSize(4, 3))
+  SETTINGS_GETTER(QUrl, desktop_qss, "desktop/qss")
 };
 
 }

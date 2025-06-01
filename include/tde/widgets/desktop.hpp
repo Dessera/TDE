@@ -4,13 +4,15 @@
 
 #include "tde/settings.hpp"
 
-namespace tde {
+namespace tde::widgets {
 
 class Desktop : public QWidget
 {
   Q_OBJECT
 
 public:
+  constexpr static int DockMargin = 5;
+
   Desktop(const AppSettings& settings, QWidget* parent = nullptr);
   ~Desktop() override = default;
 

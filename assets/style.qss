@@ -1,0 +1,28 @@
+.tde-desktop {
+  margin: 0px;
+  background-color: #68A7D0;
+}
+
+.tde-app-list {
+}
+
+.tde-dock {
+  background-color: #282D3D;
+}
+
+.tde-statusbar {
+  background-color: #2B2C3C;
+}
+
+.tde-app-item {
+  padding: 0px;
+  border-style: flat;
+}
+
+.tde-app-item:hover {
+  background-color: #B49CA6;
+}
+
+.tde-app-item:pressed {
+  background-color: #9E858E;
+}
