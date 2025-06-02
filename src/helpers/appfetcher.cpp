@@ -10,9 +10,23 @@
 #include <qobjectdefs.h>
 #include <ranges>
 
+#include "tde/common.hpp"
 #include "tde/helpers/appfetcher.hpp"
 
 namespace {
+
+constexpr bool
+_json_is_apps(const QJsonDocument& doc)
+{
+  if (!doc.isObject()) {
+    return false;
+  }
+
+  auto obj = doc.object();
+
+  return obj.contains("apps") && obj.value("apps").isArray() &&
+         obj.contains("dock_apps") && obj.value("dock_apps").isArray();
+}
 
 constexpr bool
 _json_is_appinfo(const QJsonValue& value)
@@ -23,12 +37,12 @@ _json_is_appinfo(const QJsonValue& value)
 
   auto obj = value.toObject();
 
-  if (!obj.contains("Name") || !obj.contains("Icon") || !obj.contains("Exec")) {
+  if (!obj.contains("name") || !obj.contains("exec") || !obj.contains("icon")) {
     return false;
   }
 
-  if (!obj.value("Name").isString() || !obj.value("Icon").isString() ||
-      !obj.value("Exec").isString()) {
+  if (!obj.value("name").isString() || !obj.value("exec").isString() ||
+      !obj.value("icon").isString()) {
     return false;
   }
 
@@ -39,9 +53,9 @@ constexpr tde::helpers::AppInfo
 _json_to_appinfo(const QJsonValue& value)
 {
   auto obj = value.toObject();
-  return tde::helpers::AppInfo{ .name = obj["Name"].toString(),
-                                .exec = obj["Exec"].toString(),
-                                .icon = obj["Icon"].toString() };
+  return tde::helpers::AppInfo{ .name = obj["name"].toString(),
+                                .exec = obj["exec"].toString(),
+                                .icon = obj["icon"].toString() };
 }
 
 }
@@ -90,10 +104,10 @@ AppFetcher::_on_file_changed(const QString& path)
   namespace views = std::ranges::views;
 
   auto file = QFile{ path };
+  tde_defer(_remount_watcher(file, path));
 
   if (!file.open(QFile::ReadOnly)) {
-    qWarning() << "Cannot open file" << path << file.errorString();
-    _remount_watcher(file, path);
+    qWarning() << "Cannot open file:" << path << file.errorString();
     return;
   }
 
@@ -101,22 +115,30 @@ AppFetcher::_on_file_changed(const QString& path)
   auto json_doc = QJsonDocument::fromJson(file.readAll(), &err);
   if (err.error != QJsonParseError::NoError) {
     qWarning() << "Cannot parse json:" << err.errorString();
-    _remount_watcher(file, path);
     return;
   }
 
-  if (!json_doc.isArray()) {
-    qWarning() << "Apps json is not an array:" << path;
-    _remount_watcher(file, path);
+  if (!_json_is_apps(json_doc)) {
+    qWarning() << "Apps json format error";
     return;
   }
 
-  auto apps = json_doc.array() | views::filter(_json_is_appinfo) |
+  auto json_apps = json_doc.object().value("apps").toArray();
+  auto apps = json_apps | views::filter(_json_is_appinfo) |
               views::transform(_json_to_appinfo) | ranges::to<QList<AppInfo>>();
+
+  qInfo() << "Reloaded" << apps.size() << "apps from:" << path;
 
   emit apps_changed(apps);
 
-  _remount_watcher(file, path);
+  auto json_dock_apps = json_doc.object().value("dock_apps").toArray();
+  auto dock_apps = json_dock_apps | views::filter(_json_is_appinfo) |
+                   views::transform(_json_to_appinfo) |
+                   ranges::to<QList<AppInfo>>();
+
+  qInfo() << "Reloaded" << dock_apps.size() << "dock apps from:" << path;
+
+  emit dock_apps_changed(dock_apps);
 }
 
 }

@@ -11,9 +11,11 @@
 
 #pragma once
 
+#include <qlist.h>
 #include <qtmetamacros.h>
 #include <qwidget.h>
 
+#include "tde/helpers/appfetcher.hpp"
 #include "tde/settings.hpp"
 
 namespace tde::widgets {
@@ -50,6 +52,14 @@ private:
    * @param settings Desktop settings.
    */
   void _init_ui(const DesktopSettings& settings);
+
+public slots:
+  /**
+   * @brief Handle the dock apps changed signal.
+   *
+   * @param apps List of apps.
+   */
+  void on_dock_apps_changed(const QList<helpers::AppInfo>& apps);
 };
 
 }

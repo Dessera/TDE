@@ -42,10 +42,12 @@ Desktop::_init_ui(const DesktopSettings& settings)
   auto* app_list = new AppList{ settings, this };
   layout->addWidget(app_list, 1);
 
-  layout->addWidget(
-    new widgets::Dock{ settings, this }, 0, Qt::AlignHCenter | Qt::AlignBottom);
-
   connect(this, &Desktop::apps_changed, app_list, &AppList::on_apps_changed);
+
+  auto* dock = new Dock{ settings, this };
+  layout->addWidget(dock, 0, Qt::AlignHCenter | Qt::AlignBottom);
+
+  connect(this, &Desktop::dock_apps_changed, dock, &Dock::on_dock_apps_changed);
 }
 
 }

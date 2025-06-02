@@ -88,7 +88,6 @@ class AppList : public QWidget
 private:
   QSize _grid_size;
   QStackedWidget* _stack;
-  QList<AppListCard*> _cards;
 
 public:
   /**
@@ -120,12 +119,6 @@ private:
    *
    */
   void _create_card();
-
-  /**
-   * @brief Cleans the cards.
-   *
-   */
-  void _clean_cards();
 
 public slots:
   /**

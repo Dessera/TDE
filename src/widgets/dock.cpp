@@ -31,15 +31,21 @@ Dock::_init_ui(const DesktopSettings& /*settings*/)
 {
   auto* layout = new QHBoxLayout(this);
   setLayout(layout);
+}
 
-  layout->addWidget(
-    new AppItem{ QIcon(":/icons/default-icon.svg"), "app1", this });
+void
+Dock::on_dock_apps_changed(const QList<helpers::AppInfo>& apps)
+{
+  for (auto* child : findChildren<AppItem*>()) {
+    layout()->removeWidget(child);
+    child->deleteLater();
+  }
 
-  layout->addWidget(
-    new AppItem{ QIcon(":/icons/default-icon.svg"), "app2", this });
-
-  layout->addWidget(
-    new AppItem{ QIcon(":/icons/default-icon.svg"), "app3", this });
+  for (const auto& app : apps) {
+    auto* app_item = new AppItem{ QIcon{ app.icon }, app.name, this };
+    app_item->setToolButtonStyle(Qt::ToolButtonIconOnly);
+    layout()->addWidget(app_item);
+  }
 }
 
 }

@@ -40,18 +40,7 @@ AppList::_init_ui(const DesktopSettings& /*settings*/)
 void
 AppList::_create_card()
 {
-  _cards.push_back(new AppListCard{ _grid_size, this });
-  _stack->addWidget(_cards.back());
-}
-
-void
-AppList::_clean_cards()
-{
-  for (auto* card : _cards) {
-    _stack->removeWidget(card);
-    delete card;
-  }
-  _cards.clear();
+  _stack->addWidget(new AppListCard{ _grid_size, this });
 }
 
 void
@@ -59,7 +48,11 @@ AppList::on_apps_changed(const QList<helpers::AppInfo>& apps)
 {
   auto old_idx = _stack->currentIndex();
 
-  _clean_cards();
+  for (auto* card : findChildren<AppListCard*>()) {
+    _stack->removeWidget(card);
+    card->deleteLater();
+  }
+
   _create_card();
 
   for (const auto& app : apps) {

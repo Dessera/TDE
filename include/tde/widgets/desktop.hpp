@@ -61,6 +61,13 @@ signals:
    * @param apps List of apps.
    */
   void apps_changed(const QList<helpers::AppInfo>& apps);
+
+  /**
+   * @brief Emitted when dock apps changed.
+   *
+   * @param apps List of dock apps.
+   */
+  void dock_apps_changed(const QList<helpers::AppInfo>& apps);
 };
 
 }

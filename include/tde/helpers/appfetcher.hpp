@@ -86,6 +86,13 @@ signals:
    */
   void apps_changed(const QList<AppInfo>& apps);
 
+  /**
+   * @brief Emitted when the list of dock apps changed.
+   *
+   * @param apps New list of dock apps.
+   */
+  void dock_apps_changed(const QList<AppInfo>& apps);
+
 private slots:
   /**
    * @brief Emits the apps_changed signal with the new list of apps.

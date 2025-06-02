@@ -26,6 +26,11 @@ Application::_init()
                    &_desktop,
                    &widgets::Desktop::apps_changed);
 
+  QObject::connect(&_app_fetcher,
+                   &helpers::AppFetcher::dock_apps_changed,
+                   &_desktop,
+                   &widgets::Desktop::dock_apps_changed);
+
   //  manually fetch apps on startup
   _app_fetcher.refresh();
 }
