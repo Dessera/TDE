@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['iconsize_0',['IconSize',['../classtde_1_1widgets_1_1AppItem.html#ab55b2a1f66eb3464151822d83e187b93',1,'tde::widgets::AppItem']]],
-  ['is_5ffull_1',['is_full',['../classtde_1_1widgets_1_1AppListCard.html#aa49fc64fd4942dbceab28386d8f6b146',1,'tde::widgets::AppListCard']]]
+  ['finish_5fapp_0',['finish_app',['../classtde_1_1helpers_1_1AppLauncher.html#a6f8a69e2dc019b9a1da91d0c995a3980',1,'tde::helpers::AppLauncher']]]
 ];

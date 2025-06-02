@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['on_5fapps_5fchanged_0',['on_apps_changed',['../classtde_1_1widgets_1_1AppList.html#a523fc0bf115a70739ee819dab406ed46',1,'tde::widgets::AppList']]],
-  ['on_5fdock_5fapps_5fchanged_1',['on_dock_apps_changed',['../classtde_1_1widgets_1_1Dock.html#a01af4eac0d825e366fb5968ba5a8fff8',1,'tde::widgets::Dock']]]
+  ['iconsize_0',['IconSize',['../classtde_1_1widgets_1_1AppItem.html#ab55b2a1f66eb3464151822d83e187b93',1,'tde::widgets::AppItem']]],
+  ['is_5ffull_1',['is_full',['../classtde_1_1widgets_1_1AppListCard.html#aa49fc64fd4942dbceab28386d8f6b146',1,'tde::widgets::AppListCard']]]
 ];
