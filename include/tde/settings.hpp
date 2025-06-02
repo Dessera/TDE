@@ -1,3 +1,14 @@
+/**
+ * @file settings.hpp
+ * @author Dessera (dessera@qq.com)
+ * @brief Desktop settings
+ * @version 0.1.0
+ * @date 2025-06-02
+ *
+ * @copyright Copyright (c) 2025 Dessera
+ *
+ */
+
 #pragma once
 
 #include <qcolor.h>
@@ -22,17 +33,28 @@
 
 namespace tde {
 
-class AppSettings : public QSettings
+/**
+ * @brief Desktop settings.
+ *
+ */
+class DesktopSettings : public QSettings
 {
   Q_OBJECT
 
 public:
-  AppSettings(const QString& organization,
-              const QString& application,
-              QObject* parent = nullptr);
-  ~AppSettings() override = default;
+  /**
+   * @brief Construct a new Desktop Settings object.
+   *
+   * @param organization Application organization.
+   * @param application Application name.
+   * @param parent Parent object.
+   */
+  DesktopSettings(const QString& organization,
+                  const QString& application,
+                  QObject* parent = nullptr);
+  ~DesktopSettings() override = default;
 
-  Q_DISABLE_COPY(AppSettings)
+  Q_DISABLE_COPY(DesktopSettings)
 
   SETTINGS_GETTER_DEFAULT(int, desktop_width, "desktop/width", 800)
   SETTINGS_GETTER_DEFAULT(int, desktop_height, "desktop/height", 480)

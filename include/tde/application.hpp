@@ -1,3 +1,14 @@
+/**
+ * @file application.hpp
+ * @author Dessera (dessera@qq.com)
+ * @brief QApplication wrapper, for initializing settings and styles
+ * @version 0.1.0
+ * @date 2025-06-02
+ *
+ * @copyright Copyright (c) 2025 Dessera
+ *
+ */
+
 #pragma once
 
 #include <qapplication.h>
@@ -8,19 +19,33 @@
 
 namespace tde {
 
+/**
+ * @brief Application for managing UI and other features.
+ *
+ */
 class Application : public QApplication
 {
 public:
-  constexpr static const char* AppOrganization = "com.dessera";
-  constexpr static const char* AppName = "tde";
-  constexpr static const char* AppStyleSheet = ":/styles/style.qss";
+  constexpr static const char* AppOrganization =
+    "com.dessera"; /**< Organization of the application, used to locate the
+                      config path. */
+  constexpr static const char* AppName =
+    "tde"; /**< Name of the application, used to locate the config path. */
+  constexpr static const char* AppStyleSheet =
+    ":/styles/style.qss"; /**< Path to the default stylesheet. */
 
 private:
-  AppSettings _settings{ AppOrganization, AppName };
+  DesktopSettings _settings{ AppOrganization, AppName };
   widgets::Desktop _desktop{ _settings };
   helpers::AppFetcher _app_fetcher{ _settings };
 
 public:
+  /**
+   * @brief Construct a new Application object.
+   *
+   * @param argc Number of arguments.
+   * @param argv Arguments.
+   */
   Application(int argc, char** argv);
   ~Application() override = default;
 
@@ -31,8 +56,8 @@ private:
   void _init();
 
   /**
-   * @brief Initialize application styles, if `desktop/qss` is set in settings,
-   * load it as extra stylesheet.
+   * @brief Initialize application styles, if `desktop/qss_path` is set in
+   * settings, load it as extra stylesheet.
    */
   void _init_styles();
 };

@@ -12,7 +12,7 @@
 
 namespace tde::widgets {
 
-Dock::Dock(const AppSettings& settings, QWidget* parent)
+Dock::Dock(const DesktopSettings& settings, QWidget* parent)
   : QWidget{ parent }
 {
   _init(settings);
@@ -20,14 +20,14 @@ Dock::Dock(const AppSettings& settings, QWidget* parent)
 }
 
 void
-Dock::_init(const AppSettings& /*settings*/)
+Dock::_init(const DesktopSettings& /*settings*/)
 {
   setAttribute(Qt::WA_StyledBackground);
   setProperty("class", "tde-dock");
 }
 
 void
-Dock::_init_ui(const AppSettings& /*settings*/)
+Dock::_init_ui(const DesktopSettings& /*settings*/)
 {
   auto* layout = new QHBoxLayout(this);
   setLayout(layout);

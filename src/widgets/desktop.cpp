@@ -12,7 +12,7 @@
 
 namespace tde::widgets {
 
-Desktop::Desktop(const AppSettings& settings, QWidget* parent)
+Desktop::Desktop(const DesktopSettings& settings, QWidget* parent)
   : QWidget{ parent }
 {
   _init(settings);
@@ -20,7 +20,7 @@ Desktop::Desktop(const AppSettings& settings, QWidget* parent)
 }
 
 void
-Desktop::_init(const AppSettings& settings)
+Desktop::_init(const DesktopSettings& settings)
 {
   setWindowTitle(settings.desktop_title());
   resize(settings.desktop_width(), settings.desktop_height());
@@ -29,7 +29,7 @@ Desktop::_init(const AppSettings& settings)
 }
 
 void
-Desktop::_init_ui(const AppSettings& settings)
+Desktop::_init_ui(const DesktopSettings& settings)
 {
   auto* layout = new QVBoxLayout{ this };
   layout->setContentsMargins(0, 0, 0, DockMargin);

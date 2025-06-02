@@ -2,9 +2,9 @@
 
 namespace tde {
 
-AppSettings::AppSettings(const QString& organization,
-                         const QString& application,
-                         QObject* parent)
+DesktopSettings::DesktopSettings(const QString& organization,
+                                 const QString& application,
+                                 QObject* parent)
   : QSettings{ QSettings::IniFormat,
                QSettings::UserScope,
                organization,

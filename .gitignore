@@ -4,3 +4,6 @@ builddir
 .envrc
 result
 result-*
+
+docs/html
+docs/latex

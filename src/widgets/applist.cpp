@@ -12,7 +12,7 @@
 
 namespace tde::widgets {
 
-AppList::AppList(const AppSettings& settings, QWidget* parent)
+AppList::AppList(const DesktopSettings& settings, QWidget* parent)
   : QWidget(parent)
   , _grid_size(QSize{ settings.desktop_grid_x(), settings.desktop_grid_y() })
   , _stack(new QStackedWidget{ this })
@@ -22,13 +22,13 @@ AppList::AppList(const AppSettings& settings, QWidget* parent)
 }
 
 void
-AppList::_init(const AppSettings& /*settings*/)
+AppList::_init(const DesktopSettings& /*settings*/)
 {
   setProperty("class", "tde-app-list");
 }
 
 void
-AppList::_init_ui(const AppSettings& /*settings*/)
+AppList::_init_ui(const DesktopSettings& /*settings*/)
 {
   auto* layout = new QVBoxLayout{ this };
   setLayout(layout);

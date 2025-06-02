@@ -48,7 +48,7 @@ _json_to_appinfo(const QJsonValue& value)
 
 namespace tde::helpers {
 
-AppFetcher::AppFetcher(const AppSettings& settings, QObject* parent)
+AppFetcher::AppFetcher(const DesktopSettings& settings, QObject* parent)
   : QObject{ parent }
   , _watcher{ new QFileSystemWatcher{ this } }
   , _target_path{ settings.desktop_app_path() }
@@ -57,7 +57,7 @@ AppFetcher::AppFetcher(const AppSettings& settings, QObject* parent)
 }
 
 void
-AppFetcher::_init(const AppSettings& /*settings*/)
+AppFetcher::_init(const DesktopSettings& /*settings*/)
 {
   _watcher->addPath(_target_path);
 
