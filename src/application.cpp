@@ -1,40 +1,58 @@
 #include <qapplication.h>
 #include <qfile.h>
 #include <qlogging.h>
+#include <qobject.h>
 
 #include "tde/application.hpp"
 #include "tde/common.hpp"
+#include "tde/helpers/appfetcher.hpp"
+#include "tde/widgets/desktop.hpp"
 
 namespace tde {
 
 Application::Application(int argc, char** argv)
   : QApplication{ argc, argv }
 {
+  _init();
   _init_styles();
+
   _desktop.show();
+}
+
+void
+Application::_init()
+{
+  QObject::connect(&_app_fetcher,
+                   &helpers::AppFetcher::apps_changed,
+                   &_desktop,
+                   &widgets::Desktop::apps_changed);
+
+  //  manually fetch apps on startup
+  _app_fetcher.refresh();
 }
 
 void
 Application::_init_styles()
 {
-  QFile f{ common::AppStyleSheet };
-  if (!f.open(QFile::ReadOnly)) {
+  QFile builtin_file{ common::AppStyleSheet };
+  if (!builtin_file.open(QFile::ReadOnly)) {
     qWarning()
-      << "Failed to open application stylesheet, no stylesheet applied";
+      << "Failed to open application stylesheet, no stylesheet applied:"
+      << builtin_file.errorString();
     return;
   }
 
-  auto style_str = QString::fromUtf8(f.readAll());
+  auto style_str = QString::fromUtf8(builtin_file.readAll());
 
-  auto url = _settings.desktop_qss();
-  if (url.isValid()) {
-    QFile f{ url.toLocalFile() };
-    if (!f.open(QFile::ReadOnly)) {
+  auto file = QFile{ _settings.desktop_qss_path() };
+  if (file.exists()) {
+    if (!file.open(QFile::ReadOnly)) {
       qWarning()
-        << "Failed to open user stylesheet, only default stylesheet applied";
+        << "Failed to open user stylesheet, only default stylesheet applied:"
+        << file.errorString();
     } else {
       style_str += '\n';
-      style_str += QString::fromUtf8(f.readAll());
+      style_str += QString::fromUtf8(file.readAll());
     }
   }
 

@@ -39,10 +39,13 @@ Desktop::_init_ui(const AppSettings& settings)
   label->setProperty("class", "tde-statusbar");
   layout->addWidget(label);
 
-  layout->addWidget(new widgets::AppList{ settings, this }, 1);
+  auto* app_list = new AppList{ settings, this };
+  layout->addWidget(app_list, 1);
 
   layout->addWidget(
     new widgets::Dock{ settings, this }, 0, Qt::AlignHCenter | Qt::AlignBottom);
+
+  connect(this, &Desktop::apps_changed, app_list, &AppList::on_apps_changed);
 }
 
 }

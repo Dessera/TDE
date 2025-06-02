@@ -1,7 +1,9 @@
 #pragma once
 
+#include <qlist.h>
 #include <qwidget.h>
 
+#include "tde/helpers/appfetcher.hpp"
 #include "tde/settings.hpp"
 
 namespace tde::widgets {
@@ -19,6 +21,9 @@ public:
 private:
   void _init(const AppSettings& settings);
   void _init_ui(const AppSettings& settings);
+
+signals:
+  void apps_changed(const QList<helpers::AppInfo>& apps);
 };
 
 }

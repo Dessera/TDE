@@ -1,4 +1,5 @@
 lib_src = files(
+  'helpers/appfetcher.cpp',
   'widgets/appitem.cpp',
   'widgets/applist.cpp',
   'widgets/desktop.cpp',

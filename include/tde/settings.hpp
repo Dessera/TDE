@@ -38,7 +38,8 @@ public:
   SETTINGS_GETTER_DEFAULT(int, desktop_height, "desktop/height", 480)
   SETTINGS_GETTER_DEFAULT(QString, desktop_title, "desktop/title", "TDE")
   SETTINGS_GETTER_DEFAULT(QSize, desktop_grid, "desktop/grid", QSize(4, 3))
-  SETTINGS_GETTER(QUrl, desktop_qss, "desktop/qss")
+  SETTINGS_GETTER(QString, desktop_qss_path, "desktop/qss_path")
+  SETTINGS_GETTER(QString, desktop_app_dir, "desktop/app_dir")
 };
 
 }

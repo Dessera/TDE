@@ -2,6 +2,7 @@
 
 #include <qapplication.h>
 
+#include "tde/helpers/appfetcher.hpp"
 #include "tde/settings.hpp"
 #include "tde/widgets/desktop.hpp"
 
@@ -15,13 +16,17 @@ public:
 
 private:
   AppSettings _settings{ AppOrganization, AppName };
-  widgets::Desktop _desktop{ _settings, nullptr };
+  widgets::Desktop _desktop{ _settings };
+
+  helpers::AppFetcher _app_fetcher{ _settings };
 
 public:
   Application(int argc, char** argv);
   ~Application() override = default;
 
 private:
+  void _init();
+
   /**
    * @brief Initialize application styles, if `desktop/qss` is set in settings,
    * load it as extra stylesheet.
