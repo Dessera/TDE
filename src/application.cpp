@@ -4,7 +4,6 @@
 #include <qobject.h>
 
 #include "tde/application.hpp"
-#include "tde/common.hpp"
 #include "tde/helpers/appfetcher.hpp"
 #include "tde/widgets/desktop.hpp"
 
@@ -34,7 +33,7 @@ Application::_init()
 void
 Application::_init_styles()
 {
-  QFile builtin_file{ common::AppStyleSheet };
+  QFile builtin_file{ AppStyleSheet };
   if (!builtin_file.open(QFile::ReadOnly)) {
     qWarning()
       << "Failed to open application stylesheet, no stylesheet applied:"

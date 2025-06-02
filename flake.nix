@@ -40,6 +40,7 @@
                     nixd
                     nixfmt-rfc-style
                     mesonlsp
+                    doxygen
                   ])
                   ++ [
                     clang-tools

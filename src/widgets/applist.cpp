@@ -1,10 +1,10 @@
 #include <qboxlayout.h>
+#include <qicon.h>
 #include <qlabel.h>
 #include <qlogging.h>
 #include <qstackedwidget.h>
 #include <qwidget.h>
 
-#include "qicon.h"
 #include "tde/helpers/appfetcher.hpp"
 #include "tde/settings.hpp"
 #include "tde/widgets/appitem.hpp"
@@ -14,7 +14,7 @@ namespace tde::widgets {
 
 AppList::AppList(const AppSettings& settings, QWidget* parent)
   : QWidget(parent)
-  , _grid_size(settings.desktop_grid())
+  , _grid_size(QSize{ settings.desktop_grid_x(), settings.desktop_grid_y() })
   , _stack(new QStackedWidget{ this })
 {
   _init(settings);
@@ -34,24 +34,44 @@ AppList::_init_ui(const AppSettings& /*settings*/)
   setLayout(layout);
 
   layout->addWidget(_stack, 1);
-
-  _stack->addWidget(new AppListCard{ _grid_size, this });
-
   layout->addWidget(new QLabel{ "More", this }, 0, Qt::AlignHCenter);
+}
+
+void
+AppList::_create_card()
+{
+  _cards.push_back(new AppListCard{ _grid_size, this });
+  _stack->addWidget(_cards.back());
+}
+
+void
+AppList::_clean_cards()
+{
+  for (auto* card : _cards) {
+    _stack->removeWidget(card);
+    delete card;
+  }
+  _cards.clear();
 }
 
 void
 AppList::on_apps_changed(const QList<helpers::AppInfo>& apps)
 {
-  auto apps_size = apps.size();
+  auto old_idx = _stack->currentIndex();
 
-  for (int i = 0; i < apps_size; ++i) {
+  _clean_cards();
+  _create_card();
+
+  for (const auto& app : apps) {
     auto* cw = dynamic_cast<AppListCard*>(_stack->currentWidget());
-    cw->add_app(new AppItem{ QIcon{ apps[i].icon }, apps[i].name, this });
-    if (cw->app_count() >= cw->app_size()) {
-      _stack->addWidget(new AppListCard{ _grid_size, this });
+    cw->add_app(app);
+    if (cw->is_full()) {
+      _create_card();
     }
   }
+
+  auto curr_size = _stack->count();
+  _stack->setCurrentIndex(std::min(old_idx, curr_size - 1));
 }
 
 AppListCard::AppListCard(const QSize& grid_size, QWidget* parent)
@@ -65,7 +85,7 @@ AppListCard::AppListCard(const QSize& grid_size, QWidget* parent)
 }
 
 void
-AppListCard::add_app(AppItem* app)
+AppListCard::add_app(const helpers::AppInfo& app)
 {
   int curr = app_count();
   if (curr >= app_size()) {
@@ -74,7 +94,11 @@ AppListCard::add_app(AppItem* app)
   }
 
   auto* layout = dynamic_cast<QGridLayout*>(this->layout());
-  layout->addWidget(app, curr / _grid_size.width(), curr % _grid_size.width());
+
+  // TODO: A Factory for AppItem
+  layout->addWidget(new AppItem{ QIcon{ app.icon }, app.name, this },
+                    curr / _grid_size.width(),
+                    curr % _grid_size.width());
 }
 
 }

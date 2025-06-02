@@ -1,34 +1,27 @@
-#include <qdir.h>
+#include <qfile.h>
 #include <qfilesystemwatcher.h>
+#include <qjsonarray.h>
 #include <qjsondocument.h>
 #include <qjsonobject.h>
+#include <qjsonparseerror.h>
+#include <qjsonvalue.h>
+#include <qlist.h>
 #include <qlogging.h>
+#include <qobjectdefs.h>
 #include <ranges>
 
-#include "qobjectdefs.h"
 #include "tde/helpers/appfetcher.hpp"
 
 namespace {
 
-constexpr QJsonDocument
-_path_to_json(const QString& path)
-{
-  QFile file{ path };
-  if (!file.open(QFile::ReadOnly)) {
-    qWarning() << "Cannot open file:" << path;
-    return {};
-  }
-  return QJsonDocument::fromJson(file.readAll());
-}
-
 constexpr bool
-_json_is_appinfo(const QJsonDocument& doc)
+_json_is_appinfo(const QJsonValue& value)
 {
-  if (!doc.isObject()) {
+  if (!value.isObject()) {
     return false;
   }
 
-  auto obj = doc.object();
+  auto obj = value.toObject();
 
   if (!obj.contains("Name") || !obj.contains("Icon") || !obj.contains("Exec")) {
     return false;
@@ -43,9 +36,9 @@ _json_is_appinfo(const QJsonDocument& doc)
 }
 
 constexpr tde::helpers::AppInfo
-_json_to_appinfo(const QJsonDocument& doc)
+_json_to_appinfo(const QJsonValue& value)
 {
-  auto obj = doc.object();
+  auto obj = value.toObject();
   return tde::helpers::AppInfo{ .name = obj["Name"].toString(),
                                 .exec = obj["Exec"].toString(),
                                 .icon = obj["Icon"].toString() };
@@ -58,7 +51,7 @@ namespace tde::helpers {
 AppFetcher::AppFetcher(const AppSettings& settings, QObject* parent)
   : QObject{ parent }
   , _watcher{ new QFileSystemWatcher{ this } }
-  , _target_dir{ settings.desktop_app_dir() }
+  , _target_path{ settings.desktop_app_path() }
 {
   _init(settings);
 }
@@ -66,45 +59,64 @@ AppFetcher::AppFetcher(const AppSettings& settings, QObject* parent)
 void
 AppFetcher::_init(const AppSettings& /*settings*/)
 {
-  auto app_dir = QDir{ _target_dir };
-  if (!app_dir.exists()) {
-    qWarning() << "Invalid desktop app path, cannot fetch app items:"
-               << app_dir.path();
-    return;
-  }
-
-  qInfo() << "Fetching app items from:" << app_dir.path();
+  _watcher->addPath(_target_path);
 
   connect(_watcher,
-          &QFileSystemWatcher::directoryChanged,
+          &QFileSystemWatcher::fileChanged,
           this,
-          &AppFetcher::_on_directory_changed);
+          &AppFetcher::_on_file_changed);
 
-  _watcher->addPath(app_dir.path());
+  qInfo() << "Fetching app items from:" << _target_path;
+}
+
+void
+AppFetcher::_remount_watcher(const QFile& file, const QString& path)
+{
+  if (file.exists() || !_watcher->files().contains(path)) {
+    _watcher->addPath(path);
+  }
 }
 
 void
 AppFetcher::refresh()
 {
-  QMetaObject::invokeMethod(_watcher, "directoryChanged", _target_dir);
+  QMetaObject::invokeMethod(_watcher, "fileChanged", _target_path);
 }
 
 void
-AppFetcher::_on_directory_changed(const QString& dir)
+AppFetcher::_on_file_changed(const QString& path)
 {
   namespace ranges = std::ranges;
   namespace views = std::ranges::views;
 
-  auto app_dir = QDir{ dir };
-  auto entries =
-    app_dir.entryList(QDir::Files | QDir::NoDotAndDotDot) |
-    views::filter([](const QString& file) { return file.endsWith(".te"); }) |
-    views::transform(
-      [&app_dir](const QString& file) { return app_dir.filePath(file); }) |
-    views::transform(_path_to_json) | views::filter(_json_is_appinfo) |
-    views::transform(_json_to_appinfo) | ranges::to<QList<AppInfo>>();
+  auto file = QFile{ path };
 
-  emit apps_changed(entries);
+  if (!file.open(QFile::ReadOnly)) {
+    qWarning() << "Cannot open file" << path << file.errorString();
+    _remount_watcher(file, path);
+    return;
+  }
+
+  QJsonParseError err;
+  auto json_doc = QJsonDocument::fromJson(file.readAll(), &err);
+  if (err.error != QJsonParseError::NoError) {
+    qWarning() << "Cannot parse json:" << err.errorString();
+    _remount_watcher(file, path);
+    return;
+  }
+
+  if (!json_doc.isArray()) {
+    qWarning() << "Apps json is not an array:" << path;
+    _remount_watcher(file, path);
+    return;
+  }
+
+  auto apps = json_doc.array() | views::filter(_json_is_appinfo) |
+              views::transform(_json_to_appinfo) | ranges::to<QList<AppInfo>>();
+
+  emit apps_changed(apps);
+
+  _remount_watcher(file, path);
 }
 
 }

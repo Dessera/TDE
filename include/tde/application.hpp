@@ -13,11 +13,11 @@ class Application : public QApplication
 public:
   constexpr static const char* AppOrganization = "com.dessera";
   constexpr static const char* AppName = "tde";
+  constexpr static const char* AppStyleSheet = ":/styles/style.qss";
 
 private:
   AppSettings _settings{ AppOrganization, AppName };
   widgets::Desktop _desktop{ _settings };
-
   helpers::AppFetcher _app_fetcher{ _settings };
 
 public:
@@ -25,6 +25,9 @@ public:
   ~Application() override = default;
 
 private:
+  /**
+   * @brief Initialize application.
+   */
   void _init();
 
   /**

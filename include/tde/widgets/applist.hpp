@@ -7,29 +7,8 @@
 
 #include "tde/helpers/appfetcher.hpp"
 #include "tde/settings.hpp"
-#include "tde/widgets/appitem.hpp"
 
 namespace tde::widgets {
-
-class AppList : public QWidget
-{
-  Q_OBJECT
-
-private:
-  QSize _grid_size;
-  QStackedWidget* _stack;
-
-public:
-  AppList(const AppSettings& settings, QWidget* parent = nullptr);
-  ~AppList() override = default;
-
-private:
-  void _init(const AppSettings& settings);
-  void _init_ui(const AppSettings& settings);
-
-public slots:
-  void on_apps_changed(const QList<helpers::AppInfo>& apps);
-};
 
 class AppListCard : public QWidget
 {
@@ -47,7 +26,7 @@ public:
    *
    * @param app AppItem pointer
    */
-  void add_app(AppItem* app);
+  void add_app(const helpers::AppInfo& app);
 
   /**
    * @brief Returns the number of apps in the card
@@ -65,6 +44,34 @@ public:
   {
     return _grid_size.width() * _grid_size.height();
   }
+
+  [[nodiscard]] constexpr auto is_full() const
+  {
+    return app_count() >= app_size();
+  }
 };
 
+class AppList : public QWidget
+{
+  Q_OBJECT
+
+private:
+  QSize _grid_size;
+  QStackedWidget* _stack;
+  QList<AppListCard*> _cards;
+
+public:
+  AppList(const AppSettings& settings, QWidget* parent = nullptr);
+  ~AppList() override = default;
+
+private:
+  void _init(const AppSettings& settings);
+  void _init_ui(const AppSettings& settings);
+
+  void _create_card();
+  void _clean_cards();
+
+public slots:
+  void on_apps_changed(const QList<helpers::AppInfo>& apps);
+};
 }
