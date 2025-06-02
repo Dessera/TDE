@@ -101,32 +101,39 @@ $(document).ready(function(){initNavTree('dock_8hpp_source.html',''); initResiza
 <a href="dock_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;qtmetamacros.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;qwidget.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="settings_8hpp.html">tde/settings.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span>tde::widgets {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;qlist.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;qtmetamacros.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;qwidget.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="appfetcher_8hpp.html">tde/helpers/appfetcher.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="settings_8hpp.html">tde/settings.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classtde_1_1widgets_1_1Dock.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classtde_1_1widgets_1_1Dock.html">Dock</a> : <span class="keyword">public</span> QWidget</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  Q_OBJECT</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <a class="code hl_class" href="classtde_1_1widgets_1_1Dock.html">Dock</a>(<span class="keyword">const</span> <a class="code hl_class" href="classtde_1_1DesktopSettings.html">DesktopSettings</a>&amp; settings, QWidget* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <a class="code hl_class" href="classtde_1_1widgets_1_1Dock.html">~Dock</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordtype">void</span> _init(<span class="keyword">const</span> <a class="code hl_class" href="classtde_1_1DesktopSettings.html">DesktopSettings</a>&amp; settings);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">void</span> _init_ui(<span class="keyword">const</span> <a class="code hl_class" href="classtde_1_1DesktopSettings.html">DesktopSettings</a>&amp; settings);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span>tde::widgets {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classtde_1_1widgets_1_1Dock.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="classtde_1_1widgets_1_1Dock.html">Dock</a> : <span class="keyword">public</span> QWidget</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  Q_OBJECT</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_class" href="classtde_1_1widgets_1_1Dock.html">Dock</a>(<span class="keyword">const</span> <a class="code hl_class" href="classtde_1_1DesktopSettings.html">DesktopSettings</a>&amp; settings, QWidget* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_class" href="classtde_1_1widgets_1_1Dock.html">~Dock</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordtype">void</span> _init(<span class="keyword">const</span> <a class="code hl_class" href="classtde_1_1DesktopSettings.html">DesktopSettings</a>&amp; settings);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">void</span> _init_ui(<span class="keyword">const</span> <a class="code hl_class" href="classtde_1_1DesktopSettings.html">DesktopSettings</a>&amp; settings);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordtype">void</span> <a class="code hl_slot" href="classtde_1_1widgets_1_1Dock.html#a01af4eac0d825e366fb5968ba5a8fff8">on_dock_apps_changed</a>(<span class="keyword">const</span> QList&lt;helpers::AppInfo&gt;&amp; apps);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+<div class="ttc" id="aappfetcher_8hpp_html"><div class="ttname"><a href="appfetcher_8hpp.html">appfetcher.hpp</a></div><div class="ttdoc">Wrapper for QFileSystemWatcher to fetch the list of apps.</div></div>
 <div class="ttc" id="aclasstde_1_1DesktopSettings_html"><div class="ttname"><a href="classtde_1_1DesktopSettings.html">tde::DesktopSettings</a></div><div class="ttdoc">Desktop settings.</div><div class="ttdef"><b>Definition</b> settings.hpp:41</div></div>
-<div class="ttc" id="aclasstde_1_1widgets_1_1Dock_html"><div class="ttname"><a href="classtde_1_1widgets_1_1Dock.html">tde::widgets::Dock</a></div><div class="ttdoc">Dock widget.</div><div class="ttdef"><b>Definition</b> dock.hpp:26</div></div>
+<div class="ttc" id="aclasstde_1_1widgets_1_1Dock_html"><div class="ttname"><a href="classtde_1_1widgets_1_1Dock.html">tde::widgets::Dock</a></div><div class="ttdoc">Dock widget.</div><div class="ttdef"><b>Definition</b> dock.hpp:28</div></div>
+<div class="ttc" id="aclasstde_1_1widgets_1_1Dock_html_a01af4eac0d825e366fb5968ba5a8fff8"><div class="ttname"><a href="classtde_1_1widgets_1_1Dock.html#a01af4eac0d825e366fb5968ba5a8fff8">tde::widgets::Dock::on_dock_apps_changed</a></div><div class="ttdeci">void on_dock_apps_changed(const QList&lt; helpers::AppInfo &gt; &amp;apps)</div><div class="ttdoc">Handle the dock apps changed signal.</div><div class="ttdef"><b>Definition</b> dock.cpp:37</div></div>
 <div class="ttc" id="asettings_8hpp_html"><div class="ttname"><a href="settings_8hpp.html">settings.hpp</a></div><div class="ttdoc">Desktop settings.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

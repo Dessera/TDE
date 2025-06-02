@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TDE: include/tde/widgets/dock.hpp File Reference</title>
+<title>TDE: include/tde/common.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('dock_8hpp.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('common_8hpp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -96,39 +96,90 @@ $(document).ready(function(){initNavTree('dock_8hpp.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
-  <div class="headertitle"><div class="title">dock.hpp File Reference</div></div>
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">common.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Dock widget.  
+<p>Some utility macros.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;qlist.h&gt;</code><br />
-<code>#include &lt;qtmetamacros.h&gt;</code><br />
-<code>#include &lt;qwidget.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="appfetcher_8hpp_source.html">tde/helpers/appfetcher.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="settings_8hpp_source.html">tde/settings.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
 </div>
-<p><a href="dock_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="common_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Dock.html">tde::widgets::Dock</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classtde_1_1widgets_1_1Dock.html" title="Dock widget.">Dock</a> widget.  <a href="classtde_1_1widgets_1_1Dock.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a18b0f36c069824a2dd32ae353dd3b357" id="r_a18b0f36c069824a2dd32ae353dd3b357"><td class="memItemLeft" align="right" valign="top"><a id="a18b0f36c069824a2dd32ae353dd3b357" name="a18b0f36c069824a2dd32ae353dd3b357"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_tde_forward</b>(x)&#160;&#160;&#160;x</td></tr>
+<tr class="separator:a18b0f36c069824a2dd32ae353dd3b357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae53ff77d9912435094819f2196d5112" id="r_aae53ff77d9912435094819f2196d5112"><td class="memItemLeft" align="right" valign="top"><a id="aae53ff77d9912435094819f2196d5112" name="aae53ff77d9912435094819f2196d5112"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_tde_concat</b>(a,  b)&#160;&#160;&#160;a##b</td></tr>
+<tr class="separator:aae53ff77d9912435094819f2196d5112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18fb40278d897c877e2a2f09dbcb9db2" id="r_a18fb40278d897c877e2a2f09dbcb9db2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8hpp.html#a18fb40278d897c877e2a2f09dbcb9db2">_tde_defer_impl</a>(expr,  cb_name,  ph_name,  line)</td></tr>
+<tr class="separator:a18fb40278d897c877e2a2f09dbcb9db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3b6c127ffbe0c6d102fe9b49ff0a8a1" id="r_aa3b6c127ffbe0c6d102fe9b49ff0a8a1"><td class="memItemLeft" align="right" valign="top"><a id="aa3b6c127ffbe0c6d102fe9b49ff0a8a1" name="aa3b6c127ffbe0c6d102fe9b49ff0a8a1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>tde_defer</b>(expr)&#160;&#160;&#160;  _tde_defer_impl(expr, _tde_defer_cb_, _tde_defer_ph_, __LINE__)</td></tr>
+<tr class="separator:aa3b6c127ffbe0c6d102fe9b49ff0a8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Dock widget. </p>
+<div class="textblock"><p>Some utility macros. </p>
 <dl class="section author"><dt>Author</dt><dd>Dessera (<a href="#" onclick="location.href='mai'+'lto:'+'des'+'se'+'ra@'+'qq'+'.co'+'m'; return false;">desse<span class="obfuscator">.nosp@m.</span>ra@q<span class="obfuscator">.nosp@m.</span>q.com</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025-06-02</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 Dessera </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a18fb40278d897c877e2a2f09dbcb9db2" name="a18fb40278d897c877e2a2f09dbcb9db2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18fb40278d897c877e2a2f09dbcb9db2">&#9670;&#160;</a></span>_tde_defer_impl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _tde_defer_impl</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">expr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cb_name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ph_name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">line&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">auto</span> _tde_concat(cb_name, line) = [&amp;](<span class="keywordtype">int</span>*) { expr; };                       \</div>
+<div class="line">  std::unique_ptr&lt;int, <span class="keyword">decltype</span>(_tde_concat(cb_name, line))&gt; _tde_concat(      \</div>
+<div class="line">    ph_name, line)                                                             \</div>
+<div class="line">  {                                                                            \</div>
+<div class="line">    <span class="keyword">nullptr</span>, _tde_concat(cb_name, line)                                        \</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_7c6737cf2788ee9787105746f540bd39.html">tde</a></li><li class="navelem"><a class="el" href="dir_e18e703407d77d18c2b35accf2f69f61.html">widgets</a></li><li class="navelem"><a class="el" href="dock_8hpp.html">dock.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_7c6737cf2788ee9787105746f540bd39.html">tde</a></li><li class="navelem"><a class="el" href="common_8hpp.html">common.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
