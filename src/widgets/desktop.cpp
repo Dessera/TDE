@@ -43,11 +43,26 @@ Desktop::_init_ui(const DesktopSettings& settings)
   layout->addWidget(app_list, 1);
 
   connect(this, &Desktop::apps_changed, app_list, &AppList::on_apps_changed);
+  connect(
+    app_list, &AppList::request_launch_app, this, &Desktop::request_launch_app);
 
   auto* dock = new Dock{ settings, this };
   layout->addWidget(dock, 0, Qt::AlignHCenter | Qt::AlignBottom);
 
   connect(this, &Desktop::dock_apps_changed, dock, &Dock::on_dock_apps_changed);
+  connect(dock, &Dock::request_launch_app, this, &Desktop::request_launch_app);
+}
+
+void
+Desktop::on_start_app(const helpers::AppInfo& /*app*/)
+{
+  this->hide();
+}
+
+void
+Desktop::on_finish_app(int /*code*/, QProcess::ExitStatus /*status*/)
+{
+  this->show();
 }
 
 }

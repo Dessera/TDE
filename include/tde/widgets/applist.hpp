@@ -75,6 +75,14 @@ public:
   {
     return app_count() >= app_size();
   }
+
+signals:
+  /**
+   * @brief Emitted when the app is requested to be launched.
+   *
+   * @param app Application info.
+   */
+  void request_launch_app(const helpers::AppInfo& app);
 };
 
 /**
@@ -119,6 +127,14 @@ private:
    *
    */
   void _create_card();
+
+signals:
+  /**
+   * @brief Emitted when the app is requested to be launched.
+   *
+   * @param app Application info.
+   */
+  void request_launch_app(const helpers::AppInfo& app);
 
 public slots:
   /**

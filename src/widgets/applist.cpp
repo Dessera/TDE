@@ -40,7 +40,10 @@ AppList::_init_ui(const DesktopSettings& /*settings*/)
 void
 AppList::_create_card()
 {
-  _stack->addWidget(new AppListCard{ _grid_size, this });
+  auto* card = new AppListCard{ _grid_size, this };
+  connect(
+    card, &AppListCard::request_launch_app, this, &AppList::request_launch_app);
+  _stack->addWidget(card);
 }
 
 void
@@ -88,10 +91,13 @@ AppListCard::add_app(const helpers::AppInfo& app)
 
   auto* layout = dynamic_cast<QGridLayout*>(this->layout());
 
-  // TODO: A Factory for AppItem
-  layout->addWidget(new AppItem{ QIcon{ app.icon }, app.name, this },
-                    curr / _grid_size.width(),
-                    curr % _grid_size.width());
+  auto* app_item = AppItemFactory::create(app, this);
+  connect(app_item,
+          &AppItem::request_launch_app,
+          this,
+          &AppListCard::request_launch_app);
+  layout->addWidget(
+    app_item, curr / _grid_size.width(), curr % _grid_size.width());
 }
 
 }

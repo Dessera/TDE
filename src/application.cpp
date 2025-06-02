@@ -31,6 +31,21 @@ Application::_init()
                    &_desktop,
                    &widgets::Desktop::dock_apps_changed);
 
+  QObject::connect(&_desktop,
+                   &widgets::Desktop::request_launch_app,
+                   &_app_launcher,
+                   &helpers::AppLauncher::on_request_launch_app);
+
+  QObject::connect(&_app_launcher,
+                   &helpers::AppLauncher::start_app,
+                   &_desktop,
+                   &widgets::Desktop::on_start_app);
+
+  QObject::connect(&_app_launcher,
+                   &helpers::AppLauncher::finish_app,
+                   &_desktop,
+                   &widgets::Desktop::on_finish_app);
+
   //  manually fetch apps on startup
   _app_fetcher.refresh();
 }

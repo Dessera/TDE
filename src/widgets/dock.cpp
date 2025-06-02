@@ -42,8 +42,9 @@ Dock::on_dock_apps_changed(const QList<helpers::AppInfo>& apps)
   }
 
   for (const auto& app : apps) {
-    auto* app_item = new AppItem{ QIcon{ app.icon }, app.name, this };
-    app_item->setToolButtonStyle(Qt::ToolButtonIconOnly);
+    auto* app_item = AppItemFactory::create(app, this, false);
+    connect(
+      app_item, &AppItem::request_launch_app, this, &Dock::request_launch_app);
     layout()->addWidget(app_item);
   }
 }

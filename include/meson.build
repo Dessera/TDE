@@ -1,5 +1,6 @@
 lib_qt_moc_src = files(
   'tde/helpers/appfetcher.hpp',
+  'tde/helpers/applauncher.hpp',
   'tde/settings.hpp',
   'tde/widgets/appitem.hpp',
   'tde/widgets/applist.hpp',

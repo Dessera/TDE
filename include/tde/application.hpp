@@ -14,6 +14,7 @@
 #include <qapplication.h>
 
 #include "tde/helpers/appfetcher.hpp"
+#include "tde/helpers/applauncher.hpp"
 #include "tde/settings.hpp"
 #include "tde/widgets/desktop.hpp"
 
@@ -38,6 +39,7 @@ private:
   DesktopSettings _settings{ AppOrganization, AppName };
   widgets::Desktop _desktop{ _settings };
   helpers::AppFetcher _app_fetcher{ _settings };
+  helpers::AppLauncher _app_launcher{ _settings };
 
 public:
   /**

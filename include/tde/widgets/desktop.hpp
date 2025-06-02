@@ -12,6 +12,7 @@
 #pragma once
 
 #include <qlist.h>
+#include <qprocess.h>
 #include <qwidget.h>
 
 #include "tde/helpers/appfetcher.hpp"
@@ -68,6 +69,29 @@ signals:
    * @param apps List of dock apps.
    */
   void dock_apps_changed(const QList<helpers::AppInfo>& apps);
+
+  /**
+   * @brief Emitted when the app is requested to be launched.
+   *
+   * @param app Application info.
+   */
+  void request_launch_app(const helpers::AppInfo& app);
+
+public slots:
+  /**
+   * @brief Called before the app is launched.
+   *
+   * @param app Application info.
+   */
+  void on_start_app(const helpers::AppInfo& app);
+
+  /**
+   * @brief Called after the app is finished.
+   *
+   * @param code Exit code.
+   * @param status Exit status.
+   */
+  void on_finish_app(int code, QProcess::ExitStatus status);
 };
 
 }

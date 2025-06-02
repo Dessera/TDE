@@ -53,6 +53,14 @@ private:
    */
   void _init_ui(const DesktopSettings& settings);
 
+signals:
+  /**
+   * @brief Emitted when the app is requested to be launched.
+   *
+   * @param app Application info.
+   */
+  void request_launch_app(const helpers::AppInfo& app);
+
 public slots:
   /**
    * @brief Handle the dock apps changed signal.
