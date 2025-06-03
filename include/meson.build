@@ -7,6 +7,7 @@ lib_qt_moc_src = files(
   'tde/widgets/desktop.hpp',
   'tde/widgets/dock.hpp',
   'tde/widgets/radioselector.hpp',
+  'tde/widgets/statusbar.hpp',
 )
 
 install_subdir('tde', install_dir: 'include')

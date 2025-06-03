@@ -19,18 +19,6 @@
 #include <qtmetamacros.h>
 #include <qurl.h>
 
-#define SETTINGS_GETTER(type, name, key)                                       \
-  [[nodiscard]] constexpr auto name() const                                    \
-  {                                                                            \
-    return value(key).value<type>();                                           \
-  }
-
-#define SETTINGS_GETTER_DEFAULT(type, name, key, default_value)                \
-  [[nodiscard]] constexpr auto name() const                                    \
-  {                                                                            \
-    return value(key, default_value).value<type>();                            \
-  }
-
 namespace tde {
 
 /**
@@ -56,13 +44,86 @@ public:
 
   Q_DISABLE_COPY(DesktopSettings)
 
-  SETTINGS_GETTER_DEFAULT(int, desktop_width, "desktop/width", 800)
-  SETTINGS_GETTER_DEFAULT(int, desktop_height, "desktop/height", 480)
-  SETTINGS_GETTER_DEFAULT(QString, desktop_title, "desktop/title", "TDE")
-  SETTINGS_GETTER_DEFAULT(int, desktop_grid_x, "desktop/grid_x", 4)
-  SETTINGS_GETTER_DEFAULT(int, desktop_grid_y, "desktop/grid_y", 3)
-  SETTINGS_GETTER(QString, desktop_qss_path, "desktop/qss_path")
-  SETTINGS_GETTER(QString, desktop_app_path, "desktop/app_path")
+  /**
+   * @brief Get the desktop width.
+   *
+   * @return int Desktop width.
+   */
+  [[nodiscard]] constexpr auto desktop_width() const
+  {
+    return value("desktop/width", 800).value<int>(); // NOLINT
+  }
+
+  /**
+   * @brief Get the desktop height.
+   *
+   * @return int Desktop height.
+   */
+  [[nodiscard]] constexpr auto desktop_height() const
+  {
+    return value("desktop/height", 480).value<int>(); // NOLINT
+  }
+
+  /**
+   * @brief Get the desktop title.
+   *
+   * @return QString Desktop title.
+   */
+  [[nodiscard]] constexpr auto desktop_title() const
+  {
+    return value("desktop/title", "TDE").value<QString>();
+  }
+
+  /**
+   * @brief Get the desktop grid x size.
+   *
+   * @return int Desktop grid x size.
+   */
+  [[nodiscard]] constexpr auto desktop_grid_x() const
+  {
+    return value("desktop/grid_x", 4).value<int>();
+  }
+
+  /**
+   * @brief Get the desktop grid y size.
+   *
+   * @return int Desktop grid y size.
+   */
+  [[nodiscard]] constexpr auto desktop_grid_y() const
+  {
+    return value("desktop/grid_y", 3).value<int>();
+  }
+
+  /**
+   * @brief Get the desktop qss path.
+   *
+   * @return QString Desktop qss path.
+   */
+  [[nodiscard]] constexpr auto desktop_qss_path() const
+  {
+    return value("desktop/qss_path").value<QString>();
+  }
+
+  /**
+   * @brief Get the desktop apps.json path.
+   *
+   * @return QString Desktop apps.json path.
+   */
+  [[nodiscard]] constexpr auto desktop_app_path() const
+  {
+    return value("desktop/app_path").value<QString>();
+  }
+
+  /**
+   * @brief Get the statusbar time format.
+   *
+   * @return QString Statusbar time format.
+   */
+  [[nodiscard]] constexpr auto statusbar_time_format() const
+  {
+    return value("statusbar/time_format", "yyyy/MM/dd | hh:mm:ss")
+      .value<QString>();
+  }
 };
 
 }

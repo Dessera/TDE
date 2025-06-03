@@ -1,8 +1,9 @@
 <RCC>
-    <qresource prefix="/icons">
-        <file>default-icon.svg</file>
-    </qresource>
     <qresource prefix="/styles">
         <file>style.qss</file>
+    </qresource>
+    <qresource prefix="/assets">
+        <file>icons/default.svg</file>
+        <file>icons/start-menu.svg</file>
     </qresource>
 </RCC>

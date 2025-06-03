@@ -34,7 +34,7 @@ public:
    *
    * @param parent Parent widget.
    */
-  RadioSelector(QWidget* parent = nullptr);
+  explicit RadioSelector(QWidget* parent = nullptr);
   ~RadioSelector() override = default;
 
   /**

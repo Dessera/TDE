@@ -6,6 +6,7 @@ lib_src = files(
   'widgets/desktop.cpp',
   'widgets/dock.cpp',
   'widgets/radioselector.cpp',
+  'widgets/statusbar.cpp',
   'application.cpp',
   'settings.cpp',
 )

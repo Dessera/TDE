@@ -3,8 +3,7 @@
   background-color: #68A7D0;
 }
 
-.tde-app-list {
-}
+.tde-app-list {}
 
 .tde-dock {
   background-color: #282D3D;
@@ -25,6 +24,19 @@
 }
 
 .tde-app-item:pressed {
+  background-color: #9E858E;
+}
+
+.tde-start-menu-button {
+  padding: 0px;
+  border-style: flat;
+}
+
+.tde-start-menu-button:hover {
+  background-color: #B49CA6;
+}
+
+.tde-start-menu-button:pressed {
   background-color: #9E858E;
 }
 
