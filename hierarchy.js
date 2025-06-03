@@ -5,6 +5,9 @@ var hierarchy =
     [ "QApplication", null, [
       [ "tde::Application", "classtde_1_1Application.html", null ]
     ] ],
+    [ "QLabel", null, [
+      [ "tde::widgets::TimeLabel", "classtde_1_1widgets_1_1TimeLabel.html", null ]
+    ] ],
     [ "QObject", null, [
       [ "tde::helpers::AppFetcher", "classtde_1_1helpers_1_1AppFetcher.html", null ],
       [ "tde::helpers::AppLauncher", "classtde_1_1helpers_1_1AppLauncher.html", null ]
@@ -13,13 +16,15 @@ var hierarchy =
       [ "tde::DesktopSettings", "classtde_1_1DesktopSettings.html", null ]
     ] ],
     [ "QToolButton", null, [
-      [ "tde::widgets::AppItem", "classtde_1_1widgets_1_1AppItem.html", null ]
+      [ "tde::widgets::AppItem", "classtde_1_1widgets_1_1AppItem.html", null ],
+      [ "tde::widgets::StartMenuButton", "classtde_1_1widgets_1_1StartMenuButton.html", null ]
     ] ],
     [ "QWidget", null, [
       [ "tde::widgets::AppList", "classtde_1_1widgets_1_1AppList.html", null ],
       [ "tde::widgets::AppListCard", "classtde_1_1widgets_1_1AppListCard.html", null ],
       [ "tde::widgets::Desktop", "classtde_1_1widgets_1_1Desktop.html", null ],
       [ "tde::widgets::Dock", "classtde_1_1widgets_1_1Dock.html", null ],
-      [ "tde::widgets::RadioSelector", "classtde_1_1widgets_1_1RadioSelector.html", null ]
+      [ "tde::widgets::RadioSelector", "classtde_1_1widgets_1_1RadioSelector.html", null ],
+      [ "tde::widgets::StatusBar", "classtde_1_1widgets_1_1StatusBar.html", null ]
     ] ]
 ];
