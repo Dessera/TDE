@@ -74,6 +74,7 @@ var NAVTREEINDEX0 =
 "hierarchy.html":[1,2],
 "index.html":[],
 "md_README.html":[0],
+"md_README.html#autotoc_md1":[0,0],
 "pages.html":[],
 "radioselector_8hpp.html":[2,0,0,0,1,4],
 "radioselector_8hpp_source.html":[2,0,0,0,1,4],

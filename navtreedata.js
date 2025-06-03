@@ -25,7 +25,9 @@
 var NAVTREE =
 [
   [ "TDE", "index.html", [
-    [ "TDE", "md_README.html", null ],
+    [ "TDE", "md_README.html", [
+      [ "Todos", "md_README.html#autotoc_md1", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
