@@ -19,6 +19,7 @@ var hierarchy =
       [ "tde::widgets::AppList", "classtde_1_1widgets_1_1AppList.html", null ],
       [ "tde::widgets::AppListCard", "classtde_1_1widgets_1_1AppListCard.html", null ],
       [ "tde::widgets::Desktop", "classtde_1_1widgets_1_1Desktop.html", null ],
-      [ "tde::widgets::Dock", "classtde_1_1widgets_1_1Dock.html", null ]
+      [ "tde::widgets::Dock", "classtde_1_1widgets_1_1Dock.html", null ],
+      [ "tde::widgets::RadioSelector", "classtde_1_1widgets_1_1RadioSelector.html", null ]
     ] ]
 ];

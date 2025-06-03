@@ -12,7 +12,8 @@ var annotated_dup =
         [ "AppList", "classtde_1_1widgets_1_1AppList.html", "classtde_1_1widgets_1_1AppList" ],
         [ "AppListCard", "classtde_1_1widgets_1_1AppListCard.html", "classtde_1_1widgets_1_1AppListCard" ],
         [ "Desktop", "classtde_1_1widgets_1_1Desktop.html", "classtde_1_1widgets_1_1Desktop" ],
-        [ "Dock", "classtde_1_1widgets_1_1Dock.html", "classtde_1_1widgets_1_1Dock" ]
+        [ "Dock", "classtde_1_1widgets_1_1Dock.html", "classtde_1_1widgets_1_1Dock" ],
+        [ "RadioSelector", "classtde_1_1widgets_1_1RadioSelector.html", "classtde_1_1widgets_1_1RadioSelector" ]
       ] ],
       [ "Application", "classtde_1_1Application.html", "classtde_1_1Application" ],
       [ "DesktopSettings", "classtde_1_1DesktopSettings.html", "classtde_1_1DesktopSettings" ]
