@@ -18,6 +18,7 @@
 
 #include "tde/helpers/appfetcher.hpp"
 #include "tde/settings.hpp"
+#include "tde/widgets/radioselector.hpp"
 
 namespace tde::widgets {
 
@@ -95,7 +96,9 @@ class AppList : public QWidget
 
 private:
   QSize _grid_size;
+  QList<AppListCard*> _cards;
   QStackedWidget* _stack;
+  RadioSelector* _selector;
 
 public:
   /**
@@ -128,6 +131,12 @@ private:
    */
   void _create_card();
 
+  /**
+   * @brief Clears all cards.
+   *
+   */
+  void _clear_cards();
+
 signals:
   /**
    * @brief Emitted when the app is requested to be launched.
@@ -143,6 +152,14 @@ public slots:
    * @param apps List of apps.
    */
   void on_apps_changed(const QList<helpers::AppInfo>& apps);
+
+private slots:
+  /**
+   * @brief Handles the selected card changed signal.
+   *
+   * @param index Index of the selected card.
+   */
+  void on_selected(int index);
 };
 
 }

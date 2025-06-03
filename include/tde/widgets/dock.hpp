@@ -17,6 +17,7 @@
 
 #include "tde/helpers/appfetcher.hpp"
 #include "tde/settings.hpp"
+#include "tde/widgets/appitem.hpp"
 
 namespace tde::widgets {
 
@@ -27,6 +28,9 @@ namespace tde::widgets {
 class Dock : public QWidget
 {
   Q_OBJECT
+
+private:
+  QList<AppItem*> _dock_apps;
 
 public:
   /**
@@ -52,6 +56,19 @@ private:
    * @param settings Desktop settings.
    */
   void _init_ui(const DesktopSettings& settings);
+
+  /**
+   * @brief Create the app item.
+   *
+   * @param app Application info.
+   */
+  void _create_app(const helpers::AppInfo& app);
+
+  /**
+   * @brief Clear the dock apps.
+   *
+   */
+  void _clear_apps();
 
 signals:
   /**

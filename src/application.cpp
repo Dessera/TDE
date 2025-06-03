@@ -12,8 +12,8 @@ namespace tde {
 Application::Application(int argc, char** argv)
   : QApplication{ argc, argv }
 {
-  _init();
   _init_styles();
+  _init();
 
   _desktop.show();
 }
@@ -60,8 +60,9 @@ Application::_init_styles()
       << builtin_file.errorString();
     return;
   }
-
   auto style_str = QString::fromUtf8(builtin_file.readAll());
+
+  qInfo() << "Loaded application stylesheet from:" << AppStyleSheet;
 
   auto file = QFile{ _settings.desktop_qss_path() };
   if (file.exists()) {
@@ -73,6 +74,8 @@ Application::_init_styles()
       style_str += '\n';
       style_str += QString::fromUtf8(file.readAll());
     }
+
+    qInfo() << "Loaded user stylesheet from:" << _settings.desktop_qss_path();
   }
 
   setStyleSheet(style_str);

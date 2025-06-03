@@ -34,18 +34,33 @@ Dock::_init_ui(const DesktopSettings& /*settings*/)
 }
 
 void
-Dock::on_dock_apps_changed(const QList<helpers::AppInfo>& apps)
+Dock::_create_app(const helpers::AppInfo& app)
 {
-  for (auto* child : findChildren<AppItem*>()) {
+  auto* app_item = AppItemFactory::create(app, this, false);
+  connect(
+    app_item, &AppItem::request_launch_app, this, &Dock::request_launch_app);
+
+  layout()->addWidget(app_item);
+  _dock_apps.append(app_item);
+}
+
+void
+Dock::_clear_apps()
+{
+  for (auto* child : _dock_apps) {
     layout()->removeWidget(child);
     child->deleteLater();
   }
+  _dock_apps.clear();
+}
+
+void
+Dock::on_dock_apps_changed(const QList<helpers::AppInfo>& apps)
+{
+  _clear_apps();
 
   for (const auto& app : apps) {
-    auto* app_item = AppItemFactory::create(app, this, false);
-    connect(
-      app_item, &AppItem::request_launch_app, this, &Dock::request_launch_app);
-    layout()->addWidget(app_item);
+    _create_app(app);
   }
 }
 
