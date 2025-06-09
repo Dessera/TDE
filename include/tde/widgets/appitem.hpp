@@ -1,7 +1,7 @@
 /**
  * @file appitem.hpp
  * @author Dessera (dessera@qq.com)
- * @brief Application item widget
+ * @brief Application item widget.
  * @version 0.1.0
  * @date 2025-06-02
  *
@@ -74,12 +74,13 @@ public:
    *
    * @param app Application info.
    * @param parent Parent widget.
-   * @param show_text Whether to show text.
+   * @param style Tool button style.
    * @return AppItem* Created App Item.
    */
-  static AppItem* create(const helpers::AppInfo& app,
-                         QWidget* parent,
-                         bool show_text = true);
+  static AppItem* create(
+    const helpers::AppInfo& app,
+    QWidget* parent,
+    Qt::ToolButtonStyle style = Qt::ToolButtonTextUnderIcon);
 
   /**
    * @brief Create AppInfo from AppItem.

@@ -36,7 +36,7 @@ Dock::_init_ui(const DesktopSettings& /*settings*/)
 void
 Dock::_create_app(const helpers::AppInfo& app)
 {
-  auto* app_item = AppItemFactory::create(app, this, false);
+  auto* app_item = AppItemFactory::create(app, this, Qt::ToolButtonIconOnly);
   connect(
     app_item, &AppItem::request_launch_app, this, &Dock::request_launch_app);
 

@@ -1,7 +1,7 @@
 /**
  * @file applist.hpp
  * @author Dessera (dessera@qq.com)
- * @brief Application list widget
+ * @brief Application list widget.
  * @version 0.1.0
  * @date 2025-06-02
  *

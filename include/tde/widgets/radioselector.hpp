@@ -1,7 +1,7 @@
 /**
  * @file radioselector.hpp
  * @author Dessera (dessera@qq.com)
- * @brief AppListCard selector
+ * @brief AppListCard selector.
  * @version 0.1.0
  * @date 2025-06-03
  *

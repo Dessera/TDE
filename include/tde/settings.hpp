@@ -1,7 +1,7 @@
 /**
  * @file settings.hpp
  * @author Dessera (dessera@qq.com)
- * @brief Desktop settings
+ * @brief Desktop settings.
  * @version 0.1.0
  * @date 2025-06-02
  *

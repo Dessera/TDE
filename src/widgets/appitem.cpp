@@ -38,12 +38,10 @@ AppItem::on_released()
 AppItem*
 AppItemFactory::create(const helpers::AppInfo& app,
                        QWidget* parent,
-                       bool show_text)
+                       Qt::ToolButtonStyle style)
 {
   auto* app_item = new AppItem(app, parent);
-  if (!show_text) {
-    app_item->setToolButtonStyle(Qt::ToolButtonIconOnly);
-  }
+  app_item->setToolButtonStyle(style);
   return app_item;
 }
 

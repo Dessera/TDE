@@ -10,34 +10,31 @@
   border-radius: 5px;
 }
 
-.tde-statusbar {
+.tde-tray {
   background-color: #2B2C3C;
 }
 
-.tde-app-item {
+.tde-app-item,
+.tde-tray-startmenu-button,
+.tde-startmenu-tool-button {
   padding: 0px;
   border-style: flat;
 }
 
-.tde-app-item:hover {
+.tde-app-item:hover,
+.tde-tray-startmenu-button:hover,
+.tde-startmenu-tool-button:hover {
   background-color: #B49CA6;
 }
 
-.tde-app-item:pressed {
+.tde-app-item:pressed,
+.tde-tray-startmenu-button:pressed,
+.tde-startmenu-tool-button:pressed {
   background-color: #9E858E;
 }
 
-.tde-start-menu-button {
-  padding: 0px;
-  border-style: flat;
-}
-
-.tde-start-menu-button:hover {
-  background-color: #B49CA6;
-}
-
-.tde-start-menu-button:pressed {
-  background-color: #9E858E;
+.tde-startmenu {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .tde-radio-selector-button {

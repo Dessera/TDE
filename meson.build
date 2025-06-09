@@ -8,8 +8,8 @@ project(
 qt = import('qt6')
 qt_dep = dependency('qt6', modules: ['Core', 'Gui', 'Widgets'])
 
-subdir('include')
 subdir('assets')
+subdir('include')
 subdir('src')
 
 inc = include_directories('include')

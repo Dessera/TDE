@@ -1,7 +1,7 @@
 /**
  * @file common.hpp
  * @author Dessera (dessera@qq.com)
- * @brief Some utility macros
+ * @brief Some utility macros.
  * @version 0.1.0
  * @date 2025-06-02
  *

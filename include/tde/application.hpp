@@ -1,7 +1,7 @@
 /**
  * @file application.hpp
  * @author Dessera (dessera@qq.com)
- * @brief QApplication wrapper, for initializing settings and styles
+ * @brief QApplication wrapper, for initializing settings and styles.
  * @version 0.1.0
  * @date 2025-06-02
  *

@@ -1,7 +1,7 @@
 /**
  * @file dock.hpp
  * @author Dessera (dessera@qq.com)
- * @brief Dock widget
+ * @brief Dock widget.
  * @version 0.1.0
  * @date 2025-06-02
  *

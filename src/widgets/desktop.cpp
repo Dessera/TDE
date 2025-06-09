@@ -10,7 +10,7 @@
 #include "tde/widgets/applist.hpp"
 #include "tde/widgets/desktop.hpp"
 #include "tde/widgets/dock.hpp"
-#include "tde/widgets/statusbar.hpp"
+#include "tde/widgets/tray.hpp"
 
 namespace tde::widgets {
 
@@ -37,7 +37,7 @@ Desktop::_init_ui(const DesktopSettings& settings)
   layout->setContentsMargins(0, 0, 0, DockMargin);
   setLayout(layout);
 
-  layout->addWidget(new StatusBar{ settings, this });
+  layout->addWidget(new Tray{ settings, this });
 
   auto* app_list = new AppList{ settings, this };
   layout->addWidget(app_list, 1);
