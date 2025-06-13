@@ -13,15 +13,21 @@
 
 #include <qtoolbutton.h>
 
+#include "tde/common.hpp"
+#include "tde/widgets/startmenu.hpp"
+
 namespace tde::widgets::tray {
 
 /**
  * @brief Start menu button.
  *
  */
-class StartMenuButton : public QToolButton
+class TDE_EXPORT StartMenuButton : public QToolButton
 {
   Q_OBJECT
+
+private:
+  StartMenu* _start_menu;
 
 public:
   constexpr static const char* StartMenuIcon =
@@ -35,6 +41,13 @@ public:
    */
   explicit StartMenuButton(QWidget* parent = nullptr);
   ~StartMenuButton() override = default;
+
+private slots:
+  /**
+   * @brief Handle the released event.
+   *
+   */
+  void _on_released();
 };
 
 }

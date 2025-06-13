@@ -4,7 +4,6 @@
 #include <qobject.h>
 
 #include "tde/application.hpp"
-#include "tde/helpers/appfetcher.hpp"
 #include "tde/widgets/desktop.hpp"
 
 namespace tde {
@@ -22,27 +21,27 @@ void
 Application::_init()
 {
   QObject::connect(&_app_fetcher,
-                   &helpers::AppFetcher::apps_changed,
+                   &app::Fetcher::apps_changed,
                    &_desktop,
                    &widgets::Desktop::apps_changed);
 
   QObject::connect(&_app_fetcher,
-                   &helpers::AppFetcher::dock_apps_changed,
+                   &app::Fetcher::dock_apps_changed,
                    &_desktop,
                    &widgets::Desktop::dock_apps_changed);
 
   QObject::connect(&_desktop,
                    &widgets::Desktop::request_launch_app,
                    &_app_launcher,
-                   &helpers::AppLauncher::on_request_launch_app);
+                   &app::Launcher::on_request_launch_app);
 
   QObject::connect(&_app_launcher,
-                   &helpers::AppLauncher::start_app,
+                   &app::Launcher::start_app,
                    &_desktop,
                    &widgets::Desktop::on_start_app);
 
   QObject::connect(&_app_launcher,
-                   &helpers::AppLauncher::finish_app,
+                   &app::Launcher::finish_app,
                    &_desktop,
                    &widgets::Desktop::on_finish_app);
 

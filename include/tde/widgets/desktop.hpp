@@ -15,7 +15,8 @@
 #include <qprocess.h>
 #include <qwidget.h>
 
-#include "tde/helpers/appfetcher.hpp"
+#include "tde/app/info.hpp"
+#include "tde/common.hpp"
 #include "tde/settings.hpp"
 
 namespace tde::widgets {
@@ -24,7 +25,7 @@ namespace tde::widgets {
  * @brief Desktop widget, which is the root of UI.
  *
  */
-class Desktop : public QWidget
+class TDE_EXPORT Desktop : public QWidget
 {
   Q_OBJECT
 
@@ -61,21 +62,21 @@ signals:
    *
    * @param apps List of apps.
    */
-  void apps_changed(const QList<helpers::AppInfo>& apps);
+  void apps_changed(const QList<app::Info>& apps);
 
   /**
    * @brief Emitted when dock apps changed.
    *
    * @param apps List of dock apps.
    */
-  void dock_apps_changed(const QList<helpers::AppInfo>& apps);
+  void dock_apps_changed(const QList<app::Info>& apps);
 
   /**
    * @brief Emitted when the app is requested to be launched.
    *
    * @param app Application info.
    */
-  void request_launch_app(const helpers::AppInfo& app);
+  void request_launch_app(const app::Info& app);
 
 public slots:
   /**
@@ -83,7 +84,7 @@ public slots:
    *
    * @param app Application info.
    */
-  void on_start_app(const helpers::AppInfo& app);
+  void on_start_app(const app::Info& app);
 
   /**
    * @brief Called after the app is finished.

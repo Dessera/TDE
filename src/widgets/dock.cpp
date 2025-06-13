@@ -1,10 +1,4 @@
 #include <qboxlayout.h>
-#include <qicon.h>
-#include <qlabel.h>
-#include <qpainter.h>
-#include <qpalette.h>
-#include <qstyleoption.h>
-#include <qtoolbutton.h>
 #include <qwidget.h>
 
 #include "tde/widgets/appitem.hpp"
@@ -12,31 +6,33 @@
 
 namespace tde::widgets {
 
-Dock::Dock(const DesktopSettings& settings, QWidget* parent)
+Dock::Dock(QWidget* parent)
   : QWidget{ parent }
 {
-  _init(settings);
-  _init_ui(settings);
+  _init();
+  _init_ui();
 }
 
 void
-Dock::_init(const DesktopSettings& /*settings*/)
+Dock::_init()
 {
   setAttribute(Qt::WA_StyledBackground);
   setProperty("class", "tde-dock");
 }
 
 void
-Dock::_init_ui(const DesktopSettings& /*settings*/)
+Dock::_init_ui()
 {
   auto* layout = new QHBoxLayout(this);
   setLayout(layout);
 }
 
 void
-Dock::_create_app(const helpers::AppInfo& app)
+Dock::_create_app(const app::Info& app)
 {
-  auto* app_item = AppItemFactory::create(app, this, Qt::ToolButtonIconOnly);
+  auto* app_item = new AppItem{ app, this };
+  app_item->setToolButtonStyle(Qt::ToolButtonIconOnly);
+
   connect(
     app_item, &AppItem::request_launch_app, this, &Dock::request_launch_app);
 
@@ -55,7 +51,7 @@ Dock::_clear_apps()
 }
 
 void
-Dock::on_dock_apps_changed(const QList<helpers::AppInfo>& apps)
+Dock::on_dock_apps_changed(const QList<app::Info>& apps)
 {
   _clear_apps();
 

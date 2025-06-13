@@ -13,6 +13,7 @@
 
 #include <qwidget.h>
 
+#include "tde/common.hpp"
 #include "tde/settings.hpp"
 
 namespace tde::widgets {
@@ -21,7 +22,7 @@ namespace tde::widgets {
  * @brief Tray widget.
  *
  */
-class Tray : public QWidget
+class TDE_EXPORT Tray : public QWidget
 {
   Q_OBJECT
 

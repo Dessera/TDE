@@ -13,15 +13,17 @@
 
 #include <memory> // IWYU pragma: keep
 
-#define _tde_forward(x) x
-#define _tde_concat(a, b) a##b
+#define _TDE_FORWARD(x) x
+#define _TDE_CONCAT(a, b) a##b
+
+#define TDE_EXPORT __attribute__((visibility("default")))
 
 #define _tde_defer_impl(expr, cb_name, ph_name, line)                          \
-  auto _tde_concat(cb_name, line) = [&](int*) { expr; };                       \
-  std::unique_ptr<int, decltype(_tde_concat(cb_name, line))> _tde_concat(      \
+  auto _TDE_CONCAT(cb_name, line) = [&](int*) { expr; };                       \
+  std::unique_ptr<int, decltype(_TDE_CONCAT(cb_name, line))> _TDE_CONCAT(      \
     ph_name, line)                                                             \
   {                                                                            \
-    nullptr, _tde_concat(cb_name, line)                                        \
+    nullptr, _TDE_CONCAT(cb_name, line)                                        \
   }
 
 #define tde_defer(expr)                                                        \

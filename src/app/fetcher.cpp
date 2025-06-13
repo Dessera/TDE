@@ -1,5 +1,3 @@
-#include <qfile.h>
-#include <qfilesystemwatcher.h>
 #include <qjsonarray.h>
 #include <qjsondocument.h>
 #include <qjsonobject.h>
@@ -10,8 +8,8 @@
 #include <qobjectdefs.h>
 #include <ranges>
 
+#include "tde/app/fetcher.hpp"
 #include "tde/common.hpp"
-#include "tde/helpers/appfetcher.hpp"
 
 namespace {
 
@@ -49,42 +47,36 @@ _json_is_appinfo(const QJsonValue& value)
   return true;
 }
 
-constexpr tde::helpers::AppInfo
+constexpr tde::app::Info
 _json_to_appinfo(const QJsonValue& value)
 {
   auto obj = value.toObject();
-  return tde::helpers::AppInfo{ .name = obj["name"].toString(),
-                                .exec = obj["exec"].toString(),
-                                .icon = obj["icon"].toString() };
+  return { .name = obj["name"].toString(),
+           .exec = obj["exec"].toString(),
+           .icon = obj["icon"].toString() };
 }
 
 }
 
-namespace tde::helpers {
+namespace tde::app {
 
-AppFetcher::AppFetcher(const DesktopSettings& settings, QObject* parent)
+Fetcher::Fetcher(const DesktopSettings& settings, QObject* parent)
   : QObject{ parent }
   , _watcher{ new QFileSystemWatcher{ this } }
   , _target_path{ settings.desktop_app_path() }
-{
-  _init(settings);
-}
-
-void
-AppFetcher::_init(const DesktopSettings& /*settings*/)
 {
   _watcher->addPath(_target_path);
 
   connect(_watcher,
           &QFileSystemWatcher::fileChanged,
           this,
-          &AppFetcher::_on_file_changed);
+          &Fetcher::_on_file_changed);
 
   qInfo() << "Fetching app items from:" << _target_path;
 }
 
 void
-AppFetcher::_remount_watcher(const QFile& file, const QString& path)
+Fetcher::_remount_watcher(const QFile& file, const QString& path)
 {
   if (file.exists() || !_watcher->files().contains(path)) {
     _watcher->addPath(path);
@@ -92,13 +84,13 @@ AppFetcher::_remount_watcher(const QFile& file, const QString& path)
 }
 
 void
-AppFetcher::refresh()
+Fetcher::refresh()
 {
   QMetaObject::invokeMethod(_watcher, "fileChanged", _target_path);
 }
 
 void
-AppFetcher::_on_file_changed(const QString& path)
+Fetcher::_on_file_changed(const QString& path)
 {
   namespace ranges = std::ranges;
   namespace views = std::ranges::views;
@@ -125,7 +117,7 @@ AppFetcher::_on_file_changed(const QString& path)
 
   auto json_apps = json_doc.object().value("apps").toArray();
   auto apps = json_apps | views::filter(_json_is_appinfo) |
-              views::transform(_json_to_appinfo) | ranges::to<QList<AppInfo>>();
+              views::transform(_json_to_appinfo) | ranges::to<QList<Info>>();
 
   qInfo() << "Reloaded" << apps.size() << "apps from:" << path;
 
@@ -134,7 +126,7 @@ AppFetcher::_on_file_changed(const QString& path)
   auto json_dock_apps = json_doc.object().value("dock_apps").toArray();
   auto dock_apps = json_dock_apps | views::filter(_json_is_appinfo) |
                    views::transform(_json_to_appinfo) |
-                   ranges::to<QList<AppInfo>>();
+                   ranges::to<QList<Info>>();
 
   qInfo() << "Reloaded" << dock_apps.size() << "dock apps from:" << path;
 

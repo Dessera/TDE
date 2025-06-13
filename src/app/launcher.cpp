@@ -1,19 +1,22 @@
-#include "tde/helpers/applauncher.hpp"
+#include <qdebug.h>
+#include <qlogging.h>
 
-namespace tde::helpers {
+#include "tde/app/launcher.hpp"
 
-AppLauncher::AppLauncher(const DesktopSettings& /*settings*/, QObject* parent)
+namespace tde::app {
+
+Launcher::Launcher(QObject* parent)
   : QObject{ parent }
 {
 }
 
 void
-AppLauncher::on_request_launch_app(const helpers::AppInfo& app)
+Launcher::on_request_launch_app(const Info& app)
 {
   qInfo() << "Launching app:" << app.name << "with command:" << app.exec;
 
   auto* proc = new QProcess{ this };
-  connect(proc, &QProcess::finished, this, &AppLauncher::on_finish_app);
+  connect(proc, &QProcess::finished, this, &Launcher::_on_finish_app);
 
   emit start_app(app);
 
@@ -28,7 +31,7 @@ AppLauncher::on_request_launch_app(const helpers::AppInfo& app)
 }
 
 void
-AppLauncher::on_finish_app(int code, QProcess::ExitStatus status)
+Launcher::_on_finish_app(int code, QProcess::ExitStatus status)
 {
   qInfo() << "App exited with code:" << code << "and status:" << status;
 

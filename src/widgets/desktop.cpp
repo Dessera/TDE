@@ -1,12 +1,6 @@
 #include <qboxlayout.h>
-#include <qdockwidget.h>
-#include <qlabel.h>
-#include <qlayoutitem.h>
-#include <qpalette.h>
-#include <qtoolbutton.h>
 #include <qwidget.h>
 
-#include "qnamespace.h"
 #include "tde/widgets/applist.hpp"
 #include "tde/widgets/desktop.hpp"
 #include "tde/widgets/dock.hpp"
@@ -46,7 +40,7 @@ Desktop::_init_ui(const DesktopSettings& settings)
   connect(
     app_list, &AppList::request_launch_app, this, &Desktop::request_launch_app);
 
-  auto* dock = new Dock{ settings, this };
+  auto* dock = new Dock{ this };
   layout->addWidget(dock, 0, Qt::AlignHCenter | Qt::AlignBottom);
 
   connect(this, &Desktop::dock_apps_changed, dock, &Dock::on_dock_apps_changed);
@@ -54,7 +48,7 @@ Desktop::_init_ui(const DesktopSettings& settings)
 }
 
 void
-Desktop::on_start_app(const helpers::AppInfo& /*app*/)
+Desktop::on_start_app(const app::Info& /*app*/)
 {
   this->hide();
 }

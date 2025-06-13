@@ -1,7 +1,6 @@
 #include <algorithm>
 #include <qboxlayout.h>
 #include <qradiobutton.h>
-#include <qtmetamacros.h>
 
 #include "tde/widgets/radioselector.hpp"
 

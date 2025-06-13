@@ -11,13 +11,10 @@
 
 #pragma once
 
-#include <qcolor.h>
 #include <qsettings.h>
-#include <qsize.h>
 #include <qstring.h>
-#include <qtclasshelpermacros.h>
-#include <qtmetamacros.h>
-#include <qurl.h>
+
+#include "tde/common.hpp"
 
 namespace tde {
 
@@ -25,7 +22,7 @@ namespace tde {
  * @brief Desktop settings.
  *
  */
-class DesktopSettings : public QSettings
+class TDE_EXPORT DesktopSettings : public QSettings
 {
   Q_OBJECT
 
@@ -115,14 +112,13 @@ public:
   }
 
   /**
-   * @brief Get the statusbar time format.
+   * @brief Get the tray time format.
    *
-   * @return QString Statusbar time format.
+   * @return QString tray time format.
    */
-  [[nodiscard]] constexpr auto statusbar_time_format() const
+  [[nodiscard]] constexpr auto tray_time_format() const
   {
-    return value("statusbar/time_format", "yyyy/MM/dd | hh:mm:ss")
-      .value<QString>();
+    return value("tray/time_format", "yyyy/MM/dd | hh:mm:ss").value<QString>();
   }
 };
 

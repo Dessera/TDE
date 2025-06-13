@@ -1,16 +1,12 @@
-#include <qboxlayout.h>
 #include <qicon.h>
-#include <qlabel.h>
 #include <qsize.h>
 #include <qwidget.h>
 
-#include "qtoolbutton.h"
-#include "tde/helpers/appfetcher.hpp"
 #include "tde/widgets/appitem.hpp"
 
 namespace tde::widgets {
 
-AppItem::AppItem(const helpers::AppInfo& app, QWidget* parent)
+AppItem::AppItem(const app::Info& app, QWidget* parent)
   : QToolButton{ parent }
   , _exec(app.exec)
 {
@@ -22,37 +18,23 @@ AppItem::AppItem(const helpers::AppInfo& app, QWidget* parent)
 
   setProperty("class", "tde-app-item");
 
-  connect(this, &QToolButton::released, this, &AppItem::on_released);
+  connect(this, &QToolButton::released, this, &AppItem::_on_released);
+}
+
+app::Info
+AppItem::to_app_info() const
+{
+  return { .name = text(), .exec = _exec, .icon = icon().name() };
 }
 
 void
-AppItem::on_released()
+AppItem::_on_released()
 {
-  auto app_info = AppItemFactory::create_app_info(this);
+  auto app_info = to_app_info();
 
   qInfo() << "Request launch app:" << app_info.name;
 
   emit request_launch_app(app_info);
-}
-
-AppItem*
-AppItemFactory::create(const helpers::AppInfo& app,
-                       QWidget* parent,
-                       Qt::ToolButtonStyle style)
-{
-  auto* app_item = new AppItem(app, parent);
-  app_item->setToolButtonStyle(style);
-  return app_item;
-}
-
-helpers::AppInfo
-AppItemFactory::create_app_info(const AppItem* item)
-{
-  return helpers::AppInfo{
-    .name = item->text(),
-    .exec = item->exec(),
-    .icon = item->icon().name(),
-  };
 }
 
 }

@@ -13,10 +13,10 @@
 
 #include <qgridlayout.h>
 #include <qstackedwidget.h>
-#include <qtmetamacros.h>
 #include <qwidget.h>
 
-#include "tde/helpers/appfetcher.hpp"
+#include "tde/app/info.hpp"
+#include "tde/common.hpp"
 #include "tde/settings.hpp"
 #include "tde/widgets/radioselector.hpp"
 
@@ -26,7 +26,7 @@ namespace tde::widgets {
  * @brief Application list card.
  *
  */
-class AppListCard : public QWidget
+class TDE_EXPORT AppListCard : public QWidget
 {
   Q_OBJECT
 
@@ -48,7 +48,7 @@ public:
    *
    * @param app Application information.
    */
-  void add_app(const helpers::AppInfo& app);
+  void add_app(const app::Info& app);
 
   /**
    * @brief Returns the number of apps in the card.
@@ -83,14 +83,14 @@ signals:
    *
    * @param app Application info.
    */
-  void request_launch_app(const helpers::AppInfo& app);
+  void request_launch_app(const app::Info& app);
 };
 
 /**
  * @brief Application list widget, which is a group of AppListCard.
  *
  */
-class AppList : public QWidget
+class TDE_EXPORT AppList : public QWidget
 {
   Q_OBJECT
 
@@ -114,16 +114,14 @@ private:
   /**
    * @brief Initializes the widget.
    *
-   * @param settings Desktop settings.
    */
-  void _init(const DesktopSettings& settings);
+  void _init();
 
   /**
    * @brief Initializes the UI components.
    *
-   * @param settings Desktop settings.
    */
-  void _init_ui(const DesktopSettings& settings);
+  void _init_ui();
 
   /**
    * @brief Creates a new card.
@@ -143,7 +141,7 @@ signals:
    *
    * @param app Application info.
    */
-  void request_launch_app(const helpers::AppInfo& app);
+  void request_launch_app(const app::Info& app);
 
 public slots:
   /**
@@ -151,7 +149,7 @@ public slots:
    *
    * @param apps List of apps.
    */
-  void on_apps_changed(const QList<helpers::AppInfo>& apps);
+  void on_apps_changed(const QList<app::Info>& apps);
 
 private slots:
   /**

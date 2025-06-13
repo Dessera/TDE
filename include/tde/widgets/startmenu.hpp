@@ -13,13 +13,15 @@
 
 #include <qwidget.h>
 
+#include "tde/common.hpp"
+
 namespace tde::widgets {
 
 /**
  * @brief Start menu widget.
  *
  */
-class StartMenu : public QWidget
+class TDE_EXPORT StartMenu : public QWidget
 {
   Q_OBJECT
 
@@ -60,6 +62,12 @@ private:
    *
    */
   void _init();
+
+  /**
+   * @brief Initialize the UI components.
+   *
+   */
+  void _init_ui();
 };
 
 }

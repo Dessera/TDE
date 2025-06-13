@@ -1,12 +1,10 @@
 #include <algorithm>
 #include <qboxlayout.h>
-#include <qicon.h>
-#include <qlabel.h>
 #include <qlogging.h>
 #include <qstackedwidget.h>
 #include <qwidget.h>
 
-#include "tde/helpers/appfetcher.hpp"
+#include "tde/app/info.hpp"
 #include "tde/settings.hpp"
 #include "tde/widgets/appitem.hpp"
 #include "tde/widgets/applist.hpp"
@@ -25,7 +23,7 @@ AppListCard::AppListCard(const QSize& grid_size, QWidget* parent)
 }
 
 void
-AppListCard::add_app(const helpers::AppInfo& app)
+AppListCard::add_app(const app::Info& app)
 {
   int curr = app_count();
   if (curr >= app_size()) {
@@ -35,7 +33,7 @@ AppListCard::add_app(const helpers::AppInfo& app)
 
   auto* layout = qobject_cast<QGridLayout*>(this->layout());
 
-  auto* app_item = AppItemFactory::create(app, this);
+  auto* app_item = new AppItem{ app, this };
   connect(app_item,
           &AppItem::request_launch_app,
           this,
@@ -50,18 +48,18 @@ AppList::AppList(const DesktopSettings& settings, QWidget* parent)
   , _stack(new QStackedWidget{ this })
   , _selector(new RadioSelector{ this })
 {
-  _init(settings);
-  _init_ui(settings);
+  _init();
+  _init_ui();
 }
 
 void
-AppList::_init(const DesktopSettings& /*settings*/)
+AppList::_init()
 {
   setProperty("class", "tde-app-list");
 }
 
 void
-AppList::_init_ui(const DesktopSettings& /*settings*/)
+AppList::_init_ui()
 {
   auto* layout = new QVBoxLayout{ this };
   setLayout(layout);
@@ -93,7 +91,7 @@ AppList::_clear_cards()
 }
 
 void
-AppList::on_apps_changed(const QList<helpers::AppInfo>& apps)
+AppList::on_apps_changed(const QList<app::Info>& apps)
 {
   auto old_idx = std::max(_stack->currentIndex(), 0);
   int new_idx = 0;

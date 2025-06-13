@@ -1,11 +1,7 @@
 #include <qapplication.h>
-#include <qboxlayout.h>
-#include <qbuttongroup.h>
 #include <qevent.h>
 #include <qgridlayout.h>
-#include <qlabel.h>
 #include <qscreen.h>
-#include <qtoolbutton.h>
 #include <qwidget.h>
 
 #include "tde/widgets/startmenu.hpp"
@@ -18,18 +14,13 @@ StartMenu::StartMenu(QWidget* parent)
   : QWidget{ parent }
 {
   _init();
-
-  auto* layout = new QGridLayout{ this };
-  setLayout(layout);
-
-  layout->addWidget(new startmenu::ToolPanel{ this }, 1, 0);
-  layout->addWidget(new startmenu::SysPanel{ this }, 0, 1, 2, 1);
+  _init_ui();
 }
 
 void
 StartMenu::showEvent(QShowEvent* /*event*/)
 {
-  QScreen* screen = QApplication::primaryScreen();
+  auto* screen = QApplication::primaryScreen();
   if (screen) {
     setGeometry(screen->geometry());
   }
@@ -62,6 +53,16 @@ StartMenu::_init()
   setAttribute(Qt::WA_StyledBackground);
 
   setProperty("class", "tde-startmenu");
+}
+
+void
+StartMenu::_init_ui()
+{
+  auto* layout = new QGridLayout{ this };
+  setLayout(layout);
+
+  layout->addWidget(new startmenu::ToolPanel{ this }, 1, 0);
+  layout->addWidget(new startmenu::SysPanel{ this }, 0, 1, 2, 1);
 }
 
 }

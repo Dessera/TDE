@@ -12,11 +12,10 @@
 #pragma once
 
 #include <qlist.h>
-#include <qtmetamacros.h>
 #include <qwidget.h>
 
-#include "tde/helpers/appfetcher.hpp"
-#include "tde/settings.hpp"
+#include "tde/app/info.hpp"
+#include "tde/common.hpp"
 #include "tde/widgets/appitem.hpp"
 
 namespace tde::widgets {
@@ -25,7 +24,7 @@ namespace tde::widgets {
  * @brief Dock widget
  *
  */
-class Dock : public QWidget
+class TDE_EXPORT Dock : public QWidget
 {
   Q_OBJECT
 
@@ -36,33 +35,30 @@ public:
   /**
    * @brief Construct a new Dock object.
    *
-   * @param settings Desktop settings.
    * @param parent Parent widget.
    */
-  Dock(const DesktopSettings& settings, QWidget* parent = nullptr);
+  Dock(QWidget* parent = nullptr);
   ~Dock() override = default;
 
 private:
   /**
    * @brief Initialize the dock.
    *
-   * @param settings Desktop settings.
    */
-  void _init(const DesktopSettings& settings);
+  void _init();
 
   /**
    * @brief Initialize the UI components.
    *
-   * @param settings Desktop settings.
    */
-  void _init_ui(const DesktopSettings& settings);
+  void _init_ui();
 
   /**
    * @brief Create the app item.
    *
    * @param app Application info.
    */
-  void _create_app(const helpers::AppInfo& app);
+  void _create_app(const app::Info& app);
 
   /**
    * @brief Clear the dock apps.
@@ -76,7 +72,7 @@ signals:
    *
    * @param app Application info.
    */
-  void request_launch_app(const helpers::AppInfo& app);
+  void request_launch_app(const app::Info& app);
 
 public slots:
   /**
@@ -84,7 +80,7 @@ public slots:
    *
    * @param apps List of apps.
    */
-  void on_dock_apps_changed(const QList<helpers::AppInfo>& apps);
+  void on_dock_apps_changed(const QList<app::Info>& apps);
 };
 
 }

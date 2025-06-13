@@ -13,13 +13,15 @@
 
 #include <qwidget.h>
 
+#include "tde/common.hpp"
+
 namespace tde::widgets::startmenu {
 
 /**
  * @brief System information panel.
  *
  */
-class SysPanel : public QWidget
+class TDE_EXPORT SysPanel : public QWidget
 {
   Q_OBJECT
 

@@ -13,13 +13,15 @@
 
 #include <qlabel.h>
 
+#include "tde/common.hpp"
+
 namespace tde::widgets::tray {
 
 /**
  * @brief Clock label for tray.
  *
  */
-class Clock : public QLabel
+class TDE_EXPORT Clock : public QLabel
 {
   Q_OBJECT
 

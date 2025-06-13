@@ -11,11 +11,10 @@
 
 #pragma once
 
-#include <qicon.h>
-#include <qtmetamacros.h>
 #include <qtoolbutton.h>
 
-#include "tde/helpers/appfetcher.hpp"
+#include "tde/app/info.hpp"
+#include "tde/common.hpp"
 
 namespace tde::widgets {
 
@@ -23,7 +22,7 @@ namespace tde::widgets {
  * @brief Application item widget.
  *
  */
-class AppItem : public QToolButton
+class TDE_EXPORT AppItem : public QToolButton
 {
   Q_OBJECT
 
@@ -38,57 +37,40 @@ public:
   /**
    * @brief Construct a new App Item object.
    *
-   * @param app Application info.
+   * @param app App info.
    * @param parent Parent widget.
    */
-  AppItem(const helpers::AppInfo& app, QWidget* parent = nullptr);
+  AppItem(const app::Info& app, QWidget* parent = nullptr);
   ~AppItem() override = default;
 
+  /**
+   * @brief Get the exec command.
+   *
+   * @return QString Exec command.
+   */
   [[nodiscard]] constexpr auto& exec() const { return _exec; }
+
+  /**
+   * @brief Convert the app item to app info.
+   *
+   * @return app::Info App info.
+   */
+  [[nodiscard]] app::Info to_app_info() const;
 
 signals:
   /**
    * @brief Emitted when the app is requested to be launched.
    *
-   * @param app Application info.
+   * @param app App info.
    */
-  void request_launch_app(const helpers::AppInfo& app);
+  void request_launch_app(const app::Info& app);
 
 private slots:
   /**
    * @brief Emits request_launch_app signal when the button is released.
    *
    */
-  void on_released();
-};
-
-/**
- * @brief Application item factory.
- *
- */
-class AppItemFactory
-{
-public:
-  /**
-   * @brief Create a new App Item.
-   *
-   * @param app Application info.
-   * @param parent Parent widget.
-   * @param style Tool button style.
-   * @return AppItem* Created App Item.
-   */
-  static AppItem* create(
-    const helpers::AppInfo& app,
-    QWidget* parent,
-    Qt::ToolButtonStyle style = Qt::ToolButtonTextUnderIcon);
-
-  /**
-   * @brief Create AppInfo from AppItem.
-   *
-   * @param item AppItem.
-   * @return helpers::AppInfo AppInfo.
-   */
-  static helpers::AppInfo create_app_info(const AppItem* item);
+  void _on_released();
 };
 
 }

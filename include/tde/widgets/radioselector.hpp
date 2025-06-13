@@ -12,8 +12,9 @@
 #pragma once
 
 #include <qradiobutton.h>
-#include <qtmetamacros.h>
 #include <qwidget.h>
+
+#include "tde/common.hpp"
 
 namespace tde::widgets {
 
@@ -21,7 +22,7 @@ namespace tde::widgets {
  * @brief Group of radio buttons used for selecting an item.
  *
  */
-class RadioSelector : public QWidget
+class TDE_EXPORT RadioSelector : public QWidget
 {
   Q_OBJECT
 

@@ -13,8 +13,9 @@
 
 #include <qapplication.h>
 
-#include "tde/helpers/appfetcher.hpp"
-#include "tde/helpers/applauncher.hpp"
+#include "tde/app/fetcher.hpp"
+#include "tde/app/launcher.hpp"
+#include "tde/common.hpp"
 #include "tde/settings.hpp"
 #include "tde/widgets/desktop.hpp"
 
@@ -24,7 +25,7 @@ namespace tde {
  * @brief Application for managing UI and other features.
  *
  */
-class Application : public QApplication
+class TDE_EXPORT Application : public QApplication
 {
 public:
   constexpr static const char* AppOrganization =
@@ -38,8 +39,8 @@ public:
 private:
   DesktopSettings _settings{ AppOrganization, AppName };
   widgets::Desktop _desktop{ _settings };
-  helpers::AppFetcher _app_fetcher{ _settings };
-  helpers::AppLauncher _app_launcher{ _settings };
+  app::Fetcher _app_fetcher{ _settings };
+  app::Launcher _app_launcher;
 
 public:
   /**

@@ -13,6 +13,7 @@
 
 #include <qtoolbutton.h>
 
+#include "tde/common.hpp"
 #include "tde/startmenu.hpp"
 
 namespace tde::widgets::startmenu {
@@ -23,7 +24,7 @@ using namespace tde::startmenu;
  * @brief Tool button in start menu.
  *
  */
-class ToolButton : public QToolButton
+class TDE_EXPORT ToolButton : public QToolButton
 {
   Q_OBJECT
 
