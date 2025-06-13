@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['selected_0',['selected',['../classtde_1_1widgets_1_1RadioSelector.html#af45f3831ea35b7c424c010521217c2ce',1,'tde::widgets::RadioSelector']]],
-  ['set_5fcount_1',['set_count',['../classtde_1_1widgets_1_1RadioSelector.html#a6e97a3072b7af7f9224542afc1178267',1,'tde::widgets::RadioSelector']]],
-  ['set_5fcurrent_2',['set_current',['../classtde_1_1widgets_1_1RadioSelector.html#afe2c34f3153c17a631e2775eb7324e84',1,'tde::widgets::RadioSelector']]],
-  ['showevent_3',['showEvent',['../classtde_1_1widgets_1_1StartMenu.html#ac59eb880c38ec42f8589aef831916d78',1,'tde::widgets::StartMenu']]],
-  ['start_5fapp_4',['start_app',['../classtde_1_1helpers_1_1AppLauncher.html#a30d0d7ff1043ff16a726df2097f3873f',1,'tde::helpers::AppLauncher']]],
-  ['startmenu_5',['StartMenu',['../classtde_1_1widgets_1_1StartMenu.html#a2dc00f3c02cfd6dc0c1f63df7ff80dfd',1,'tde::widgets::StartMenu']]],
-  ['startmenubutton_6',['StartMenuButton',['../classtde_1_1widgets_1_1tray_1_1StartMenuButton.html#a917cece0b582e1389a21ad2b58f68355',1,'tde::widgets::tray::StartMenuButton']]],
-  ['statusbar_5ftime_5fformat_7',['statusbar_time_format',['../classtde_1_1DesktopSettings.html#a86eb041e0c61111bb63cc3f5d5d306f2',1,'tde::DesktopSettings']]],
-  ['syspanel_8',['SysPanel',['../classtde_1_1widgets_1_1startmenu_1_1SysPanel.html#a833045c0cee8673129b6f75492738305',1,'tde::widgets::startmenu::SysPanel']]]
+  ['on_5fapps_5fchanged_0',['on_apps_changed',['../classtde_1_1widgets_1_1AppList.html#a14f53ca188d9e3372a26833e659510e1',1,'tde::widgets::AppList']]],
+  ['on_5fdock_5fapps_5fchanged_1',['on_dock_apps_changed',['../classtde_1_1widgets_1_1Dock.html#a1db6eb9df5a7d9c06edfdeced6988644',1,'tde::widgets::Dock']]],
+  ['on_5ffinish_5fapp_2',['on_finish_app',['../classtde_1_1widgets_1_1Desktop.html#ab116fa6a137e54b2a4ab00fb2f13a373',1,'tde::widgets::Desktop']]],
+  ['on_5frequest_5flaunch_5fapp_3',['on_request_launch_app',['../classtde_1_1app_1_1Launcher.html#a25fb9d78884d2a3a5e27b1735ae33f13',1,'tde::app::Launcher']]],
+  ['on_5fstart_5fapp_4',['on_start_app',['../classtde_1_1widgets_1_1Desktop.html#a91fad4e86063e62a6a9bd059432cefce',1,'tde::widgets::Desktop']]]
 ];

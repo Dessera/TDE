@@ -103,51 +103,49 @@ $(document).ready(function(){initNavTree('application_8hpp_source.html',''); ini
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;qapplication.h&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="appfetcher_8hpp.html">tde/helpers/appfetcher.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="applauncher_8hpp.html">tde/helpers/applauncher.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="settings_8hpp.html">tde/settings.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="desktop_8hpp.html">tde/widgets/desktop.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span>tde {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classtde_1_1Application.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="classtde_1_1Application.html">Application</a> : <span class="keyword">public</span> QApplication</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classtde_1_1Application.html#a0b2f7d783a91cd1f0888758cb12f2b45">   30</a></span>  <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="classtde_1_1Application.html#a0b2f7d783a91cd1f0888758cb12f2b45">AppOrganization</a> =</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="stringliteral">&quot;com.dessera&quot;</span>; </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classtde_1_1Application.html#a1953db36937a8318d6e13229abf5b0e2">   33</a></span>  <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="classtde_1_1Application.html#a1953db36937a8318d6e13229abf5b0e2">AppName</a> =</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="stringliteral">&quot;tde&quot;</span>; </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classtde_1_1Application.html#aa680594fbcf1803437939a6a6b1ebd7c">   35</a></span>  <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="classtde_1_1Application.html#aa680594fbcf1803437939a6a6b1ebd7c">AppStyleSheet</a> =</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="stringliteral">&quot;:/styles/style.qss&quot;</span>; </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_class" href="classtde_1_1DesktopSettings.html">DesktopSettings</a> _settings{ <a class="code hl_variable" href="classtde_1_1Application.html#a0b2f7d783a91cd1f0888758cb12f2b45">AppOrganization</a>, <a class="code hl_variable" href="classtde_1_1Application.html#a1953db36937a8318d6e13229abf5b0e2">AppName</a> };</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_class" href="classtde_1_1widgets_1_1Desktop.html">widgets::Desktop</a> _desktop{ _settings };</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  helpers::AppFetcher _app_fetcher{ _settings };</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  helpers::AppLauncher _app_launcher{ _settings };</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_function" href="classtde_1_1Application.html#a362e650cfdea0d0491d32a099a20b2de">Application</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  ~Application() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordtype">void</span> _init();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">void</span> _init_styles();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="fetcher_8hpp.html">tde/app/fetcher.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="launcher_8hpp.html">tde/app/launcher.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="common_8hpp.html">tde/common.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="settings_8hpp.html">tde/settings.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="desktop_8hpp.html">tde/widgets/desktop.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span>tde {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classtde_1_1Application.html">   28</a></span><span class="keyword">class </span>TDE_EXPORT <a class="code hl_class" href="classtde_1_1Application.html">Application</a> : <span class="keyword">public</span> QApplication</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classtde_1_1Application.html#a0b2f7d783a91cd1f0888758cb12f2b45">   31</a></span>  <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* AppOrganization =</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="stringliteral">&quot;com.dessera&quot;</span>; </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classtde_1_1Application.html#a1953db36937a8318d6e13229abf5b0e2">   34</a></span>  <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* AppName =</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="stringliteral">&quot;tde&quot;</span>; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classtde_1_1Application.html#aa680594fbcf1803437939a6a6b1ebd7c">   36</a></span>  <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* AppStyleSheet =</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="stringliteral">&quot;:/styles/style.qss&quot;</span>; </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_class" href="classtde_1_1DesktopSettings.html">DesktopSettings</a> _settings{ AppOrganization, AppName };</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_class" href="classtde_1_1widgets_1_1Desktop.html">widgets::Desktop</a> _desktop{ _settings };</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  app::Fetcher _app_fetcher{ _settings };</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  app::Launcher _app_launcher;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  Application(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  ~Application() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordtype">void</span> _init();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordtype">void</span> _init_styles();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
-<div class="ttc" id="aappfetcher_8hpp_html"><div class="ttname"><a href="appfetcher_8hpp.html">appfetcher.hpp</a></div><div class="ttdoc">Wrapper for QFileSystemWatcher to fetch the list of apps.</div></div>
-<div class="ttc" id="aapplauncher_8hpp_html"><div class="ttname"><a href="applauncher_8hpp.html">applauncher.hpp</a></div><div class="ttdoc">Application launcher.</div></div>
-<div class="ttc" id="aclasstde_1_1Application_html"><div class="ttname"><a href="classtde_1_1Application.html">tde::Application</a></div><div class="ttdoc">Application for managing UI and other features.</div><div class="ttdef"><b>Definition</b> application.hpp:28</div></div>
-<div class="ttc" id="aclasstde_1_1Application_html_a0b2f7d783a91cd1f0888758cb12f2b45"><div class="ttname"><a href="classtde_1_1Application.html#a0b2f7d783a91cd1f0888758cb12f2b45">tde::Application::AppOrganization</a></div><div class="ttdeci">static constexpr const char * AppOrganization</div><div class="ttdef"><b>Definition</b> application.hpp:30</div></div>
-<div class="ttc" id="aclasstde_1_1Application_html_a1953db36937a8318d6e13229abf5b0e2"><div class="ttname"><a href="classtde_1_1Application.html#a1953db36937a8318d6e13229abf5b0e2">tde::Application::AppName</a></div><div class="ttdeci">static constexpr const char * AppName</div><div class="ttdef"><b>Definition</b> application.hpp:33</div></div>
-<div class="ttc" id="aclasstde_1_1Application_html_a362e650cfdea0d0491d32a099a20b2de"><div class="ttname"><a href="classtde_1_1Application.html#a362e650cfdea0d0491d32a099a20b2de">tde::Application::Application</a></div><div class="ttdeci">Application(int argc, char **argv)</div><div class="ttdoc">Construct a new Application object.</div><div class="ttdef"><b>Definition</b> application.cpp:12</div></div>
-<div class="ttc" id="aclasstde_1_1Application_html_aa680594fbcf1803437939a6a6b1ebd7c"><div class="ttname"><a href="classtde_1_1Application.html#aa680594fbcf1803437939a6a6b1ebd7c">tde::Application::AppStyleSheet</a></div><div class="ttdeci">static constexpr const char * AppStyleSheet</div><div class="ttdef"><b>Definition</b> application.hpp:35</div></div>
-<div class="ttc" id="aclasstde_1_1DesktopSettings_html"><div class="ttname"><a href="classtde_1_1DesktopSettings.html">tde::DesktopSettings</a></div><div class="ttdoc">Desktop settings.</div><div class="ttdef"><b>Definition</b> settings.hpp:29</div></div>
-<div class="ttc" id="aclasstde_1_1widgets_1_1Desktop_html"><div class="ttname"><a href="classtde_1_1widgets_1_1Desktop.html">tde::widgets::Desktop</a></div><div class="ttdoc">Desktop widget, which is the root of UI.</div><div class="ttdef"><b>Definition</b> desktop.hpp:28</div></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="ttc" id="aclasstde_1_1Application_html"><div class="ttname"><a href="classtde_1_1Application.html">tde::Application</a></div><div class="ttdoc">Application for managing UI and other features.</div><div class="ttdef"><b>Definition</b> application.hpp:29</div></div>
+<div class="ttc" id="aclasstde_1_1DesktopSettings_html"><div class="ttname"><a href="classtde_1_1DesktopSettings.html">tde::DesktopSettings</a></div><div class="ttdoc">Desktop settings.</div><div class="ttdef"><b>Definition</b> settings.hpp:26</div></div>
+<div class="ttc" id="aclasstde_1_1widgets_1_1Desktop_html"><div class="ttname"><a href="classtde_1_1widgets_1_1Desktop.html">tde::widgets::Desktop</a></div><div class="ttdoc">Desktop widget, which is the root of UI.</div><div class="ttdef"><b>Definition</b> desktop.hpp:29</div></div>
+<div class="ttc" id="acommon_8hpp_html"><div class="ttname"><a href="common_8hpp.html">common.hpp</a></div><div class="ttdoc">Some utility macros.</div></div>
 <div class="ttc" id="adesktop_8hpp_html"><div class="ttname"><a href="desktop_8hpp.html">desktop.hpp</a></div><div class="ttdoc">Desktop widget.</div></div>
+<div class="ttc" id="afetcher_8hpp_html"><div class="ttname"><a href="fetcher_8hpp.html">fetcher.hpp</a></div><div class="ttdoc">Application fetcher from local config file.</div></div>
+<div class="ttc" id="alauncher_8hpp_html"><div class="ttname"><a href="launcher_8hpp.html">launcher.hpp</a></div><div class="ttdoc">Application launcher.</div></div>
 <div class="ttc" id="asettings_8hpp_html"><div class="ttname"><a href="settings_8hpp.html">settings.hpp</a></div><div class="ttdoc">Desktop settings.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mousepressevent_0',['mousePressEvent',['../classtde_1_1widgets_1_1StartMenu.html#abe0b0b0a384bb1736d8396ec1630293e',1,'tde::widgets::StartMenu']]]
+  ['keypressevent_0',['keyPressEvent',['../classtde_1_1widgets_1_1StartMenu.html#ad29bc9ba184e78edc81639cbc2dd1dd7',1,'tde::widgets::StartMenu']]]
 ];

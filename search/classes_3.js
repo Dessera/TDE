@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['radioselector_0',['RadioSelector',['../classtde_1_1widgets_1_1RadioSelector.html',1,'tde::widgets']]]
+  ['fetcher_0',['Fetcher',['../classtde_1_1app_1_1Fetcher.html',1,'tde::app']]]
 ];

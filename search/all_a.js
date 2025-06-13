@@ -1,14 +1,7 @@
 var searchData=
 [
-  ['tde_0',['TDE',['../md_README.html',1,'']]],
-  ['timeupdateinterval_1',['TimeUpdateInterval',['../classtde_1_1widgets_1_1tray_1_1Clock.html#a04890da1d6f9c1dfebf90abb8adf4f98',1,'tde::widgets::tray::Clock']]],
-  ['todos_2',['Todos',['../md_README.html#autotoc_md1',1,'']]],
-  ['toolbutton_3',['toolbutton',['../classtde_1_1widgets_1_1startmenu_1_1ToolButton.html',1,'tde::widgets::startmenu::ToolButton'],['../classtde_1_1widgets_1_1startmenu_1_1ToolButton.html#ae8bf54d17ce9226261799420eae9671b',1,'tde::widgets::startmenu::ToolButton::ToolButton()']]],
-  ['toolbutton_2ehpp_4',['toolbutton.hpp',['../toolbutton_8hpp.html',1,'']]],
-  ['toolinfo_5',['ToolInfo',['../structtde_1_1startmenu_1_1ToolInfo.html',1,'tde::startmenu']]],
-  ['toolpanel_6',['toolpanel',['../classtde_1_1widgets_1_1startmenu_1_1ToolPanel.html',1,'tde::widgets::startmenu::ToolPanel'],['../classtde_1_1widgets_1_1startmenu_1_1ToolPanel.html#a2f97d46b9861ca7e47585eba4b69cd6b',1,'tde::widgets::startmenu::ToolPanel::ToolPanel()']]],
-  ['toolpanel_2ehpp_7',['toolpanel.hpp',['../toolpanel_8hpp.html',1,'']]],
-  ['tools_8',['Tools',['../classtde_1_1widgets_1_1startmenu_1_1ToolPanel.html#a51cb20cc0427fa101372fe535e54072b',1,'tde::widgets::startmenu::ToolPanel']]],
-  ['tray_9',['tray',['../classtde_1_1widgets_1_1Tray.html',1,'tde::widgets::Tray'],['../classtde_1_1widgets_1_1Tray.html#a1b2a070b3bac8e3704f99f1c5c818f1a',1,'tde::widgets::Tray::Tray()']]],
-  ['tray_2ehpp_10',['tray.hpp',['../tray_8hpp.html',1,'']]]
+  ['radioselector_0',['radioselector',['../classtde_1_1widgets_1_1RadioSelector.html',1,'tde::widgets::RadioSelector'],['../classtde_1_1widgets_1_1RadioSelector.html#a635aff1477a448b3694ca78cfb242a15',1,'tde::widgets::RadioSelector::RadioSelector()']]],
+  ['radioselector_2ehpp_1',['radioselector.hpp',['../radioselector_8hpp.html',1,'']]],
+  ['refresh_2',['refresh',['../classtde_1_1app_1_1Fetcher.html#a7ca8c4fbe84b115f4383679cb08fc341',1,'tde::app::Fetcher']]],
+  ['request_5flaunch_5fapp_3',['request_launch_app',['../classtde_1_1widgets_1_1AppItem.html#aff4c96f744b2f95d9b7264bfd55709f6',1,'tde::widgets::AppItem::request_launch_app()'],['../classtde_1_1widgets_1_1AppListCard.html#af24dae35bed7a29e14341d19258ec640',1,'tde::widgets::AppListCard::request_launch_app()'],['../classtde_1_1widgets_1_1AppList.html#a732c9e75b639c33a886ef89bd6b3cce4',1,'tde::widgets::AppList::request_launch_app()'],['../classtde_1_1widgets_1_1Desktop.html#aa4129d39bc08adb05d4017992a559408',1,'tde::widgets::Desktop::request_launch_app()'],['../classtde_1_1widgets_1_1Dock.html#a54342146049619551a6f89db74e7e1bc',1,'tde::widgets::Dock::request_launch_app()']]]
 ];

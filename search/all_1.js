@@ -2,7 +2,5 @@ var searchData=
 [
   ['clock_0',['clock',['../classtde_1_1widgets_1_1tray_1_1Clock.html',1,'tde::widgets::tray::Clock'],['../classtde_1_1widgets_1_1tray_1_1Clock.html#aba7f820f1e35d120d062a462b504cce0',1,'tde::widgets::tray::Clock::Clock()']]],
   ['clock_2ehpp_1',['clock.hpp',['../clock_8hpp.html',1,'']]],
-  ['common_2ehpp_2',['common.hpp',['../common_8hpp.html',1,'']]],
-  ['create_3',['create',['../classtde_1_1widgets_1_1AppItemFactory.html#aa3686e46defa857fd12055fb2a867211',1,'tde::widgets::AppItemFactory']]],
-  ['create_5fapp_5finfo_4',['create_app_info',['../classtde_1_1widgets_1_1AppItemFactory.html#a94e0b509f5303504e76b7ffa27bb21dc',1,'tde::widgets::AppItemFactory']]]
+  ['common_2ehpp_2',['common.hpp',['../common_8hpp.html',1,'']]]
 ];

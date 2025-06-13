@@ -109,12 +109,15 @@ $(document).ready(function(){initNavTree('common_8hpp.html',''); initResizable()
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a18b0f36c069824a2dd32ae353dd3b357" id="r_a18b0f36c069824a2dd32ae353dd3b357"><td class="memItemLeft" align="right" valign="top"><a id="a18b0f36c069824a2dd32ae353dd3b357" name="a18b0f36c069824a2dd32ae353dd3b357"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>_tde_forward</b>(x)&#160;&#160;&#160;x</td></tr>
-<tr class="separator:a18b0f36c069824a2dd32ae353dd3b357"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae53ff77d9912435094819f2196d5112" id="r_aae53ff77d9912435094819f2196d5112"><td class="memItemLeft" align="right" valign="top"><a id="aae53ff77d9912435094819f2196d5112" name="aae53ff77d9912435094819f2196d5112"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>_tde_concat</b>(a,  b)&#160;&#160;&#160;a##b</td></tr>
-<tr class="separator:aae53ff77d9912435094819f2196d5112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa2a656e6dad21817abdfa302562fdc5" id="r_afa2a656e6dad21817abdfa302562fdc5"><td class="memItemLeft" align="right" valign="top"><a id="afa2a656e6dad21817abdfa302562fdc5" name="afa2a656e6dad21817abdfa302562fdc5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_TDE_FORWARD</b>(x)&#160;&#160;&#160;x</td></tr>
+<tr class="separator:afa2a656e6dad21817abdfa302562fdc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1da465a2e6c5ad9feba2ed8d92c30d" id="r_ade1da465a2e6c5ad9feba2ed8d92c30d"><td class="memItemLeft" align="right" valign="top"><a id="ade1da465a2e6c5ad9feba2ed8d92c30d" name="ade1da465a2e6c5ad9feba2ed8d92c30d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>_TDE_CONCAT</b>(a,  b)&#160;&#160;&#160;a##b</td></tr>
+<tr class="separator:ade1da465a2e6c5ad9feba2ed8d92c30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae63c4bdabf61461dfe916aeeba6e132c" id="r_ae63c4bdabf61461dfe916aeeba6e132c"><td class="memItemLeft" align="right" valign="top"><a id="ae63c4bdabf61461dfe916aeeba6e132c" name="ae63c4bdabf61461dfe916aeeba6e132c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TDE_EXPORT</b>&#160;&#160;&#160;__attribute__((visibility(&quot;default&quot;)))</td></tr>
+<tr class="separator:ae63c4bdabf61461dfe916aeeba6e132c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18fb40278d897c877e2a2f09dbcb9db2" id="r_a18fb40278d897c877e2a2f09dbcb9db2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8hpp.html#a18fb40278d897c877e2a2f09dbcb9db2">_tde_defer_impl</a>(expr,  cb_name,  ph_name,  line)</td></tr>
 <tr class="separator:a18fb40278d897c877e2a2f09dbcb9db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3b6c127ffbe0c6d102fe9b49ff0a8a1" id="r_aa3b6c127ffbe0c6d102fe9b49ff0a8a1"><td class="memItemLeft" align="right" valign="top"><a id="aa3b6c127ffbe0c6d102fe9b49ff0a8a1" name="aa3b6c127ffbe0c6d102fe9b49ff0a8a1"></a>
@@ -165,11 +168,11 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">auto</span> _tde_concat(cb_name, line) = [&amp;](<span class="keywordtype">int</span>*) { expr; };                       \</div>
-<div class="line">  std::unique_ptr&lt;int, <span class="keyword">decltype</span>(_tde_concat(cb_name, line))&gt; _tde_concat(      \</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">auto</span> _TDE_CONCAT(cb_name, line) = [&amp;](<span class="keywordtype">int</span>*) { expr; };                       \</div>
+<div class="line">  std::unique_ptr&lt;int, <span class="keyword">decltype</span>(_TDE_CONCAT(cb_name, line))&gt; _TDE_CONCAT(      \</div>
 <div class="line">    ph_name, line)                                                             \</div>
 <div class="line">  {                                                                            \</div>
-<div class="line">    <span class="keyword">nullptr</span>, _tde_concat(cb_name, line)                                        \</div>
+<div class="line">    <span class="keyword">nullptr</span>, _TDE_CONCAT(cb_name, line)                                        \</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TDE: tde::helpers::AppFetcher Class Reference</title>
+<title>TDE: tde::app::Fetcher Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classtde_1_1helpers_1_1AppFetcher.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('classtde_1_1app_1_1Fetcher.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -98,52 +98,52 @@ $(document).ready(function(){initNavTree('classtde_1_1helpers_1_1AppFetcher.html
   <div class="summary">
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classtde_1_1helpers_1_1AppFetcher-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">tde::helpers::AppFetcher Class Reference</div></div>
+<a href="classtde_1_1app_1_1Fetcher-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">tde::app::Fetcher Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Fetches the list of apps from the given path (in the settings).  
- <a href="classtde_1_1helpers_1_1AppFetcher.html#details">More...</a></p>
+<p><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> fetcher from local config file.  
+ <a href="classtde_1_1app_1_1Fetcher.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="appfetcher_8hpp_source.html">appfetcher.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="fetcher_8hpp_source.html">fetcher.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for tde::helpers::AppFetcher:</div>
+Inheritance diagram for tde::app::Fetcher:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classtde_1_1helpers_1_1AppFetcher.png" alt=""/>
+  <img src="classtde_1_1app_1_1Fetcher.png" alt=""/>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:a71612e199f03e4b8d4cd58028a0389e5" id="r_a71612e199f03e4b8d4cd58028a0389e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1helpers_1_1AppFetcher.html#a71612e199f03e4b8d4cd58028a0389e5">apps_changed</a> (const QList&lt; <a class="el" href="structtde_1_1helpers_1_1AppInfo.html">AppInfo</a> &gt; &amp;apps)</td></tr>
-<tr class="memdesc:a71612e199f03e4b8d4cd58028a0389e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the list of apps changed.  <br /></td></tr>
-<tr class="separator:a71612e199f03e4b8d4cd58028a0389e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb9b4af95fe67d4066e9ab2bef8c2db8" id="r_adb9b4af95fe67d4066e9ab2bef8c2db8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1helpers_1_1AppFetcher.html#adb9b4af95fe67d4066e9ab2bef8c2db8">dock_apps_changed</a> (const QList&lt; <a class="el" href="structtde_1_1helpers_1_1AppInfo.html">AppInfo</a> &gt; &amp;apps)</td></tr>
-<tr class="memdesc:adb9b4af95fe67d4066e9ab2bef8c2db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the list of dock apps changed.  <br /></td></tr>
-<tr class="separator:adb9b4af95fe67d4066e9ab2bef8c2db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec6287317f417d72f29f4cba50ef0ff" id="r_a0ec6287317f417d72f29f4cba50ef0ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1app_1_1Fetcher.html#a0ec6287317f417d72f29f4cba50ef0ff">apps_changed</a> (const QList&lt; <a class="el" href="structtde_1_1app_1_1Info.html">Info</a> &gt; &amp;apps)</td></tr>
+<tr class="memdesc:a0ec6287317f417d72f29f4cba50ef0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the application list changed.  <br /></td></tr>
+<tr class="separator:a0ec6287317f417d72f29f4cba50ef0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90a1af51a97402340683a0db86438872" id="r_a90a1af51a97402340683a0db86438872"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1app_1_1Fetcher.html#a90a1af51a97402340683a0db86438872">dock_apps_changed</a> (const QList&lt; <a class="el" href="structtde_1_1app_1_1Info.html">Info</a> &gt; &amp;apps)</td></tr>
+<tr class="memdesc:a90a1af51a97402340683a0db86438872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the dock app list changed.  <br /></td></tr>
+<tr class="separator:a90a1af51a97402340683a0db86438872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0a57b352628aadf4d36a16784d539e89" id="r_a0a57b352628aadf4d36a16784d539e89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1helpers_1_1AppFetcher.html#a0a57b352628aadf4d36a16784d539e89">AppFetcher</a> (const <a class="el" href="classtde_1_1DesktopSettings.html">DesktopSettings</a> &amp;settings, QObject *parent=nullptr)</td></tr>
-<tr class="memdesc:a0a57b352628aadf4d36a16784d539e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new App Fetcher object.  <br /></td></tr>
-<tr class="separator:a0a57b352628aadf4d36a16784d539e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a611bb5a8cadbd4c6f17893161896cc64" id="r_a611bb5a8cadbd4c6f17893161896cc64"><td class="memItemLeft" align="right" valign="top"><a id="a611bb5a8cadbd4c6f17893161896cc64" name="a611bb5a8cadbd4c6f17893161896cc64"></a>
+<tr class="memitem:a9c2ab2449e7da54fad0b83e44b92503d" id="r_a9c2ab2449e7da54fad0b83e44b92503d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1app_1_1Fetcher.html#a9c2ab2449e7da54fad0b83e44b92503d">Fetcher</a> (const <a class="el" href="classtde_1_1DesktopSettings.html">DesktopSettings</a> &amp;settings, QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:a9c2ab2449e7da54fad0b83e44b92503d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classtde_1_1app_1_1Fetcher.html" title="Application fetcher from local config file.">Fetcher</a> object.  <br /></td></tr>
+<tr class="separator:a9c2ab2449e7da54fad0b83e44b92503d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca8c4fbe84b115f4383679cb08fc341" id="r_a7ca8c4fbe84b115f4383679cb08fc341"><td class="memItemLeft" align="right" valign="top"><a id="a7ca8c4fbe84b115f4383679cb08fc341" name="a7ca8c4fbe84b115f4383679cb08fc341"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>refresh</b> ()</td></tr>
-<tr class="memdesc:a611bb5a8cadbd4c6f17893161896cc64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually refresh the list of apps (trigger the fileChanged signal). <br /></td></tr>
-<tr class="separator:a611bb5a8cadbd4c6f17893161896cc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a7ca8c4fbe84b115f4383679cb08fc341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh the application list. <br /></td></tr>
+<tr class="separator:a7ca8c4fbe84b115f4383679cb08fc341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Fetches the list of apps from the given path (in the settings). </p>
+<div class="textblock"><p><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> fetcher from local config file. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0a57b352628aadf4d36a16784d539e89" name="a0a57b352628aadf4d36a16784d539e89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a57b352628aadf4d36a16784d539e89">&#9670;&#160;</a></span>AppFetcher()</h2>
+<a id="a9c2ab2449e7da54fad0b83e44b92503d" name="a9c2ab2449e7da54fad0b83e44b92503d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c2ab2449e7da54fad0b83e44b92503d">&#9670;&#160;</a></span>Fetcher()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">tde::helpers::AppFetcher::AppFetcher </td>
+          <td class="memname">tde::app::Fetcher::Fetcher </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classtde_1_1DesktopSettings.html">DesktopSettings</a> &amp;&#160;</td>
           <td class="paramname"><em>settings</em>, </td>
@@ -162,7 +162,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>refresh</b> ()</td></
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new App Fetcher object. </p>
+<p>Construct a new <a class="el" href="classtde_1_1app_1_1Fetcher.html" title="Application fetcher from local config file.">Fetcher</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">settings</td><td>Desktop settings. </td></tr>
@@ -174,8 +174,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>refresh</b> ()</td></
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a71612e199f03e4b8d4cd58028a0389e5" name="a71612e199f03e4b8d4cd58028a0389e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71612e199f03e4b8d4cd58028a0389e5">&#9670;&#160;</a></span>apps_changed</h2>
+<a id="a0ec6287317f417d72f29f4cba50ef0ff" name="a0ec6287317f417d72f29f4cba50ef0ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec6287317f417d72f29f4cba50ef0ff">&#9670;&#160;</a></span>apps_changed</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,9 +184,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>refresh</b> ()</td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void tde::helpers::AppFetcher::apps_changed </td>
+          <td class="memname">void tde::app::Fetcher::apps_changed </td>
           <td>(</td>
-          <td class="paramtype">const QList&lt; <a class="el" href="structtde_1_1helpers_1_1AppInfo.html">AppInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const QList&lt; <a class="el" href="structtde_1_1app_1_1Info.html">Info</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>apps</em></td><td>)</td>
           <td></td>
         </tr>
@@ -198,18 +198,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>refresh</b> ()</td></
 </table>
 </div><div class="memdoc">
 
-<p>Emitted when the list of apps changed. </p>
+<p>Emitted when the application list changed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">apps</td><td>New list of apps. </td></tr>
+    <tr><td class="paramname">apps</td><td>List of application info. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="adb9b4af95fe67d4066e9ab2bef8c2db8" name="adb9b4af95fe67d4066e9ab2bef8c2db8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb9b4af95fe67d4066e9ab2bef8c2db8">&#9670;&#160;</a></span>dock_apps_changed</h2>
+<a id="a90a1af51a97402340683a0db86438872" name="a90a1af51a97402340683a0db86438872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a1af51a97402340683a0db86438872">&#9670;&#160;</a></span>dock_apps_changed</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,9 +218,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>refresh</b> ()</td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void tde::helpers::AppFetcher::dock_apps_changed </td>
+          <td class="memname">void tde::app::Fetcher::dock_apps_changed </td>
           <td>(</td>
-          <td class="paramtype">const QList&lt; <a class="el" href="structtde_1_1helpers_1_1AppInfo.html">AppInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const QList&lt; <a class="el" href="structtde_1_1app_1_1Info.html">Info</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>apps</em></td><td>)</td>
           <td></td>
         </tr>
@@ -232,10 +232,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>refresh</b> ()</td></
 </table>
 </div><div class="memdoc">
 
-<p>Emitted when the list of dock apps changed. </p>
+<p>Emitted when the dock app list changed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">apps</td><td>New list of dock apps. </td></tr>
+    <tr><td class="paramname">apps</td><td>List of dock app info. </td></tr>
   </table>
   </dd>
 </dl>
@@ -243,15 +243,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>refresh</b> ()</td></
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/tde/helpers/<a class="el" href="appfetcher_8hpp_source.html">appfetcher.hpp</a></li>
-<li>src/helpers/<b>appfetcher.cpp</b></li>
+<li>include/tde/app/<a class="el" href="fetcher_8hpp_source.html">fetcher.hpp</a></li>
+<li>src/app/<b>fetcher.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>tde</b></li><li class="navelem"><b>helpers</b></li><li class="navelem"><a class="el" href="classtde_1_1helpers_1_1AppFetcher.html">AppFetcher</a></li>
+    <li class="navelem"><b>tde</b></li><li class="navelem"><b>app</b></li><li class="navelem"><a class="el" href="classtde_1_1app_1_1Fetcher.html">Fetcher</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

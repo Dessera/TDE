@@ -101,61 +101,47 @@ $(document).ready(function(){initNavTree('appitem_8hpp_source.html',''); initRes
 <a href="appitem_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;qicon.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;qtmetamacros.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;qtoolbutton.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="appfetcher_8hpp.html">tde/helpers/appfetcher.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>tde::widgets {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classtde_1_1widgets_1_1AppItem.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="classtde_1_1widgets_1_1AppItem.html">AppItem</a> : <span class="keyword">public</span> QToolButton</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  Q_OBJECT</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classtde_1_1widgets_1_1AppItem.html#ab55b2a1f66eb3464151822d83e187b93">   31</a></span>  <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classtde_1_1widgets_1_1AppItem.html#ab55b2a1f66eb3464151822d83e187b93">IconSize</a> =</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    48; </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  QString _exec;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_class" href="classtde_1_1widgets_1_1AppItem.html">AppItem</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1helpers_1_1AppInfo.html">helpers::AppInfo</a>&amp; app, QWidget* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_class" href="classtde_1_1widgets_1_1AppItem.html">~AppItem</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span>&amp; exec()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _exec; }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>signals:</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classtde_1_1widgets_1_1AppItem.html#adcd10a95b814335a3d168e041a3c5dda">   55</a></span>  <span class="keywordtype">void</span> <a class="code hl_signal" href="classtde_1_1widgets_1_1AppItem.html#adcd10a95b814335a3d168e041a3c5dda">request_launch_app</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1helpers_1_1AppInfo.html">helpers::AppInfo</a>&amp; app);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">private</span> slots:</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordtype">void</span> on_released();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;qtoolbutton.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="info_8hpp.html">tde/app/info.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="common_8hpp.html">tde/common.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span>tde::widgets {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classtde_1_1widgets_1_1AppItem.html">   25</a></span><span class="keyword">class </span>TDE_EXPORT <a class="code hl_class" href="classtde_1_1widgets_1_1AppItem.html">AppItem</a> : <span class="keyword">public</span> QToolButton</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  Q_OBJECT</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classtde_1_1widgets_1_1AppItem.html#ab55b2a1f66eb3464151822d83e187b93">   30</a></span>  <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keywordtype">int</span> IconSize =</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    48; </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  QString _exec;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_class" href="classtde_1_1widgets_1_1AppItem.html">AppItem</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1app_1_1Info.html">app::Info</a>&amp; app, QWidget* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_class" href="classtde_1_1widgets_1_1AppItem.html">~AppItem</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classtde_1_1widgets_1_1AppItem.html#af85ccf834d6072d3b8013076739948e3">   51</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">auto</span>&amp; <a class="code hl_function" href="classtde_1_1widgets_1_1AppItem.html#af85ccf834d6072d3b8013076739948e3">exec</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _exec; }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  [[nodiscard]] <a class="code hl_struct" href="structtde_1_1app_1_1Info.html">app::Info</a> to_app_info() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>signals:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classtde_1_1widgets_1_1AppItem.html#aff4c96f744b2f95d9b7264bfd55709f6">   66</a></span>  <span class="keywordtype">void</span> <a class="code hl_signal" href="classtde_1_1widgets_1_1AppItem.html#aff4c96f744b2f95d9b7264bfd55709f6">request_launch_app</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1app_1_1Info.html">app::Info</a>&amp; app);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordtype">void</span> _on_released();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="};">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classtde_1_1widgets_1_1AppItemFactory.html">   69</a></span><span class="keyword">class </span><a class="code hl_class" href="classtde_1_1widgets_1_1AppItemFactory.html">AppItemFactory</a></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keyword">static</span> <a class="code hl_class" href="classtde_1_1widgets_1_1AppItem.html">AppItem</a>* <a class="code hl_function" href="classtde_1_1widgets_1_1AppItemFactory.html#aa3686e46defa857fd12055fb2a867211">create</a>(</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1helpers_1_1AppInfo.html">helpers::AppInfo</a>&amp; app,</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    QWidget* parent,</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    Qt::ToolButtonStyle style = Qt::ToolButtonTextUnderIcon);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keyword">static</span> <a class="code hl_struct" href="structtde_1_1helpers_1_1AppInfo.html">helpers::AppInfo</a> <a class="code hl_function" href="classtde_1_1widgets_1_1AppItemFactory.html#a94e0b509f5303504e76b7ffa27bb21dc">create_app_info</a>(<span class="keyword">const</span> <a class="code hl_class" href="classtde_1_1widgets_1_1AppItem.html">AppItem</a>* item);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
-</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
-<div class="ttc" id="aappfetcher_8hpp_html"><div class="ttname"><a href="appfetcher_8hpp.html">appfetcher.hpp</a></div><div class="ttdoc">Wrapper for QFileSystemWatcher to fetch the list of apps.</div></div>
-<div class="ttc" id="aclasstde_1_1widgets_1_1AppItemFactory_html"><div class="ttname"><a href="classtde_1_1widgets_1_1AppItemFactory.html">tde::widgets::AppItemFactory</a></div><div class="ttdoc">Application item factory.</div><div class="ttdef"><b>Definition</b> appitem.hpp:70</div></div>
-<div class="ttc" id="aclasstde_1_1widgets_1_1AppItemFactory_html_a94e0b509f5303504e76b7ffa27bb21dc"><div class="ttname"><a href="classtde_1_1widgets_1_1AppItemFactory.html#a94e0b509f5303504e76b7ffa27bb21dc">tde::widgets::AppItemFactory::create_app_info</a></div><div class="ttdeci">static helpers::AppInfo create_app_info(const AppItem *item)</div><div class="ttdoc">Create AppInfo from AppItem.</div><div class="ttdef"><b>Definition</b> appitem.cpp:49</div></div>
-<div class="ttc" id="aclasstde_1_1widgets_1_1AppItemFactory_html_aa3686e46defa857fd12055fb2a867211"><div class="ttname"><a href="classtde_1_1widgets_1_1AppItemFactory.html#aa3686e46defa857fd12055fb2a867211">tde::widgets::AppItemFactory::create</a></div><div class="ttdeci">static AppItem * create(const helpers::AppInfo &amp;app, QWidget *parent, Qt::ToolButtonStyle style=Qt::ToolButtonTextUnderIcon)</div><div class="ttdoc">Create a new App Item.</div><div class="ttdef"><b>Definition</b> appitem.cpp:39</div></div>
-<div class="ttc" id="aclasstde_1_1widgets_1_1AppItem_html"><div class="ttname"><a href="classtde_1_1widgets_1_1AppItem.html">tde::widgets::AppItem</a></div><div class="ttdoc">Application item widget.</div><div class="ttdef"><b>Definition</b> appitem.hpp:27</div></div>
-<div class="ttc" id="aclasstde_1_1widgets_1_1AppItem_html_ab55b2a1f66eb3464151822d83e187b93"><div class="ttname"><a href="classtde_1_1widgets_1_1AppItem.html#ab55b2a1f66eb3464151822d83e187b93">tde::widgets::AppItem::IconSize</a></div><div class="ttdeci">static constexpr int IconSize</div><div class="ttdef"><b>Definition</b> appitem.hpp:31</div></div>
-<div class="ttc" id="aclasstde_1_1widgets_1_1AppItem_html_adcd10a95b814335a3d168e041a3c5dda"><div class="ttname"><a href="classtde_1_1widgets_1_1AppItem.html#adcd10a95b814335a3d168e041a3c5dda">tde::widgets::AppItem::request_launch_app</a></div><div class="ttdeci">void request_launch_app(const helpers::AppInfo &amp;app)</div><div class="ttdoc">Emitted when the app is requested to be launched.</div></div>
-<div class="ttc" id="astructtde_1_1helpers_1_1AppInfo_html"><div class="ttname"><a href="structtde_1_1helpers_1_1AppInfo.html">tde::helpers::AppInfo</a></div><div class="ttdoc">Application info struct.</div><div class="ttdef"><b>Definition</b> appfetcher.hpp:28</div></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+<div class="ttc" id="aclasstde_1_1widgets_1_1AppItem_html"><div class="ttname"><a href="classtde_1_1widgets_1_1AppItem.html">tde::widgets::AppItem</a></div><div class="ttdoc">Application item widget.</div><div class="ttdef"><b>Definition</b> appitem.hpp:26</div></div>
+<div class="ttc" id="aclasstde_1_1widgets_1_1AppItem_html_af85ccf834d6072d3b8013076739948e3"><div class="ttname"><a href="classtde_1_1widgets_1_1AppItem.html#af85ccf834d6072d3b8013076739948e3">tde::widgets::AppItem::exec</a></div><div class="ttdeci">constexpr auto &amp; exec() const</div><div class="ttdoc">Get the exec command.</div><div class="ttdef"><b>Definition</b> appitem.hpp:51</div></div>
+<div class="ttc" id="aclasstde_1_1widgets_1_1AppItem_html_aff4c96f744b2f95d9b7264bfd55709f6"><div class="ttname"><a href="classtde_1_1widgets_1_1AppItem.html#aff4c96f744b2f95d9b7264bfd55709f6">tde::widgets::AppItem::request_launch_app</a></div><div class="ttdeci">void request_launch_app(const app::Info &amp;app)</div><div class="ttdoc">Emitted when the app is requested to be launched.</div></div>
+<div class="ttc" id="acommon_8hpp_html"><div class="ttname"><a href="common_8hpp.html">common.hpp</a></div><div class="ttdoc">Some utility macros.</div></div>
+<div class="ttc" id="ainfo_8hpp_html"><div class="ttname"><a href="info_8hpp.html">info.hpp</a></div><div class="ttdoc">Application information.</div></div>
+<div class="ttc" id="astructtde_1_1app_1_1Info_html"><div class="ttname"><a href="structtde_1_1app_1_1Info.html">tde::app::Info</a></div><div class="ttdoc">Application information.</div><div class="ttdef"><b>Definition</b> info.hpp:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

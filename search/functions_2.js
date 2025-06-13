@@ -9,6 +9,6 @@ var searchData=
   ['desktop_5ftitle_6',['desktop_title',['../classtde_1_1DesktopSettings.html#ae4d43eea239c1ca7c9e49b76dc9c0a2d',1,'tde::DesktopSettings']]],
   ['desktop_5fwidth_7',['desktop_width',['../classtde_1_1DesktopSettings.html#af097d41449cff353afc8087234c44ebb',1,'tde::DesktopSettings']]],
   ['desktopsettings_8',['DesktopSettings',['../classtde_1_1DesktopSettings.html#aac290fb9b44657365995b7d811e411eb',1,'tde::DesktopSettings']]],
-  ['dock_9',['Dock',['../classtde_1_1widgets_1_1Dock.html#af7bd3a5ced44dfbe67e5cc67f95f6f1b',1,'tde::widgets::Dock']]],
-  ['dock_5fapps_5fchanged_10',['dock_apps_changed',['../classtde_1_1helpers_1_1AppFetcher.html#adb9b4af95fe67d4066e9ab2bef8c2db8',1,'tde::helpers::AppFetcher::dock_apps_changed()'],['../classtde_1_1widgets_1_1Desktop.html#af9f8418079b963fd4c7b47832369c5a2',1,'tde::widgets::Desktop::dock_apps_changed()']]]
+  ['dock_9',['Dock',['../classtde_1_1widgets_1_1Dock.html#affb24eb156d68ac1aa9ec7870b86f4e0',1,'tde::widgets::Dock']]],
+  ['dock_5fapps_5fchanged_10',['dock_apps_changed',['../classtde_1_1app_1_1Fetcher.html#a90a1af51a97402340683a0db86438872',1,'tde::app::Fetcher::dock_apps_changed()'],['../classtde_1_1widgets_1_1Desktop.html#aae64ce8536e3db72007b29d9dde0745b',1,'tde::widgets::Desktop::dock_apps_changed()']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TDE: include/tde/helpers/applauncher.hpp File Reference</title>
+<title>TDE: include/tde/app/info.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('applauncher_8hpp.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('info_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -95,40 +95,33 @@ $(document).ready(function(){initNavTree('applauncher_8hpp.html',''); initResiza
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
-  <div class="headertitle"><div class="title">applauncher.hpp File Reference</div></div>
+  <div class="headertitle"><div class="title">info.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Application launcher.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;qobject.h&gt;</code><br />
-<code>#include &lt;qprocess.h&gt;</code><br />
-<code>#include &lt;qtmetamacros.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="appfetcher_8hpp_source.html">tde/helpers/appfetcher.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="settings_8hpp_source.html">tde/settings.hpp</a>&quot;</code><br />
+<a href="info_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;qstring.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>tde::app {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structtde_1_1app_1_1Info.html">   22</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structtde_1_1app_1_1Info.html">Info</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  QString name;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  QString exec;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  QString icon;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
 </div>
-<p><a href="applauncher_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1helpers_1_1AppLauncher.html">tde::helpers::AppLauncher</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> launcher.  <a href="classtde_1_1helpers_1_1AppLauncher.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Application launcher. </p>
-<dl class="section author"><dt>Author</dt><dd>Dessera (<a href="#" onclick="location.href='mai'+'lto:'+'des'+'se'+'ra@'+'qq'+'.co'+'m'; return false;">desse<span class="obfuscator">.nosp@m.</span>ra@q<span class="obfuscator">.nosp@m.</span>q.com</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2025-06-02</dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 Dessera </dd></dl>
-</div></div><!-- contents -->
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
+<div class="ttc" id="astructtde_1_1app_1_1Info_html"><div class="ttname"><a href="structtde_1_1app_1_1Info.html">tde::app::Info</a></div><div class="ttdoc">Application information.</div><div class="ttdef"><b>Definition</b> info.hpp:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_7c6737cf2788ee9787105746f540bd39.html">tde</a></li><li class="navelem"><a class="el" href="dir_1db6e55d8f923815fb8cd8e7e925ebcc.html">helpers</a></li><li class="navelem"><a class="el" href="applauncher_8hpp.html">applauncher.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_7c6737cf2788ee9787105746f540bd39.html">tde</a></li><li class="navelem"><a class="el" href="dir_1e3b6aebb4c61593d2c6b073fc0e8472.html">app</a></li><li class="navelem"><a class="el" href="info_8hpp.html">info.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

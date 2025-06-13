@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TDE: tde::helpers::AppLauncher Class Reference</title>
+<title>TDE: tde::app::Launcher Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classtde_1_1helpers_1_1AppLauncher.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('classtde_1_1app_1_1Launcher.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -99,76 +99,65 @@ $(document).ready(function(){initNavTree('classtde_1_1helpers_1_1AppLauncher.htm
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classtde_1_1helpers_1_1AppLauncher-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">tde::helpers::AppLauncher Class Reference</div></div>
+<a href="classtde_1_1app_1_1Launcher-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">tde::app::Launcher Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> launcher.  
- <a href="classtde_1_1helpers_1_1AppLauncher.html#details">More...</a></p>
+ <a href="classtde_1_1app_1_1Launcher.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="applauncher_8hpp_source.html">applauncher.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="launcher_8hpp_source.html">launcher.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for tde::helpers::AppLauncher:</div>
+Inheritance diagram for tde::app::Launcher:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classtde_1_1helpers_1_1AppLauncher.png" alt=""/>
+  <img src="classtde_1_1app_1_1Launcher.png" alt=""/>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:a9c4c9bcfcbeba595cceee4c30c90cbb7" id="r_a9c4c9bcfcbeba595cceee4c30c90cbb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1helpers_1_1AppLauncher.html#a9c4c9bcfcbeba595cceee4c30c90cbb7">on_request_launch_app</a> (const <a class="el" href="structtde_1_1helpers_1_1AppInfo.html">helpers::AppInfo</a> &amp;app)</td></tr>
-<tr class="memdesc:a9c4c9bcfcbeba595cceee4c30c90cbb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launch an application.  <br /></td></tr>
-<tr class="separator:a9c4c9bcfcbeba595cceee4c30c90cbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25fb9d78884d2a3a5e27b1735ae33f13" id="r_a25fb9d78884d2a3a5e27b1735ae33f13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1app_1_1Launcher.html#a25fb9d78884d2a3a5e27b1735ae33f13">on_request_launch_app</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">Info</a> &amp;app)</td></tr>
+<tr class="memdesc:a25fb9d78884d2a3a5e27b1735ae33f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launch the application.  <br /></td></tr>
+<tr class="separator:a25fb9d78884d2a3a5e27b1735ae33f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:a30d0d7ff1043ff16a726df2097f3873f" id="r_a30d0d7ff1043ff16a726df2097f3873f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1helpers_1_1AppLauncher.html#a30d0d7ff1043ff16a726df2097f3873f">start_app</a> (const <a class="el" href="structtde_1_1helpers_1_1AppInfo.html">helpers::AppInfo</a> &amp;app)</td></tr>
-<tr class="memdesc:a30d0d7ff1043ff16a726df2097f3873f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted before app is launched.  <br /></td></tr>
-<tr class="separator:a30d0d7ff1043ff16a726df2097f3873f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f8a69e2dc019b9a1da91d0c995a3980" id="r_a6f8a69e2dc019b9a1da91d0c995a3980"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1helpers_1_1AppLauncher.html#a6f8a69e2dc019b9a1da91d0c995a3980">finish_app</a> (int code, QProcess::ExitStatus status)</td></tr>
-<tr class="memdesc:a6f8a69e2dc019b9a1da91d0c995a3980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted after app is launched.  <br /></td></tr>
-<tr class="separator:a6f8a69e2dc019b9a1da91d0c995a3980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9277115e7264bcef3e8cb6b14629a7e9" id="r_a9277115e7264bcef3e8cb6b14629a7e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1app_1_1Launcher.html#a9277115e7264bcef3e8cb6b14629a7e9">start_app</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">Info</a> &amp;app)</td></tr>
+<tr class="memdesc:a9277115e7264bcef3e8cb6b14629a7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted before the application is launched.  <br /></td></tr>
+<tr class="separator:a9277115e7264bcef3e8cb6b14629a7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b8768f60a3821ac8b017e9dbf5add2" id="r_ae1b8768f60a3821ac8b017e9dbf5add2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1app_1_1Launcher.html#ae1b8768f60a3821ac8b017e9dbf5add2">finish_app</a> (int code, QProcess::ExitStatus status)</td></tr>
+<tr class="memdesc:ae1b8768f60a3821ac8b017e9dbf5add2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted after the application is finished.  <br /></td></tr>
+<tr class="separator:ae1b8768f60a3821ac8b017e9dbf5add2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0f838e0de39e585fe39214df77d911c2" id="r_a0f838e0de39e585fe39214df77d911c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1helpers_1_1AppLauncher.html#a0f838e0de39e585fe39214df77d911c2">AppLauncher</a> (const <a class="el" href="classtde_1_1DesktopSettings.html">DesktopSettings</a> &amp;settings, QObject *parent=nullptr)</td></tr>
-<tr class="memdesc:a0f838e0de39e585fe39214df77d911c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new App Launcher object.  <br /></td></tr>
-<tr class="separator:a0f838e0de39e585fe39214df77d911c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abccac6f5134c5ed1b20ede749bc67f5c" id="r_abccac6f5134c5ed1b20ede749bc67f5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1app_1_1Launcher.html#abccac6f5134c5ed1b20ede749bc67f5c">Launcher</a> (QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:abccac6f5134c5ed1b20ede749bc67f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classtde_1_1app_1_1Launcher.html" title="Application launcher.">Launcher</a> object.  <br /></td></tr>
+<tr class="separator:abccac6f5134c5ed1b20ede749bc67f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> launcher. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0f838e0de39e585fe39214df77d911c2" name="a0f838e0de39e585fe39214df77d911c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f838e0de39e585fe39214df77d911c2">&#9670;&#160;</a></span>AppLauncher()</h2>
+<a id="abccac6f5134c5ed1b20ede749bc67f5c" name="abccac6f5134c5ed1b20ede749bc67f5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abccac6f5134c5ed1b20ede749bc67f5c">&#9670;&#160;</a></span>Launcher()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">tde::helpers::AppLauncher::AppLauncher </td>
+          <td class="memname">tde::app::Launcher::Launcher </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classtde_1_1DesktopSettings.html">DesktopSettings</a> &amp;&#160;</td>
-          <td class="paramname"><em>settings</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">QObject *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new App Launcher object. </p>
+<p>Construct a new <a class="el" href="classtde_1_1app_1_1Launcher.html" title="Application launcher.">Launcher</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">settings</td><td>Desktop settings. </td></tr>
     <tr><td class="paramname">parent</td><td>Parent object. </td></tr>
   </table>
   </dd>
@@ -177,8 +166,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6f8a69e2dc019b9a1da91d0c995a3980" name="a6f8a69e2dc019b9a1da91d0c995a3980"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f8a69e2dc019b9a1da91d0c995a3980">&#9670;&#160;</a></span>finish_app</h2>
+<a id="ae1b8768f60a3821ac8b017e9dbf5add2" name="ae1b8768f60a3821ac8b017e9dbf5add2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b8768f60a3821ac8b017e9dbf5add2">&#9670;&#160;</a></span>finish_app</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,7 +176,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void tde::helpers::AppLauncher::finish_app </td>
+          <td class="memname">void tde::app::Launcher::finish_app </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>code</em>, </td>
@@ -211,7 +200,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Emitted after app is launched. </p>
+<p>Emitted after the application is finished. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">code</td><td>Exit code. </td></tr>
@@ -222,8 +211,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9c4c9bcfcbeba595cceee4c30c90cbb7" name="a9c4c9bcfcbeba595cceee4c30c90cbb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c4c9bcfcbeba595cceee4c30c90cbb7">&#9670;&#160;</a></span>on_request_launch_app</h2>
+<a id="a25fb9d78884d2a3a5e27b1735ae33f13" name="a25fb9d78884d2a3a5e27b1735ae33f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25fb9d78884d2a3a5e27b1735ae33f13">&#9670;&#160;</a></span>on_request_launch_app</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,9 +221,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void tde::helpers::AppLauncher::on_request_launch_app </td>
+          <td class="memname">void tde::app::Launcher::on_request_launch_app </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structtde_1_1helpers_1_1AppInfo.html">helpers::AppInfo</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structtde_1_1app_1_1Info.html">Info</a> &amp;&#160;</td>
           <td class="paramname"><em>app</em></td><td>)</td>
           <td></td>
         </tr>
@@ -246,18 +235,18 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Launch an application. </p>
+<p>Launch the application. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">app</td><td><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> information. </td></tr>
+    <tr><td class="paramname">app</td><td><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> info. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a30d0d7ff1043ff16a726df2097f3873f" name="a30d0d7ff1043ff16a726df2097f3873f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30d0d7ff1043ff16a726df2097f3873f">&#9670;&#160;</a></span>start_app</h2>
+<a id="a9277115e7264bcef3e8cb6b14629a7e9" name="a9277115e7264bcef3e8cb6b14629a7e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9277115e7264bcef3e8cb6b14629a7e9">&#9670;&#160;</a></span>start_app</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -266,9 +255,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void tde::helpers::AppLauncher::start_app </td>
+          <td class="memname">void tde::app::Launcher::start_app </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structtde_1_1helpers_1_1AppInfo.html">helpers::AppInfo</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structtde_1_1app_1_1Info.html">Info</a> &amp;&#160;</td>
           <td class="paramname"><em>app</em></td><td>)</td>
           <td></td>
         </tr>
@@ -280,10 +269,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Emitted before app is launched. </p>
+<p>Emitted before the application is launched. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">app</td><td><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> information. </td></tr>
+    <tr><td class="paramname">app</td><td><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> info. </td></tr>
   </table>
   </dd>
 </dl>
@@ -291,15 +280,15 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/tde/helpers/<a class="el" href="applauncher_8hpp_source.html">applauncher.hpp</a></li>
-<li>src/helpers/<b>applauncher.cpp</b></li>
+<li>include/tde/app/<a class="el" href="launcher_8hpp_source.html">launcher.hpp</a></li>
+<li>src/app/<b>launcher.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>tde</b></li><li class="navelem"><b>helpers</b></li><li class="navelem"><a class="el" href="classtde_1_1helpers_1_1AppLauncher.html">AppLauncher</a></li>
+    <li class="navelem"><b>tde</b></li><li class="navelem"><b>app</b></li><li class="navelem"><a class="el" href="classtde_1_1app_1_1Launcher.html">Launcher</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

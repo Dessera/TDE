@@ -8,5 +8,5 @@ var classtde_1_1DesktopSettings =
     [ "desktop_qss_path", "classtde_1_1DesktopSettings.html#aa6f94cf343733b27d7a50fc2a0eec7ee", null ],
     [ "desktop_title", "classtde_1_1DesktopSettings.html#ae4d43eea239c1ca7c9e49b76dc9c0a2d", null ],
     [ "desktop_width", "classtde_1_1DesktopSettings.html#af097d41449cff353afc8087234c44ebb", null ],
-    [ "statusbar_time_format", "classtde_1_1DesktopSettings.html#a86eb041e0c61111bb63cc3f5d5d306f2", null ]
+    [ "tray_time_format", "classtde_1_1DesktopSettings.html#a0c4bf2c70b41b861949cd29b2535ae7e", null ]
 ];
