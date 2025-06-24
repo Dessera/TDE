@@ -6,8 +6,22 @@ WIP.
 
 ## Todos
 
-- [ ] Status panel
+- [ ] Refactor (support more compiler and `cpp_std`)
+- [ ] Tray
+  - [ ] Icons and control panel: Network, Sound
+- [ ] Startup menu
+  - [ ] System info monitor
 - [ ] Notification
 - [ ] Builtin apps
+  - [ ] Filesystem browser
+  - [ ] Process manager
+  - [ ] About
+  - [ ] File reader
+  - [ ] Screenshot
 - [ ] External apps
+  - [ ] Calculator [WIP `tcalc_gui`]
+  - [ ] VideoPlayer
+  - [ ] Chat
 - [ ] Animation
+- [ ] Support configuration hot update
+- [ ] Wallpaper (Static, Dynamic, etc)
