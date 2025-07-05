@@ -22,7 +22,7 @@ namespace tde::widgets {
  * @brief Group of radio buttons used for selecting an item.
  *
  */
-class TDE_EXPORT RadioSelector : public QWidget
+class TDE_PUBLIC RadioSelector : public QWidget
 {
   Q_OBJECT
 
@@ -36,6 +36,7 @@ public:
    * @param parent Parent widget.
    */
   explicit RadioSelector(QWidget* parent = nullptr);
+
   ~RadioSelector() override = default;
 
   /**

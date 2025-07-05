@@ -19,7 +19,7 @@ WIP.
   - [ ] File reader
   - [ ] Screenshot
 - [ ] External apps
-  - [ ] Calculator [WIP `tcalc_gui`]
+  - [x] Calculator [tcalc](https://github.com/Dessera/tcalc)
   - [ ] VideoPlayer
   - [ ] Chat
 - [ ] Animation

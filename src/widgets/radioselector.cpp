@@ -64,7 +64,7 @@ RadioSelector::on_button_released()
 
   button->setChecked(true);
 
-  auto res = std::ranges::find(_buttons, button);
+  auto res = std::find(_buttons.begin(), _buttons.end(), button);
   if (res == _buttons.end()) {
     qWarning() << "Invalid button:" << button;
     return;

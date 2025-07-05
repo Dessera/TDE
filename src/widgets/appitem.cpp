@@ -11,7 +11,7 @@ AppItem::AppItem(const app::Info& app, QWidget* parent)
   , _exec(app.exec)
 {
   setIcon(QIcon{ app.icon });
-  setIconSize(QSize(IconSize, IconSize));
+  setIconSize(QSize(ICON_SIZE, ICON_SIZE));
 
   setText(app.name);
   setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
@@ -24,7 +24,7 @@ AppItem::AppItem(const app::Info& app, QWidget* parent)
 app::Info
 AppItem::to_app_info() const
 {
-  return { .name = text(), .exec = _exec, .icon = icon().name() };
+  return { text(), _exec, icon().name() };
 }
 
 void

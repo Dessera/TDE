@@ -24,24 +24,22 @@ using namespace tde::startmenu;
  * @brief Tool buttons in start menu.
  *
  */
-class TDE_EXPORT ToolPanel : public QWidget
+class TDE_PUBLIC ToolPanel : public QWidget
 {
   Q_OBJECT
 
 public:
   inline static const QList<ToolInfo> Tools = {
-    { .name = "Logout",
-      .exec = "echo Logout",
-      .icon = ":/assets/icons/logout.svg" },
+    { "Logout", "echo Logout", ":/assets/icons/logout.svg" },
     {
-      .name = "Reboot",
-      .exec = "echo reboot",
-      .icon = ":/assets/icons/reboot.svg",
+      "Reboot",
+      "echo reboot",
+      ":/assets/icons/reboot.svg",
     },
     {
-      .name = "Shutdown",
-      .exec = "echo shutdown",
-      .icon = ":/assets/icons/shutdown.svg",
+      "Shutdown",
+      "echo shutdown",
+      ":/assets/icons/shutdown.svg",
     }
   }; /**< Buttons in panel */
 

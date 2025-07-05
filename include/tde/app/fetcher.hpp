@@ -17,7 +17,6 @@
 
 #include "tde/app/info.hpp"
 #include "tde/common.hpp"
-#include "tde/settings.hpp"
 
 namespace tde::app {
 
@@ -25,7 +24,7 @@ namespace tde::app {
  * @brief Application fetcher from local config file.
  *
  */
-class TDE_EXPORT Fetcher : public QObject
+class TDE_PUBLIC Fetcher : public QObject
 {
   Q_OBJECT
 
@@ -40,7 +39,7 @@ public:
    * @param settings Desktop settings.
    * @param parent Parent object.
    */
-  Fetcher(const DesktopSettings& settings, QObject* parent = nullptr);
+  Fetcher(QString target_path, QObject* parent = nullptr);
   ~Fetcher() override = default;
 
   /**

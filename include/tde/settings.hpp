@@ -22,7 +22,7 @@ namespace tde {
  * @brief Desktop settings.
  *
  */
-class TDE_EXPORT DesktopSettings : public QSettings
+class TDE_PUBLIC DesktopSettings : public QSettings
 {
   Q_OBJECT
 
@@ -36,7 +36,15 @@ public:
    */
   DesktopSettings(const QString& organization,
                   const QString& application,
-                  QObject* parent = nullptr);
+                  QObject* parent = nullptr)
+    : QSettings{ QSettings::IniFormat,
+                 QSettings::UserScope,
+                 organization,
+                 application,
+                 parent }
+  {
+  }
+
   ~DesktopSettings() override = default;
 
   Q_DISABLE_COPY(DesktopSettings)
@@ -46,7 +54,7 @@ public:
    *
    * @return int Desktop width.
    */
-  [[nodiscard]] constexpr auto desktop_width() const
+  [[nodiscard]] TDE_INLINE auto desktop_width() const
   {
     return value("desktop/width", 800).value<int>(); // NOLINT
   }
@@ -56,7 +64,7 @@ public:
    *
    * @return int Desktop height.
    */
-  [[nodiscard]] constexpr auto desktop_height() const
+  [[nodiscard]] TDE_INLINE auto desktop_height() const
   {
     return value("desktop/height", 480).value<int>(); // NOLINT
   }
@@ -66,7 +74,7 @@ public:
    *
    * @return QString Desktop title.
    */
-  [[nodiscard]] constexpr auto desktop_title() const
+  [[nodiscard]] TDE_INLINE auto desktop_title() const
   {
     return value("desktop/title", "TDE").value<QString>();
   }
@@ -76,7 +84,7 @@ public:
    *
    * @return int Desktop grid x size.
    */
-  [[nodiscard]] constexpr auto desktop_grid_x() const
+  [[nodiscard]] TDE_INLINE auto desktop_grid_x() const
   {
     return value("desktop/grid_x", 4).value<int>();
   }
@@ -86,7 +94,7 @@ public:
    *
    * @return int Desktop grid y size.
    */
-  [[nodiscard]] constexpr auto desktop_grid_y() const
+  [[nodiscard]] TDE_INLINE auto desktop_grid_y() const
   {
     return value("desktop/grid_y", 3).value<int>();
   }
@@ -96,7 +104,7 @@ public:
    *
    * @return QString Desktop qss path.
    */
-  [[nodiscard]] constexpr auto desktop_qss_path() const
+  [[nodiscard]] TDE_INLINE auto desktop_qss_path() const
   {
     return value("desktop/qss_path").value<QString>();
   }
@@ -106,7 +114,7 @@ public:
    *
    * @return QString Desktop apps.json path.
    */
-  [[nodiscard]] constexpr auto desktop_app_path() const
+  [[nodiscard]] TDE_INLINE auto desktop_app_path() const
   {
     return value("desktop/app_path").value<QString>();
   }
@@ -116,7 +124,7 @@ public:
    *
    * @return QString tray time format.
    */
-  [[nodiscard]] constexpr auto tray_time_format() const
+  [[nodiscard]] TDE_INLINE auto tray_time_format() const
   {
     return value("tray/time_format", "yyyy/MM/dd | hh:mm:ss").value<QString>();
   }

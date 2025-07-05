@@ -9,8 +9,8 @@ StartMenuButton::StartMenuButton(QWidget* parent)
   setProperty("class", "tde-tray-startmenu-button");
 
   setText("Start");
-  setIcon(QIcon{ StartMenuIcon });
-  setIconSize({ StartMenuIconSize, StartMenuIconSize });
+  setIcon(QIcon{ START_MENU_ICON });
+  setIconSize({ START_MENU_ICON_SIZE, START_MENU_ICON_SIZE });
 
   connect(this, &QToolButton::released, this, &StartMenuButton::_on_released);
 }

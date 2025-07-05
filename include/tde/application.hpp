@@ -16,6 +16,7 @@
 #include "tde/app/fetcher.hpp"
 #include "tde/app/launcher.hpp"
 #include "tde/common.hpp"
+#include "tde/config.hpp"
 #include "tde/settings.hpp"
 #include "tde/widgets/desktop.hpp"
 
@@ -25,22 +26,17 @@ namespace tde {
  * @brief Application for managing UI and other features.
  *
  */
-class TDE_EXPORT Application : public QApplication
+class TDE_PUBLIC Application : public QApplication
 {
-public:
-  constexpr static const char* AppOrganization =
-    "com.dessera"; /**< Organization of the application, used to locate the
-                      config path. */
-  constexpr static const char* AppName =
-    "tde"; /**< Name of the application, used to locate the config path. */
-  constexpr static const char* AppStyleSheet =
-    ":/styles/style.qss"; /**< Path to the default stylesheet. */
+  Q_OBJECT
 
 private:
-  DesktopSettings _settings{ AppOrganization, AppName };
-  widgets::Desktop _desktop{ _settings };
-  app::Fetcher _app_fetcher{ _settings };
+  DesktopSettings _settings{ config::APP_ORGANIZATION, config::APP_NAME };
+
+  app::Fetcher _app_fetcher{ _settings.desktop_app_path() };
   app::Launcher _app_launcher;
+
+  widgets::Desktop _desktop{ _settings };
 
 public:
   /**
@@ -50,6 +46,7 @@ public:
    * @param argv Arguments.
    */
   Application(int argc, char** argv);
+
   ~Application() override = default;
 
 private:

@@ -22,7 +22,7 @@ namespace tde::widgets {
  * @brief Tray widget.
  *
  */
-class TDE_EXPORT Tray : public QWidget
+class TDE_PUBLIC Tray : public QWidget
 {
   Q_OBJECT
 

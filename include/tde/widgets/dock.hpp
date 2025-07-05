@@ -24,7 +24,7 @@ namespace tde::widgets {
  * @brief Dock widget
  *
  */
-class TDE_EXPORT Dock : public QWidget
+class TDE_PUBLIC Dock : public QWidget
 {
   Q_OBJECT
 

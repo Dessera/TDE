@@ -13,7 +13,7 @@ Clock::Clock(QString format, QWidget* parent)
   setProperty("class", "tde-tray-clock");
 
   connect(_timer, &QTimer::timeout, this, &Clock::_on_timeout);
-  _timer->start(TimeUpdateInterval);
+  _timer->start(TIME_UPDATE_INTERVAL);
 
   _on_timeout();
 }

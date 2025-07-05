@@ -24,12 +24,12 @@ using namespace tde::startmenu;
  * @brief Tool button in start menu.
  *
  */
-class TDE_EXPORT ToolButton : public QToolButton
+class TDE_PUBLIC ToolButton : public QToolButton
 {
   Q_OBJECT
 
 public:
-  constexpr static int IconSize = 48; /**< Icon size. */
+  constexpr static int ICON_SIZE = 48; /**< Icon size. */
 
   /**
    * @brief Construct a new Tool Button object.

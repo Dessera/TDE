@@ -22,12 +22,12 @@ namespace tde::widgets {
  * @brief Application item widget.
  *
  */
-class TDE_EXPORT AppItem : public QToolButton
+class TDE_PUBLIC AppItem : public QToolButton
 {
   Q_OBJECT
 
 public:
-  constexpr static int IconSize =
+  constexpr static int ICON_SIZE =
     48; /**< Default icon size, which is immutable now. */
 
 private:
@@ -48,7 +48,7 @@ public:
    *
    * @return QString Exec command.
    */
-  [[nodiscard]] constexpr auto& exec() const { return _exec; }
+  [[nodiscard]] TDE_INLINE auto& exec() const { return _exec; }
 
   /**
    * @brief Convert the app item to app info.

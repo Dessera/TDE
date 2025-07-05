@@ -14,7 +14,7 @@ ToolButton::ToolButton(const ToolInfo& info, QWidget* parent)
   setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 
   setIcon(QIcon{ info.icon });
-  setIconSize({ IconSize, IconSize });
+  setIconSize({ ICON_SIZE, ICON_SIZE });
 
   setText(info.name);
 }

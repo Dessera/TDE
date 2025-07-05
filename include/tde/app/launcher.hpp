@@ -23,7 +23,7 @@ namespace tde::app {
  * @brief Application launcher.
  *
  */
-class TDE_EXPORT Launcher : public QObject
+class TDE_PUBLIC Launcher : public QObject
 {
   Q_OBJECT
 
@@ -33,8 +33,19 @@ public:
    *
    * @param parent Parent object.
    */
-  Launcher(QObject* parent = nullptr);
+  explicit Launcher(QObject* parent = nullptr)
+    : QObject{ parent }
+  {
+  }
+
   ~Launcher() override = default;
+
+  /**
+   * @brief Launch the application.
+   *
+   * @param app Application info.
+   */
+  void launch(const Info& app);
 
 signals:
   /**
@@ -42,7 +53,7 @@ signals:
    *
    * @param app Application info.
    */
-  void start_app(const Info& app);
+  void before_app_start(const Info& app);
 
   /**
    * @brief Emitted after the application is finished.
@@ -50,7 +61,7 @@ signals:
    * @param code Exit code.
    * @param status Exit status.
    */
-  void finish_app(int code, QProcess::ExitStatus status);
+  void after_app_finish(int code, QProcess::ExitStatus status);
 
 public slots:
   /**
@@ -67,7 +78,7 @@ private slots:
    * @param code Exit code.
    * @param status Exit status.
    */
-  void _on_finish_app(int code, QProcess::ExitStatus status);
+  void _on_app_finish(int code, QProcess::ExitStatus status);
 };
 
 }

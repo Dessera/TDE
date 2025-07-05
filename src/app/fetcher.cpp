@@ -5,15 +5,13 @@
 #include <qjsonvalue.h>
 #include <qlist.h>
 #include <qlogging.h>
-#include <qobjectdefs.h>
-#include <ranges>
 
 #include "tde/app/fetcher.hpp"
 #include "tde/common.hpp"
 
 namespace {
 
-constexpr bool
+bool
 _json_is_apps(const QJsonDocument& doc)
 {
   if (!doc.isObject()) {
@@ -26,7 +24,7 @@ _json_is_apps(const QJsonDocument& doc)
          obj.contains("dock_apps") && obj.value("dock_apps").isArray();
 }
 
-constexpr bool
+bool
 _json_is_appinfo(const QJsonValue& value)
 {
   if (!value.isObject()) {
@@ -47,23 +45,37 @@ _json_is_appinfo(const QJsonValue& value)
   return true;
 }
 
-constexpr tde::app::Info
+TDE_INLINE tde::app::Info
 _json_to_appinfo(const QJsonValue& value)
 {
   auto obj = value.toObject();
-  return { .name = obj["name"].toString(),
-           .exec = obj["exec"].toString(),
-           .icon = obj["icon"].toString() };
+  return { obj["name"].toString(),
+           obj["exec"].toString(),
+           obj["icon"].toString() };
+}
+
+QList<tde::app::Info>
+_json_to_appinfo_list(const QJsonArray& array)
+{
+  auto res = QList<tde::app::Info>{};
+
+  for (const auto& value : array) {
+    if (_json_is_appinfo(value)) {
+      res.append(_json_to_appinfo(value));
+    }
+  }
+
+  return res;
 }
 
 }
 
 namespace tde::app {
 
-Fetcher::Fetcher(const DesktopSettings& settings, QObject* parent)
+Fetcher::Fetcher(QString target_path, QObject* parent)
   : QObject{ parent }
   , _watcher{ new QFileSystemWatcher{ this } }
-  , _target_path{ settings.desktop_app_path() }
+  , _target_path{ std::move(target_path) }
 {
   _watcher->addPath(_target_path);
 
@@ -92,44 +104,35 @@ Fetcher::refresh()
 void
 Fetcher::_on_file_changed(const QString& path)
 {
-  namespace ranges = std::ranges;
-  namespace views = std::ranges::views;
-
   auto file = QFile{ path };
   tde_defer(_remount_watcher(file, path));
 
   if (!file.open(QFile::ReadOnly)) {
-    qWarning() << "Cannot open file:" << path << file.errorString();
+    qWarning() << "Failed to open dekstop apps file:" << file.errorString();
     return;
   }
 
   QJsonParseError err;
   auto json_doc = QJsonDocument::fromJson(file.readAll(), &err);
   if (err.error != QJsonParseError::NoError) {
-    qWarning() << "Cannot parse json:" << err.errorString();
+    qWarning() << "Failed to parse desktop apps file:" << err.errorString();
     return;
   }
 
   if (!_json_is_apps(json_doc)) {
-    qWarning() << "Apps json format error";
+    qWarning() << "Failed to parse desktop apps file: Apps json format error";
     return;
   }
 
-  auto json_apps = json_doc.object().value("apps").toArray();
-  auto apps = json_apps | views::filter(_json_is_appinfo) |
-              views::transform(_json_to_appinfo) | ranges::to<QList<Info>>();
+  auto apps = _json_to_appinfo_list(json_doc.object().value("apps").toArray());
 
   qInfo() << "Reloaded" << apps.size() << "apps from:" << path;
-
   emit apps_changed(apps);
 
-  auto json_dock_apps = json_doc.object().value("dock_apps").toArray();
-  auto dock_apps = json_dock_apps | views::filter(_json_is_appinfo) |
-                   views::transform(_json_to_appinfo) |
-                   ranges::to<QList<Info>>();
+  auto dock_apps =
+    _json_to_appinfo_list(json_doc.object().value("dock_apps").toArray());
 
   qInfo() << "Reloaded" << dock_apps.size() << "dock apps from:" << path;
-
   emit dock_apps_changed(dock_apps);
 }
 

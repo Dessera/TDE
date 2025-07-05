@@ -28,7 +28,7 @@ void
 Desktop::_init_ui(const DesktopSettings& settings)
 {
   auto* layout = new QVBoxLayout{ this };
-  layout->setContentsMargins(0, 0, 0, DockMargin);
+  layout->setContentsMargins(0, 0, 0, DOCK_MARGIN);
   setLayout(layout);
 
   layout->addWidget(new Tray{ settings, this });
@@ -48,13 +48,13 @@ Desktop::_init_ui(const DesktopSettings& settings)
 }
 
 void
-Desktop::on_start_app(const app::Info& /*app*/)
+Desktop::on_app_start(const app::Info& /*app*/)
 {
   this->hide();
 }
 
 void
-Desktop::on_finish_app(int /*code*/, QProcess::ExitStatus /*status*/)
+Desktop::on_app_finish(int /*code*/, QProcess::ExitStatus /*status*/)
 {
   this->show();
 }

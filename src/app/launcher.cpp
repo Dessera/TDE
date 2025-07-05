@@ -1,24 +1,18 @@
 #include <qdebug.h>
-#include <qlogging.h>
 
 #include "tde/app/launcher.hpp"
 
 namespace tde::app {
 
-Launcher::Launcher(QObject* parent)
-  : QObject{ parent }
-{
-}
-
 void
-Launcher::on_request_launch_app(const Info& app)
+Launcher::launch(const Info& app)
 {
   qInfo() << "Launching app:" << app.name << "with command:" << app.exec;
 
   auto* proc = new QProcess{ this };
-  connect(proc, &QProcess::finished, this, &Launcher::_on_finish_app);
+  connect(proc, &QProcess::finished, this, &Launcher::_on_app_finish);
 
-  emit start_app(app);
+  emit before_app_start(app);
 
   proc->startCommand(app.exec);
   if (!proc->waitForStarted()) {
@@ -31,14 +25,20 @@ Launcher::on_request_launch_app(const Info& app)
 }
 
 void
-Launcher::_on_finish_app(int code, QProcess::ExitStatus status)
+Launcher::on_request_launch_app(const Info& app)
+{
+  launch(app);
+}
+
+void
+Launcher::_on_app_finish(int code, QProcess::ExitStatus status)
 {
   qInfo() << "App exited with code:" << code << "and status:" << status;
 
   auto* proc = qobject_cast<QProcess*>(sender());
   proc->deleteLater();
 
-  emit finish_app(code, status);
+  emit after_app_finish(code, status);
 }
 
 }

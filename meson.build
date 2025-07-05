@@ -2,7 +2,7 @@ project(
   'tde',
   'cpp',
   version: '0.1.0',
-  default_options: ['warning_level=3', 'cpp_std=gnu++26'],
+  default_options: ['warning_level=3', 'cpp_std=gnu++17'],
 )
 
 qt = import('qt6')
@@ -14,7 +14,7 @@ subdir('src')
 
 inc = include_directories('include')
 src = files('src/main.cpp')
-deps = [dep_tde]
+deps = [tde_dep]
 
 exe = executable(
   'tde',

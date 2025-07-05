@@ -16,7 +16,25 @@
 #define _TDE_FORWARD(x) x
 #define _TDE_CONCAT(a, b) a##b
 
-#define TDE_EXPORT __attribute__((visibility("default")))
+#if defined _WIN32 || defined __CYGWIN__
+#ifdef BUILDING_TDE
+#define TDE_PUBLIC __declspec(dllexport)
+#else
+#define TDE_PUBLIC __declspec(dllimport)
+#endif
+#else
+#ifdef BUILDING_TDE
+#define TDE_PUBLIC __attribute__((visibility("default")))
+#else
+#define TDE_PUBLIC
+#endif
+#endif
+
+#if defined _WIN32 || defined __CYGWIN__
+#define TDE_INLINE inline __forceinline
+#else
+#define TDE_INLINE inline __attribute__((always_inline))
+#endif
 
 #define _tde_defer_impl(expr, cb_name, ph_name, line)                          \
   auto _TDE_CONCAT(cb_name, line) = [&](int*) { expr; };                       \

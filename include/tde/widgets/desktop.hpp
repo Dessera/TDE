@@ -25,12 +25,12 @@ namespace tde::widgets {
  * @brief Desktop widget, which is the root of UI.
  *
  */
-class TDE_EXPORT Desktop : public QWidget
+class TDE_PUBLIC Desktop : public QWidget
 {
   Q_OBJECT
 
 public:
-  constexpr static int DockMargin = 5; /**< Margin for dock widget. */
+  constexpr static int DOCK_MARGIN = 5; /**< Margin for dock widget. */
 
   /**
    * @brief Construct a new Desktop object.
@@ -84,7 +84,7 @@ public slots:
    *
    * @param app Application info.
    */
-  void on_start_app(const app::Info& app);
+  void on_app_start(const app::Info& app);
 
   /**
    * @brief Called after the app is finished.
@@ -92,7 +92,7 @@ public slots:
    * @param code Exit code.
    * @param status Exit status.
    */
-  void on_finish_app(int code, QProcess::ExitStatus status);
+  void on_app_finish(int code, QProcess::ExitStatus status);
 };
 
 }

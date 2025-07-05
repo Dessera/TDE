@@ -26,7 +26,7 @@ namespace tde::widgets {
  * @brief Application list card.
  *
  */
-class TDE_EXPORT AppListCard : public QWidget
+class TDE_PUBLIC AppListCard : public QWidget
 {
   Q_OBJECT
 
@@ -55,14 +55,14 @@ public:
    *
    * @return int Number of apps.
    */
-  [[nodiscard]] constexpr auto app_count() const { return layout()->count(); }
+  [[nodiscard]] TDE_INLINE auto app_count() const { return layout()->count(); }
 
   /**
    * @brief Returns the size of the app grid.
    *
    * @return int Size of the app grid.
    */
-  [[nodiscard]] constexpr auto app_size() const
+  [[nodiscard]] TDE_INLINE auto app_size() const
   {
     return _grid_size.width() * _grid_size.height();
   }
@@ -72,7 +72,7 @@ public:
    *
    * @return bool True if the card is full, false otherwise.
    */
-  [[nodiscard]] constexpr auto is_full() const
+  [[nodiscard]] TDE_INLINE auto is_full() const
   {
     return app_count() >= app_size();
   }
@@ -90,7 +90,7 @@ signals:
  * @brief Application list widget, which is a group of AppListCard.
  *
  */
-class TDE_EXPORT AppList : public QWidget
+class TDE_PUBLIC AppList : public QWidget
 {
   Q_OBJECT
 

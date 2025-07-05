@@ -21,7 +21,7 @@ namespace tde::widgets::startmenu {
  * @brief System information panel.
  *
  */
-class TDE_EXPORT SysPanel : public QWidget
+class TDE_PUBLIC SysPanel : public QWidget
 {
   Q_OBJECT
 

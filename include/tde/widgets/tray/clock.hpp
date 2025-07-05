@@ -21,12 +21,13 @@ namespace tde::widgets::tray {
  * @brief Clock label for tray.
  *
  */
-class TDE_EXPORT Clock : public QLabel
+class TDE_PUBLIC Clock : public QLabel
 {
   Q_OBJECT
 
 public:
-  constexpr static int TimeUpdateInterval = 1000; /**< Time update interval. */
+  constexpr static int TIME_UPDATE_INTERVAL =
+    1000; /**< Time update interval. */
 
 private:
   QString _format;

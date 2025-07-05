@@ -21,7 +21,7 @@ namespace tde::widgets {
  * @brief Start menu widget.
  *
  */
-class TDE_EXPORT StartMenu : public QWidget
+class TDE_PUBLIC StartMenu : public QWidget
 {
   Q_OBJECT
 
