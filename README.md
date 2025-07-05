@@ -7,14 +7,11 @@ WIP.
 ## Todos
 
 - [ ] Refactor (support more compiler and `cpp_std`)
-- [ ] Tray
-  - [ ] Icons and control panel: Network, Sound
-- [ ] Startup menu
-  - [ ] System info monitor
 - [ ] Notification
 - [ ] Builtin apps
   - [ ] Filesystem browser
   - [ ] Process manager
+  - [ ] System monitor
   - [ ] About
   - [ ] File reader
   - [ ] Screenshot

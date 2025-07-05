@@ -3,7 +3,6 @@
 
 #include "tde/widgets/tray.hpp"
 #include "tde/widgets/tray/clock.hpp"
-#include "tde/widgets/tray/startmenubutton.hpp"
 
 namespace tde::widgets {
 
@@ -27,12 +26,8 @@ Tray::_init_ui(const DesktopSettings& settings)
   auto* layout = new QHBoxLayout{ this };
   setLayout(layout);
 
-  auto* smb = new tray::StartMenuButton{ this };
-  layout->addWidget(smb, 0, Qt::AlignVCenter);
-  layout->addSpacerItem(
-    new QSpacerItem{ 0, 0, QSizePolicy::Expanding, QSizePolicy::Minimum });
   layout->addWidget(
-    new tray::Clock{ settings.tray_time_format(), this }, 0, Qt::AlignVCenter);
+    new tray::Clock{ settings.tray_time_format(), this }, 0, Qt::AlignCenter);
 }
 
 }
