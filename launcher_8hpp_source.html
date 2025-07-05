@@ -110,31 +110,40 @@ $(document).ready(function(){initNavTree('launcher_8hpp_source.html',''); initRe
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>tde::app {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classtde_1_1app_1_1Launcher.html">   26</a></span><span class="keyword">class </span>TDE_EXPORT <a class="code hl_class" href="classtde_1_1app_1_1Launcher.html">Launcher</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classtde_1_1app_1_1Launcher.html">   26</a></span><span class="keyword">class </span>TDE_PUBLIC <a class="code hl_class" href="classtde_1_1app_1_1Launcher.html">Launcher</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  Q_OBJECT</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <a class="code hl_class" href="classtde_1_1app_1_1Launcher.html">Launcher</a>(QObject* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <a class="code hl_class" href="classtde_1_1app_1_1Launcher.html">~Launcher</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>signals:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classtde_1_1app_1_1Launcher.html#a9277115e7264bcef3e8cb6b14629a7e9">   45</a></span>  <span class="keywordtype">void</span> <a class="code hl_signal" href="classtde_1_1app_1_1Launcher.html#a9277115e7264bcef3e8cb6b14629a7e9">start_app</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1app_1_1Info.html">Info</a>&amp; app);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classtde_1_1app_1_1Launcher.html#ae1b8768f60a3821ac8b017e9dbf5add2">   53</a></span>  <span class="keywordtype">void</span> <a class="code hl_signal" href="classtde_1_1app_1_1Launcher.html#ae1b8768f60a3821ac8b017e9dbf5add2">finish_app</a>(<span class="keywordtype">int</span> code, QProcess::ExitStatus status);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">public</span> slots:</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">void</span> on_request_launch_app(<span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1app_1_1Info.html">Info</a>&amp; app);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">private</span> slots:</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">void</span> _on_finish_app(<span class="keywordtype">int</span> code, QProcess::ExitStatus status);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classtde_1_1app_1_1Launcher.html#abccac6f5134c5ed1b20ede749bc67f5c">   36</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classtde_1_1app_1_1Launcher.html#abccac6f5134c5ed1b20ede749bc67f5c">Launcher</a>(QObject* parent = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    : QObject{ parent }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  }</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_class" href="classtde_1_1app_1_1Launcher.html">~Launcher</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">void</span> launch(<span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1app_1_1Info.html">Info</a>&amp; app);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>signals:</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classtde_1_1app_1_1Launcher.html#aeb05c2314e4adb35e6d1c32a9e5bd29e">   56</a></span>  <span class="keywordtype">void</span> <a class="code hl_signal" href="classtde_1_1app_1_1Launcher.html#aeb05c2314e4adb35e6d1c32a9e5bd29e">before_app_start</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1app_1_1Info.html">Info</a>&amp; app);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classtde_1_1app_1_1Launcher.html#a3064ef9d12dec5cb9b5adf498dd051a1">   64</a></span>  <span class="keywordtype">void</span> <a class="code hl_signal" href="classtde_1_1app_1_1Launcher.html#a3064ef9d12dec5cb9b5adf498dd051a1">after_app_finish</a>(<span class="keywordtype">int</span> code, QProcess::ExitStatus status);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">void</span> on_request_launch_app(<span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1app_1_1Info.html">Info</a>&amp; app);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">void</span> _on_app_finish(<span class="keywordtype">int</span> code, QProcess::ExitStatus status);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
 <div class="ttc" id="aclasstde_1_1app_1_1Launcher_html"><div class="ttname"><a href="classtde_1_1app_1_1Launcher.html">tde::app::Launcher</a></div><div class="ttdoc">Application launcher.</div><div class="ttdef"><b>Definition</b> launcher.hpp:27</div></div>
-<div class="ttc" id="aclasstde_1_1app_1_1Launcher_html_a9277115e7264bcef3e8cb6b14629a7e9"><div class="ttname"><a href="classtde_1_1app_1_1Launcher.html#a9277115e7264bcef3e8cb6b14629a7e9">tde::app::Launcher::start_app</a></div><div class="ttdeci">void start_app(const Info &amp;app)</div><div class="ttdoc">Emitted before the application is launched.</div></div>
-<div class="ttc" id="aclasstde_1_1app_1_1Launcher_html_ae1b8768f60a3821ac8b017e9dbf5add2"><div class="ttname"><a href="classtde_1_1app_1_1Launcher.html#ae1b8768f60a3821ac8b017e9dbf5add2">tde::app::Launcher::finish_app</a></div><div class="ttdeci">void finish_app(int code, QProcess::ExitStatus status)</div><div class="ttdoc">Emitted after the application is finished.</div></div>
+<div class="ttc" id="aclasstde_1_1app_1_1Launcher_html_a3064ef9d12dec5cb9b5adf498dd051a1"><div class="ttname"><a href="classtde_1_1app_1_1Launcher.html#a3064ef9d12dec5cb9b5adf498dd051a1">tde::app::Launcher::after_app_finish</a></div><div class="ttdeci">void after_app_finish(int code, QProcess::ExitStatus status)</div><div class="ttdoc">Emitted after the application is finished.</div></div>
+<div class="ttc" id="aclasstde_1_1app_1_1Launcher_html_abccac6f5134c5ed1b20ede749bc67f5c"><div class="ttname"><a href="classtde_1_1app_1_1Launcher.html#abccac6f5134c5ed1b20ede749bc67f5c">tde::app::Launcher::Launcher</a></div><div class="ttdeci">Launcher(QObject *parent=nullptr)</div><div class="ttdoc">Construct a new Launcher object.</div><div class="ttdef"><b>Definition</b> launcher.hpp:36</div></div>
+<div class="ttc" id="aclasstde_1_1app_1_1Launcher_html_aeb05c2314e4adb35e6d1c32a9e5bd29e"><div class="ttname"><a href="classtde_1_1app_1_1Launcher.html#aeb05c2314e4adb35e6d1c32a9e5bd29e">tde::app::Launcher::before_app_start</a></div><div class="ttdeci">void before_app_start(const Info &amp;app)</div><div class="ttdoc">Emitted before the application is launched.</div></div>
 <div class="ttc" id="acommon_8hpp_html"><div class="ttname"><a href="common_8hpp.html">common.hpp</a></div><div class="ttdoc">Some utility macros.</div></div>
 <div class="ttc" id="ainfo_8hpp_html"><div class="ttname"><a href="info_8hpp.html">info.hpp</a></div><div class="ttdoc">Application information.</div></div>
 <div class="ttc" id="astructtde_1_1app_1_1Info_html"><div class="ttname"><a href="structtde_1_1app_1_1Info.html">tde::app::Info</a></div><div class="ttdoc">Application information.</div><div class="ttdef"><b>Definition</b> info.hpp:23</div></div>

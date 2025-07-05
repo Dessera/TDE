@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['clock_0',['Clock',['../classtde_1_1widgets_1_1tray_1_1Clock.html#aba7f820f1e35d120d062a462b504cce0',1,'tde::widgets::tray::Clock']]]
+  ['before_5fapp_5fstart_0',['before_app_start',['../classtde_1_1app_1_1Launcher.html#aeb05c2314e4adb35e6d1c32a9e5bd29e',1,'tde::app::Launcher']]]
 ];

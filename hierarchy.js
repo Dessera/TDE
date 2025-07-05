@@ -1,6 +1,8 @@
 var hierarchy =
 [
+    [ "tde::sys::CPUInfo", "structtde_1_1sys_1_1CPUInfo.html", null ],
     [ "tde::app::Info", "structtde_1_1app_1_1Info.html", null ],
+    [ "tde::sys::MemoryInfo", "structtde_1_1sys_1_1MemoryInfo.html", null ],
     [ "QApplication", null, [
       [ "tde::Application", "classtde_1_1Application.html", null ]
     ] ],

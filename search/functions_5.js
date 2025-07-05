@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['is_5ffull_0',['is_full',['../classtde_1_1widgets_1_1AppListCard.html#aa49fc64fd4942dbceab28386d8f6b146',1,'tde::widgets::AppListCard']]]
+  ['fetcher_0',['Fetcher',['../classtde_1_1app_1_1Fetcher.html#a3bc430ca2b30fbe465dafae3a70e1759',1,'tde::app::Fetcher']]]
 ];

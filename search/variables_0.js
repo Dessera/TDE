@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['appname_0',['AppName',['../classtde_1_1Application.html#a1953db36937a8318d6e13229abf5b0e2',1,'tde::Application']]],
-  ['apporganization_1',['AppOrganization',['../classtde_1_1Application.html#a0b2f7d783a91cd1f0888758cb12f2b45',1,'tde::Application']]],
-  ['appstylesheet_2',['AppStyleSheet',['../classtde_1_1Application.html#aa680594fbcf1803437939a6a6b1ebd7c',1,'tde::Application']]]
+  ['app_5fname_0',['APP_NAME',['../config_8hpp.html#ab842b2f07881cd5b83e3fdea186cdd02',1,'tde::config']]],
+  ['app_5forganization_1',['APP_ORGANIZATION',['../config_8hpp.html#a4d1bb1e74acf78cdfc1677c76b373e90',1,'tde::config']]],
+  ['app_5fstylesheet_2',['APP_STYLESHEET',['../config_8hpp.html#a827c66eb54897e59e816c385262eeed8',1,'tde::config']]]
 ];

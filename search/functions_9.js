@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['on_5fapps_5fchanged_0',['on_apps_changed',['../classtde_1_1widgets_1_1AppList.html#a14f53ca188d9e3372a26833e659510e1',1,'tde::widgets::AppList']]],
-  ['on_5fdock_5fapps_5fchanged_1',['on_dock_apps_changed',['../classtde_1_1widgets_1_1Dock.html#a1db6eb9df5a7d9c06edfdeced6988644',1,'tde::widgets::Dock']]],
-  ['on_5ffinish_5fapp_2',['on_finish_app',['../classtde_1_1widgets_1_1Desktop.html#ab116fa6a137e54b2a4ab00fb2f13a373',1,'tde::widgets::Desktop']]],
-  ['on_5frequest_5flaunch_5fapp_3',['on_request_launch_app',['../classtde_1_1app_1_1Launcher.html#a25fb9d78884d2a3a5e27b1735ae33f13',1,'tde::app::Launcher']]],
-  ['on_5fstart_5fapp_4',['on_start_app',['../classtde_1_1widgets_1_1Desktop.html#a91fad4e86063e62a6a9bd059432cefce',1,'tde::widgets::Desktop']]]
+  ['mousepressevent_0',['mousePressEvent',['../classtde_1_1widgets_1_1StartMenu.html#abe0b0b0a384bb1736d8396ec1630293e',1,'tde::widgets::StartMenu']]]
 ];

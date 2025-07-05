@@ -118,12 +118,12 @@ Inheritance diagram for tde::widgets::Desktop:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:a91fad4e86063e62a6a9bd059432cefce" id="r_a91fad4e86063e62a6a9bd059432cefce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Desktop.html#a91fad4e86063e62a6a9bd059432cefce">on_start_app</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;app)</td></tr>
-<tr class="memdesc:a91fad4e86063e62a6a9bd059432cefce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the app is launched.  <br /></td></tr>
-<tr class="separator:a91fad4e86063e62a6a9bd059432cefce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab116fa6a137e54b2a4ab00fb2f13a373" id="r_ab116fa6a137e54b2a4ab00fb2f13a373"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Desktop.html#ab116fa6a137e54b2a4ab00fb2f13a373">on_finish_app</a> (int code, QProcess::ExitStatus status)</td></tr>
-<tr class="memdesc:ab116fa6a137e54b2a4ab00fb2f13a373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after the app is finished.  <br /></td></tr>
-<tr class="separator:ab116fa6a137e54b2a4ab00fb2f13a373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b11d05e122704ccfaa1ca058de95def" id="r_a2b11d05e122704ccfaa1ca058de95def"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Desktop.html#a2b11d05e122704ccfaa1ca058de95def">on_app_start</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;app)</td></tr>
+<tr class="memdesc:a2b11d05e122704ccfaa1ca058de95def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the app is launched.  <br /></td></tr>
+<tr class="separator:a2b11d05e122704ccfaa1ca058de95def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fd0d7d0504682f7fd0b261eb3d692ec" id="r_a7fd0d7d0504682f7fd0b261eb3d692ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Desktop.html#a7fd0d7d0504682f7fd0b261eb3d692ec">on_app_finish</a> (int code, QProcess::ExitStatus status)</td></tr>
+<tr class="memdesc:a7fd0d7d0504682f7fd0b261eb3d692ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after the app is finished.  <br /></td></tr>
+<tr class="separator:a7fd0d7d0504682f7fd0b261eb3d692ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
@@ -145,8 +145,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ae3ba7c403d1a281284634505dddb3862" id="r_ae3ba7c403d1a281284634505dddb3862"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Desktop.html#ae3ba7c403d1a281284634505dddb3862">DockMargin</a> = 5</td></tr>
-<tr class="separator:ae3ba7c403d1a281284634505dddb3862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0880f8432df874fccf2174ba9de42f" id="r_a5b0880f8432df874fccf2174ba9de42f"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Desktop.html#a5b0880f8432df874fccf2174ba9de42f">DOCK_MARGIN</a> = 5</td></tr>
+<tr class="separator:a5b0880f8432df874fccf2174ba9de42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classtde_1_1widgets_1_1Desktop.html" title="Desktop widget, which is the root of UI.">Desktop</a> widget, which is the root of UI. </p>
@@ -257,8 +257,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab116fa6a137e54b2a4ab00fb2f13a373" name="ab116fa6a137e54b2a4ab00fb2f13a373"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab116fa6a137e54b2a4ab00fb2f13a373">&#9670;&#160;</a></span>on_finish_app</h2>
+<a id="a7fd0d7d0504682f7fd0b261eb3d692ec" name="a7fd0d7d0504682f7fd0b261eb3d692ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fd0d7d0504682f7fd0b261eb3d692ec">&#9670;&#160;</a></span>on_app_finish</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,7 +267,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void tde::widgets::Desktop::on_finish_app </td>
+          <td class="memname">void tde::widgets::Desktop::on_app_finish </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>code</em>, </td>
@@ -302,8 +302,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a91fad4e86063e62a6a9bd059432cefce" name="a91fad4e86063e62a6a9bd059432cefce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91fad4e86063e62a6a9bd059432cefce">&#9670;&#160;</a></span>on_start_app</h2>
+<a id="a2b11d05e122704ccfaa1ca058de95def" name="a2b11d05e122704ccfaa1ca058de95def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b11d05e122704ccfaa1ca058de95def">&#9670;&#160;</a></span>on_app_start</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,7 +312,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void tde::widgets::Desktop::on_start_app </td>
+          <td class="memname">void tde::widgets::Desktop::on_app_start </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;&#160;</td>
           <td class="paramname"><em>app</em></td><td>)</td>
@@ -371,8 +371,8 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ae3ba7c403d1a281284634505dddb3862" name="ae3ba7c403d1a281284634505dddb3862"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3ba7c403d1a281284634505dddb3862">&#9670;&#160;</a></span>DockMargin</h2>
+<a id="a5b0880f8432df874fccf2174ba9de42f" name="a5b0880f8432df874fccf2174ba9de42f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b0880f8432df874fccf2174ba9de42f">&#9670;&#160;</a></span>DOCK_MARGIN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -381,7 +381,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int tde::widgets::Desktop::DockMargin = 5</td>
+          <td class="memname">constexpr int tde::widgets::Desktop::DOCK_MARGIN = 5</td>
         </tr>
       </table>
   </td>

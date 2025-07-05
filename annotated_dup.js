@@ -9,6 +9,10 @@ var annotated_dup =
       [ "startmenu", null, [
         [ "ToolInfo", "structtde_1_1startmenu_1_1ToolInfo.html", null ]
       ] ],
+      [ "sys", null, [
+        [ "CPUInfo", "structtde_1_1sys_1_1CPUInfo.html", null ],
+        [ "MemoryInfo", "structtde_1_1sys_1_1MemoryInfo.html", null ]
+      ] ],
       [ "widgets", null, [
         [ "startmenu", null, [
           [ "SysPanel", "classtde_1_1widgets_1_1startmenu_1_1SysPanel.html", "classtde_1_1widgets_1_1startmenu_1_1SysPanel" ],
