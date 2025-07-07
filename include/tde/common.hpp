@@ -15,6 +15,8 @@
 
 #define _TDE_FORWARD(x) x
 #define _TDE_CONCAT(a, b) a##b
+#define _TDE_STR_IMPL(x) #x
+#define _TDE_STR(x) _TDE_STR_IMPL(x)
 
 #if defined _WIN32 || defined __CYGWIN__
 #ifdef BUILDING_TDE
@@ -36,6 +38,20 @@
 #define TDE_INLINE inline __attribute__((always_inline))
 #endif
 
+#if defined __clang__
+#define TDE_CXX_NAME "Clang "
+#define TDE_CXX_VERSION __clang_version__
+#elif defined __GNUC__
+#define TDE_CXX_NAME "GCC "
+#define TDE_CXX_VERSION                                                        \
+  _TDE_STR(__GNUC__)                                                           \
+  "." _TDE_STR(__GNUC_MINOR__) "." _TDE_STR(__GNUC_PATCHLEVEL__)
+#else
+#defube TDE_CXX_NAME "unknown "
+#define TDE_CXX_VERSION "unknown"
+#endif
+
+// NOLINTNEXTLINE
 #define _tde_defer_impl(expr, cb_name, ph_name, line)                          \
   auto _TDE_CONCAT(cb_name, line) = [&](int*) { expr; };                       \
   std::unique_ptr<int, decltype(_TDE_CONCAT(cb_name, line))> _TDE_CONCAT(      \
@@ -44,5 +60,6 @@
     nullptr, _TDE_CONCAT(cb_name, line)                                        \
   }
 
+// NOLINTNEXTLINE
 #define tde_defer(expr)                                                        \
   _tde_defer_impl(expr, _tde_defer_cb_, _tde_defer_ph_, __LINE__)

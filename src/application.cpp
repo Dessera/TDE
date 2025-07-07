@@ -5,15 +5,16 @@
 
 #include "tde/application.hpp"
 #include "tde/widgets/desktop.hpp"
+#include "tde/widgets/style.hpp"
 
 namespace tde {
 
 Application::Application(int argc, char** argv)
   : QApplication{ argc, argv }
 {
-  _init_styles();
-  _init();
+  setStyleSheet(widgets::StyleFactory::generate_qss(_settings));
 
+  _init();
   _desktop.show();
 }
 
@@ -47,37 +48,6 @@ Application::_init()
 
   // manually fetch apps on startup
   _app_fetcher.refresh();
-}
-
-void
-Application::_init_styles()
-{
-  auto builtin_file = QFile{ config::APP_STYLESHEET };
-  if (!builtin_file.open(QFile::ReadOnly)) {
-    qWarning()
-      << "Failed to open application stylesheet, no stylesheet applied:"
-      << builtin_file.errorString();
-    return;
-  }
-  auto style_str = QString::fromUtf8(builtin_file.readAll());
-
-  qInfo() << "Loaded application stylesheet from:" << config::APP_STYLESHEET;
-
-  auto file = QFile{ _settings.desktop_qss_path() };
-  if (file.exists()) {
-    if (!file.open(QFile::ReadOnly)) {
-      qWarning()
-        << "Failed to open user stylesheet, only default stylesheet applied:"
-        << file.errorString();
-    } else {
-      style_str += '\n';
-      style_str += QString::fromUtf8(file.readAll());
-    }
-
-    qInfo() << "Loaded user stylesheet from:" << _settings.desktop_qss_path();
-  }
-
-  setStyleSheet(style_str);
 }
 
 }

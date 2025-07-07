@@ -3,8 +3,6 @@
   background-color: #68A7D0;
 }
 
-.tde-app-list {}
-
 .tde-dock {
   background-color: #282D3D;
   border-radius: 5px;
@@ -14,27 +12,17 @@
   background-color: #2B2C3C;
 }
 
-.tde-app-item,
-.tde-tray-startmenu-button,
-.tde-startmenu-tool-button {
+.tde-app-item {
   padding: 0px;
   border-style: flat;
 }
 
-.tde-app-item:hover,
-.tde-tray-startmenu-button:hover,
-.tde-startmenu-tool-button:hover {
+.tde-app-item:hover {
   background-color: #B49CA6;
 }
 
-.tde-app-item:pressed,
-.tde-tray-startmenu-button:pressed,
-.tde-startmenu-tool-button:pressed {
+.tde-app-item:pressed {
   background-color: #9E858E;
-}
-
-.tde-startmenu {
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .tde-radio-selector-button {
@@ -49,4 +37,9 @@
 
 .tde-radio-selector-button::indicator:checked {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tde-title {
+  font-size: 16px;
+  font-weight: bold;
 }

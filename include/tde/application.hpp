@@ -16,7 +16,6 @@
 #include "tde/app/fetcher.hpp"
 #include "tde/app/launcher.hpp"
 #include "tde/common.hpp"
-#include "tde/config.hpp"
 #include "tde/settings.hpp"
 #include "tde/widgets/desktop.hpp"
 
@@ -31,7 +30,7 @@ class TDE_PUBLIC Application : public QApplication
   Q_OBJECT
 
 private:
-  DesktopSettings _settings{ config::APP_ORGANIZATION, config::APP_NAME };
+  DesktopSettings _settings;
 
   app::Fetcher _app_fetcher{ _settings.desktop_app_path() };
   app::Launcher _app_launcher;
@@ -54,12 +53,6 @@ private:
    * @brief Initialize application.
    */
   void _init();
-
-  /**
-   * @brief Initialize application styles, if `desktop/qss_path` is set in
-   * settings, load it as extra stylesheet.
-   */
-  void _init_styles();
 };
 
 }

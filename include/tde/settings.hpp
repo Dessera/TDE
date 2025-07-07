@@ -15,6 +15,7 @@
 #include <qstring.h>
 
 #include "tde/common.hpp"
+#include "tde/config.hpp"
 
 namespace tde {
 
@@ -30,17 +31,13 @@ public:
   /**
    * @brief Construct a new Desktop Settings object.
    *
-   * @param organization Application organization.
-   * @param application Application name.
    * @param parent Parent object.
    */
-  DesktopSettings(const QString& organization,
-                  const QString& application,
-                  QObject* parent = nullptr)
+  DesktopSettings(QObject* parent = nullptr)
     : QSettings{ QSettings::IniFormat,
                  QSettings::UserScope,
-                 organization,
-                 application,
+                 config::APP_ORGANIZATION,
+                 config::APP_NAME,
                  parent }
   {
   }

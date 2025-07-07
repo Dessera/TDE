@@ -1,8 +1,8 @@
-#include <qicon.h>
 #include <qsize.h>
 #include <qwidget.h>
 
 #include "tde/widgets/appitem.hpp"
+#include "tde/widgets/icon.hpp"
 
 namespace tde::widgets {
 
@@ -10,7 +10,7 @@ AppItem::AppItem(const app::Info& app, QWidget* parent)
   : QToolButton{ parent }
   , _exec(app.exec)
 {
-  setIcon(QIcon{ app.icon });
+  setIcon(IconFactory::icon(app.icon));
   setIconSize(QSize(ICON_SIZE, ICON_SIZE));
 
   setText(app.name);
