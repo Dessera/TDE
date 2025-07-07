@@ -1,6 +1,6 @@
 var classtde_1_1DesktopSettings =
 [
-    [ "DesktopSettings", "classtde_1_1DesktopSettings.html#aac290fb9b44657365995b7d811e411eb", null ],
+    [ "DesktopSettings", "classtde_1_1DesktopSettings.html#a6e07e7a99134c71509fef2ba1cc18451", null ],
     [ "desktop_app_path", "classtde_1_1DesktopSettings.html#ab59353e79a719a75f01c89a6be7dd0ef", null ],
     [ "desktop_grid_x", "classtde_1_1DesktopSettings.html#ac47c10bbd0da3b3e25a62ccd076552d4", null ],
     [ "desktop_grid_y", "classtde_1_1DesktopSettings.html#a843c12fad394244c9d7a22f9bcfa53c0", null ],

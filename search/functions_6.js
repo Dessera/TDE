@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['is_5ffull_0',['is_full',['../classtde_1_1widgets_1_1AppListCard.html#a5d966a967e8727ef48ff7c7b8dcf6386',1,'tde::widgets::AppListCard']]]
+  ['generate_5fqss_0',['generate_qss',['../classtde_1_1widgets_1_1StyleFactory.html#a1c2497d269c91cb256baba62c7c6d704',1,'tde::widgets::StyleFactory::generate_qss(const QStringList &amp;files={})'],['../classtde_1_1widgets_1_1StyleFactory.html#a908b81b0d6885ceb90723a6706669b67',1,'tde::widgets::StyleFactory::generate_qss(const DesktopSettings &amp;settings)']]]
 ];

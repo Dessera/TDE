@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['query_5fcpu_5finfo_0',['query_cpu_info',['../cpu_8hpp.html#a7b6c5366ef983969ebba60d56847df56',1,'tde::sys']]],
-  ['query_5fmemory_5finfo_1',['query_memory_info',['../memory_8hpp.html#a4ebd4fee7de5f3d444edda90a2affa3e',1,'tde::sys']]]
+  ['pixmap_0',['pixmap',['../classtde_1_1widgets_1_1IconFactory.html#a5c5ccba389790364649bab36431fd169',1,'tde::widgets::IconFactory::pixmap(IconType type)'],['../classtde_1_1widgets_1_1IconFactory.html#add4c7b6eac63f9a2d576977a36a7a946',1,'tde::widgets::IconFactory::pixmap(IconType type, const QSize &amp;size)'],['../classtde_1_1widgets_1_1IconFactory.html#a30ee09db482a59e028e6792d530b94f7',1,'tde::widgets::IconFactory::pixmap(const QString &amp;path)']]]
 ];
