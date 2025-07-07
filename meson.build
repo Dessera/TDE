@@ -26,18 +26,6 @@ tde_dep = declare_dependency(include_directories: lib_inc, link_with: lib, depen
 
 subdir('builtin')
 
-src = files('src/main.cpp')
-deps = [tde_dep]
-
-exe = executable(
-  'tde',
-  src,
-  dependencies: deps,
-  install: true,
-)
-
-test('tde', exe)
-
 pkg_mod = import('pkgconfig')
 pkg_mod.generate(
   name: 'tde',
