@@ -12,10 +12,6 @@
   background-color: #2B2C3C;
 }
 
-.tde-app-decoration {
-  background-color: #292C3C;
-}
-
 .tde-app-button {
   padding: 0px;
   border-style: flat;
@@ -28,6 +24,35 @@
 .tde-app-button:pressed {
   background-color: #9E858E;
 }
+
+/* TDE Application Decoration */
+.tde-app-decoration {
+  background-color: #292C3C;
+}
+
+.tde-app-decoration-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tde-app-decoration-button {
+  padding: 0px;
+  border-style: flat;
+  qproperty-iconSize: 20px;
+}
+
+.tde-app-decoration-close-button {
+  qproperty-icon: url(:/tde/icons/window-close.svg);
+}
+
+.tde-app-decoration-close-button:hover {
+  background-color: #E78284;
+}
+
+.tde-app-decoration-close-button:pressed {
+  background-color: #C27275;
+}
+/* END TDE Application Decoration */
 
 .tde-radio-selector-button {
   outline: none;

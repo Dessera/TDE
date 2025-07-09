@@ -6,7 +6,8 @@ WIP.
 
 ## Todos
 
-- [ ] Refactor (support more compiler and `cpp_std`)
+- [x] Refactor (support more compiler and `cpp_std`)
+- [ ] Refactor style sheet
 - [ ] Notification
 - [ ] Builtin apps
   - [ ] Filesystem browser

@@ -1,5 +1,7 @@
+#include <qapplication.h>
 #include <qboxlayout.h>
 #include <qlabel.h>
+#include <qtoolbutton.h>
 
 #include "tde/widgets/app/decoration.hpp"
 
@@ -14,9 +16,27 @@ Decoration::Decoration(const QString& app_name, QWidget* parent)
   auto* layout = new QHBoxLayout{ this };
   setLayout(layout);
 
-  layout->addWidget(new QLabel{ app_name, this });
+  auto* app_name_label = new QLabel{ app_name, this };
+  app_name_label->setProperty("class", "tde-app-decoration-text");
+  layout->addWidget(app_name_label);
+
   layout->addStretch(1);
-  layout->addWidget(new QLabel{ "X", this });
+
+  auto* close_btn = new QToolButton{ this };
+  close_btn->setProperty(
+    "class", "tde-app-decoration-button tde-app-decoration-close-button");
+  layout->addWidget(close_btn);
+
+  connect(close_btn,
+          &QToolButton::clicked,
+          this,
+          &Decoration::_on_close_button_clicked);
+}
+
+void
+Decoration::_on_close_button_clicked()
+{
+  QApplication::quit();
 }
 
 }

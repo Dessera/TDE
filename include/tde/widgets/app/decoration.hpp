@@ -36,6 +36,13 @@ public:
   Decoration(const QString& app_name, QWidget* parent = nullptr);
 
   ~Decoration() override = default;
+
+private slots:
+  /**
+   * @brief Handles the close button click event (quit).
+   *
+   */
+  void _on_close_button_clicked();
 };
 
 }
