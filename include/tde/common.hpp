@@ -47,8 +47,8 @@
   _TDE_STR(__GNUC__)                                                           \
   "." _TDE_STR(__GNUC_MINOR__) "." _TDE_STR(__GNUC_PATCHLEVEL__)
 #else
-#defube TDE_CXX_NAME "unknown "
-#define TDE_CXX_VERSION "unknown"
+#defube TDE_CXX_NAME "Unknown "
+#define TDE_CXX_VERSION ""
 #endif
 
 // NOLINTNEXTLINE

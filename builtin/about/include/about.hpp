@@ -23,16 +23,13 @@ class AboutWidget : public QWidget
 {
   Q_OBJECT
 
-private:
-  tde::DesktopSettings _settings;
-
 public:
   /**
    * @brief Construct a new About Widget object.
    *
    * @param parent Parent object.
    */
-  AboutWidget(QWidget* parent = nullptr);
+  AboutWidget(const tde::DesktopSettings& settings, QWidget* parent = nullptr);
 
   ~AboutWidget() override = default;
 

@@ -34,6 +34,7 @@ public:
    * @param parent Parent widget.
    */
   Tray(const DesktopSettings& settings, QWidget* parent = nullptr);
+
   ~Tray() override = default;
 
 private:

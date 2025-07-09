@@ -1,7 +1,7 @@
 /**
- * @file appitem.hpp
+ * @file appbutton.hpp
  * @author Dessera (dessera@qq.com)
- * @brief Application item widget.
+ * @brief Application launcher button.
  * @version 0.1.0
  * @date 2025-06-02
  *
@@ -19,29 +19,25 @@
 namespace tde::widgets {
 
 /**
- * @brief Application item widget.
+ * @brief Application launcher button.
  *
  */
-class TDE_PUBLIC AppItem : public QToolButton
+class TDE_PUBLIC AppButton : public QToolButton
 {
   Q_OBJECT
-
-public:
-  constexpr static int ICON_SIZE =
-    48; /**< Default icon size, which is immutable now. */
 
 private:
   QString _exec;
 
 public:
   /**
-   * @brief Construct a new App Item object.
+   * @brief Construct a new App Button object
    *
    * @param app App info.
    * @param parent Parent widget.
    */
-  AppItem(const app::Info& app, QWidget* parent = nullptr);
-  ~AppItem() override = default;
+  AppButton(const app::Info& app, QWidget* parent = nullptr);
+  ~AppButton() override = default;
 
   /**
    * @brief Get the exec command.
@@ -70,7 +66,7 @@ private slots:
    * @brief Emits request_launch_app signal when the button is released.
    *
    */
-  void _on_released();
+  void _on_clicked();
 };
 
 }

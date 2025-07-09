@@ -1,7 +1,7 @@
 #include <qboxlayout.h>
 #include <qwidget.h>
 
-#include "tde/widgets/applist.hpp"
+#include "tde/widgets/appcard.hpp"
 #include "tde/widgets/desktop.hpp"
 #include "tde/widgets/dock.hpp"
 #include "tde/widgets/tray.hpp"
@@ -33,12 +33,17 @@ Desktop::_init_ui(const DesktopSettings& settings)
 
   layout->addWidget(new Tray{ settings, this });
 
-  auto* app_list = new AppList{ settings, this };
+  auto* app_list = new AppCardList{
+    QSize{ settings.desktop_grid_x(), settings.desktop_grid_y() }, this
+  };
   layout->addWidget(app_list, 1);
 
-  connect(this, &Desktop::apps_changed, app_list, &AppList::on_apps_changed);
   connect(
-    app_list, &AppList::request_launch_app, this, &Desktop::request_launch_app);
+    this, &Desktop::apps_changed, app_list, &AppCardList::on_apps_changed);
+  connect(app_list,
+          &AppCardList::request_launch_app,
+          this,
+          &Desktop::request_launch_app);
 
   auto* dock = new Dock{ this };
   layout->addWidget(dock, 0, Qt::AlignHCenter | Qt::AlignBottom);

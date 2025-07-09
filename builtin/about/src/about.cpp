@@ -7,14 +7,12 @@
 #include <tde/widgets/style.hpp>
 
 #include "about.hpp"
+#include "tde/settings.hpp"
 
-AboutWidget::AboutWidget(QWidget* parent)
+AboutWidget::AboutWidget(const tde::DesktopSettings& /*settings*/,
+                         QWidget* parent)
   : QWidget{ parent }
 {
-  using tde::widgets::StyleFactory;
-
-  setStyleSheet(StyleFactory::generate_qss(_settings));
-
   auto* layout = new QVBoxLayout{ this };
   layout->setContentsMargins(10, 10, 10, 10);
   layout->setSpacing(10);
@@ -69,7 +67,7 @@ AboutHeaderWidget::AboutHeaderWidget(QWidget* parent)
   layout->addWidget(icon);
 
   layout->addWidget(new QLabel{
-    QString{ "%1 (version %2)" }.arg(APP_NAME_CAPITALIZED).arg(APP_VERSION),
+    QString{ "%1 (version %2)" }.arg(TDE_NAME_CAPITALIZED).arg(TDE_VERSION),
     this });
 
   layout->addStretch(1);

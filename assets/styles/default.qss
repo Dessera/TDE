@@ -12,16 +12,20 @@
   background-color: #2B2C3C;
 }
 
-.tde-app-item {
+.tde-app-decoration {
+  background-color: #292C3C;
+}
+
+.tde-app-button {
   padding: 0px;
   border-style: flat;
 }
 
-.tde-app-item:hover {
+.tde-app-button:hover {
   background-color: #B49CA6;
 }
 
-.tde-app-item:pressed {
+.tde-app-button:pressed {
   background-color: #9E858E;
 }
 

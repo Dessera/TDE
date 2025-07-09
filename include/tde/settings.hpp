@@ -36,8 +36,8 @@ public:
   DesktopSettings(QObject* parent = nullptr)
     : QSettings{ QSettings::IniFormat,
                  QSettings::UserScope,
-                 config::APP_ORGANIZATION,
-                 config::APP_NAME,
+                 config::TDE_ORGANIZATION,
+                 config::TDE_NAME,
                  parent }
   {
   }

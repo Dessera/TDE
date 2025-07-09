@@ -1,7 +1,7 @@
 /**
- * @file applist.hpp
+ * @file appcard.hpp
  * @author Dessera (dessera@qq.com)
- * @brief Application list widget.
+ * @brief Application card.
  * @version 0.1.0
  * @date 2025-06-02
  *
@@ -17,7 +17,6 @@
 
 #include "tde/app/info.hpp"
 #include "tde/common.hpp"
-#include "tde/settings.hpp"
 #include "tde/widgets/radioselector.hpp"
 
 namespace tde::widgets {
@@ -26,7 +25,7 @@ namespace tde::widgets {
  * @brief Application list card.
  *
  */
-class TDE_PUBLIC AppListCard : public QWidget
+class TDE_PUBLIC AppCard : public QWidget
 {
   Q_OBJECT
 
@@ -35,13 +34,14 @@ private:
 
 public:
   /**
-   * @brief Construct a new App List Card object.
+   * @brief Construct a new App Card object.
    *
    * @param grid_size Size of the app grid.
-   * @param parent Parent widget
+   * @param parent Parent widget.
    */
-  AppListCard(const QSize& grid_size, QWidget* parent = nullptr);
-  ~AppListCard() override = default;
+  AppCard(const QSize& grid_size, QWidget* parent = nullptr);
+
+  ~AppCard() override = default;
 
   /**
    * @brief Adds an app to the card.
@@ -87,42 +87,31 @@ signals:
 };
 
 /**
- * @brief Application list widget, which is a group of AppListCard.
+ * @brief Application list widget, which is a group of AppCard.
  *
  */
-class TDE_PUBLIC AppList : public QWidget
+class TDE_PUBLIC AppCardList : public QWidget
 {
   Q_OBJECT
 
 private:
   QSize _grid_size;
-  QList<AppListCard*> _cards;
+  QList<AppCard*> _cards;
   QStackedWidget* _stack;
-  RadioSelector* _selector;
+  RadioSelector* _sel;
 
 public:
   /**
-   * @brief Construct a new App List object.
+   * @brief Construct a new App Card List object.
    *
-   * @param settings Desktop settings.
+   * @param grid_size Size of the app grid.
    * @param parent Parent widget.
    */
-  AppList(const DesktopSettings& settings, QWidget* parent = nullptr);
-  ~AppList() override = default;
+  AppCardList(const QSize& grid_size, QWidget* parent = nullptr);
+
+  ~AppCardList() override = default;
 
 private:
-  /**
-   * @brief Initializes the widget.
-   *
-   */
-  void _init();
-
-  /**
-   * @brief Initializes the UI components.
-   *
-   */
-  void _init_ui();
-
   /**
    * @brief Creates a new card.
    *
@@ -157,7 +146,7 @@ private slots:
    *
    * @param index Index of the selected card.
    */
-  void on_selected(int index);
+  void _on_selected(int index);
 };
 
 }

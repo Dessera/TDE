@@ -39,6 +39,7 @@ public:
    * @param parent Parent widget.
    */
   Desktop(const DesktopSettings& settings, QWidget* parent = nullptr);
+
   ~Desktop() override = default;
 
 private:

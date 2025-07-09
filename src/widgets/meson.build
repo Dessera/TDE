@@ -1,7 +1,8 @@
 lib_src += files(
+  'app/decoration.cpp',
   'tray/clock.cpp',
-  'appitem.cpp',
-  'applist.cpp',
+  'appbutton.cpp',
+  'appcard.cpp',
   'desktop.cpp',
   'dock.cpp',
   'icon.cpp',

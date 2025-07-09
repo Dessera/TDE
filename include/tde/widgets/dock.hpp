@@ -16,7 +16,7 @@
 
 #include "tde/app/info.hpp"
 #include "tde/common.hpp"
-#include "tde/widgets/appitem.hpp"
+#include "tde/widgets/appbutton.hpp"
 
 namespace tde::widgets {
 
@@ -29,7 +29,7 @@ class TDE_PUBLIC Dock : public QWidget
   Q_OBJECT
 
 private:
-  QList<AppItem*> _dock_apps;
+  QList<AppButton*> _dock_apps;
 
 public:
   /**
@@ -38,6 +38,7 @@ public:
    * @param parent Parent widget.
    */
   Dock(QWidget* parent = nullptr);
+
   ~Dock() override = default;
 
 private:
