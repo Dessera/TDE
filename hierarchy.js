@@ -18,17 +18,19 @@ var hierarchy =
       [ "tde::DesktopSettings", "classtde_1_1DesktopSettings.html", null ]
     ] ],
     [ "QToolButton", null, [
-      [ "tde::widgets::AppItem", "classtde_1_1widgets_1_1AppItem.html", null ]
+      [ "tde::widgets::AppButton", "classtde_1_1widgets_1_1AppButton.html", null ]
     ] ],
     [ "QWidget", null, [
       [ "AboutHeaderWidget", "classAboutHeaderWidget.html", null ],
       [ "AboutWidget", "classAboutWidget.html", null ],
-      [ "tde::widgets::AppList", "classtde_1_1widgets_1_1AppList.html", null ],
-      [ "tde::widgets::AppListCard", "classtde_1_1widgets_1_1AppListCard.html", null ],
+      [ "tde::widgets::AppCard", "classtde_1_1widgets_1_1AppCard.html", null ],
+      [ "tde::widgets::AppCardList", "classtde_1_1widgets_1_1AppCardList.html", null ],
       [ "tde::widgets::Desktop", "classtde_1_1widgets_1_1Desktop.html", null ],
       [ "tde::widgets::Dock", "classtde_1_1widgets_1_1Dock.html", null ],
       [ "tde::widgets::RadioSelector", "classtde_1_1widgets_1_1RadioSelector.html", null ],
-      [ "tde::widgets::Tray", "classtde_1_1widgets_1_1Tray.html", null ]
+      [ "tde::widgets::Tray", "classtde_1_1widgets_1_1Tray.html", null ],
+      [ "tde::widgets::app::Container", "classtde_1_1widgets_1_1app_1_1Container.html", null ],
+      [ "tde::widgets::app::Decoration", "classtde_1_1widgets_1_1app_1_1Decoration.html", null ]
     ] ],
     [ "tde::widgets::StyleFactory", "classtde_1_1widgets_1_1StyleFactory.html", null ]
 ];

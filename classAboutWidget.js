@@ -1,4 +1,4 @@
 var classAboutWidget =
 [
-    [ "AboutWidget", "classAboutWidget.html#a2f7bd5b188df35502a7dd376b7756274", null ]
+    [ "AboutWidget", "classAboutWidget.html#a3d012d7cc13bbf2a2df82fa00b15247a", null ]
 ];

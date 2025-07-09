@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['icon_5fmap_0',['ICON_MAP',['../classtde_1_1widgets_1_1IconFactory.html#a476fc30b90c1913caebb9cb2554c2e9d',1,'tde::widgets::IconFactory']]],
-  ['icon_5fsize_1',['ICON_SIZE',['../classtde_1_1widgets_1_1AppItem.html#a0cbe2866eea735e64acd90715818701c',1,'tde::widgets::AppItem']]]
+  ['sys_5fcpu_5ffile_0',['SYS_CPU_FILE',['../config_8hpp.html#a12a64943cc6e927a3c1b099d8a35b4f4',1,'tde::config']]],
+  ['sys_5fmemory_5ffile_1',['SYS_MEMORY_FILE',['../config_8hpp.html#aba7576c7010bddabb7486023d78f4baa',1,'tde::config']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TDE: tde::widgets::AppItem Class Reference</title>
+<title>TDE: tde::widgets::AppButton Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classtde_1_1widgets_1_1AppItem.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('classtde_1_1widgets_1_1AppButton.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -98,57 +98,51 @@ $(document).ready(function(){initNavTree('classtde_1_1widgets_1_1AppItem.html','
   <div class="summary">
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="classtde_1_1widgets_1_1AppItem-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">tde::widgets::AppItem Class Reference</div></div>
+<a href="classtde_1_1widgets_1_1AppButton-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">tde::widgets::AppButton Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> item widget.  
- <a href="classtde_1_1widgets_1_1AppItem.html#details">More...</a></p>
+<p><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> launcher button.  
+ <a href="classtde_1_1widgets_1_1AppButton.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="appitem_8hpp_source.html">appitem.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="appbutton_8hpp_source.html">appbutton.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for tde::widgets::AppItem:</div>
+Inheritance diagram for tde::widgets::AppButton:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classtde_1_1widgets_1_1AppItem.png" alt=""/>
+  <img src="classtde_1_1widgets_1_1AppButton.png" alt=""/>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:aff4c96f744b2f95d9b7264bfd55709f6" id="r_aff4c96f744b2f95d9b7264bfd55709f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppItem.html#aff4c96f744b2f95d9b7264bfd55709f6">request_launch_app</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;app)</td></tr>
-<tr class="memdesc:aff4c96f744b2f95d9b7264bfd55709f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the app is requested to be launched.  <br /></td></tr>
-<tr class="separator:aff4c96f744b2f95d9b7264bfd55709f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55e2326187e9af6323efbaeee36e401" id="r_ab55e2326187e9af6323efbaeee36e401"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppButton.html#ab55e2326187e9af6323efbaeee36e401">request_launch_app</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;app)</td></tr>
+<tr class="memdesc:ab55e2326187e9af6323efbaeee36e401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the app is requested to be launched.  <br /></td></tr>
+<tr class="separator:ab55e2326187e9af6323efbaeee36e401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abff8a83962bf5ace9b6d44449c995312" id="r_abff8a83962bf5ace9b6d44449c995312"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppItem.html#abff8a83962bf5ace9b6d44449c995312">AppItem</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;app, QWidget *parent=nullptr)</td></tr>
-<tr class="memdesc:abff8a83962bf5ace9b6d44449c995312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new App Item object.  <br /></td></tr>
-<tr class="separator:abff8a83962bf5ace9b6d44449c995312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a030ea1100715ad5ccf6b286afd6d7ec8" id="r_a030ea1100715ad5ccf6b286afd6d7ec8"><td class="memItemLeft" align="right" valign="top">TDE_INLINE auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppItem.html#a030ea1100715ad5ccf6b286afd6d7ec8">exec</a> () const</td></tr>
-<tr class="memdesc:a030ea1100715ad5ccf6b286afd6d7ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the exec command.  <br /></td></tr>
-<tr class="separator:a030ea1100715ad5ccf6b286afd6d7ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e38e98c3c1882236a67ef6de56433cc" id="r_a8e38e98c3c1882236a67ef6de56433cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppItem.html#a8e38e98c3c1882236a67ef6de56433cc">to_app_info</a> () const</td></tr>
-<tr class="memdesc:a8e38e98c3c1882236a67ef6de56433cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the app item to app info.  <br /></td></tr>
-<tr class="separator:a8e38e98c3c1882236a67ef6de56433cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a0cbe2866eea735e64acd90715818701c" id="r_a0cbe2866eea735e64acd90715818701c"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppItem.html#a0cbe2866eea735e64acd90715818701c">ICON_SIZE</a></td></tr>
-<tr class="separator:a0cbe2866eea735e64acd90715818701c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af237ecada275992a5af830f1f5067cb1" id="r_af237ecada275992a5af830f1f5067cb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppButton.html#af237ecada275992a5af830f1f5067cb1">AppButton</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;app, QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:af237ecada275992a5af830f1f5067cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new App Button object.  <br /></td></tr>
+<tr class="separator:af237ecada275992a5af830f1f5067cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d3303771c9381235a67606fff20c94e" id="r_a3d3303771c9381235a67606fff20c94e"><td class="memItemLeft" align="right" valign="top">TDE_INLINE auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppButton.html#a3d3303771c9381235a67606fff20c94e">exec</a> () const</td></tr>
+<tr class="memdesc:a3d3303771c9381235a67606fff20c94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the exec command.  <br /></td></tr>
+<tr class="separator:a3d3303771c9381235a67606fff20c94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87705dac48e8928f9897eed9258c702a" id="r_a87705dac48e8928f9897eed9258c702a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppButton.html#a87705dac48e8928f9897eed9258c702a">to_app_info</a> () const</td></tr>
+<tr class="memdesc:a87705dac48e8928f9897eed9258c702a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the app item to app info.  <br /></td></tr>
+<tr class="separator:a87705dac48e8928f9897eed9258c702a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> item widget. </p>
+<div class="textblock"><p><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> launcher button. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="abff8a83962bf5ace9b6d44449c995312" name="abff8a83962bf5ace9b6d44449c995312"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abff8a83962bf5ace9b6d44449c995312">&#9670;&#160;</a></span>AppItem()</h2>
+<a id="af237ecada275992a5af830f1f5067cb1" name="af237ecada275992a5af830f1f5067cb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af237ecada275992a5af830f1f5067cb1">&#9670;&#160;</a></span>AppButton()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">tde::widgets::AppItem::AppItem </td>
+          <td class="memname">tde::widgets::AppButton::AppButton </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;&#160;</td>
           <td class="paramname"><em>app</em>, </td>
@@ -167,7 +161,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new App Item object. </p>
+<p>Construct a new App Button object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">app</td><td>App info. </td></tr>
@@ -179,8 +173,8 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a030ea1100715ad5ccf6b286afd6d7ec8" name="a030ea1100715ad5ccf6b286afd6d7ec8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a030ea1100715ad5ccf6b286afd6d7ec8">&#9670;&#160;</a></span>exec()</h2>
+<a id="a3d3303771c9381235a67606fff20c94e" name="a3d3303771c9381235a67606fff20c94e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d3303771c9381235a67606fff20c94e">&#9670;&#160;</a></span>exec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +183,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TDE_INLINE auto &amp; tde::widgets::AppItem::exec </td>
+          <td class="memname">TDE_INLINE auto &amp; tde::widgets::AppButton::exec </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -207,8 +201,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aff4c96f744b2f95d9b7264bfd55709f6" name="aff4c96f744b2f95d9b7264bfd55709f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff4c96f744b2f95d9b7264bfd55709f6">&#9670;&#160;</a></span>request_launch_app</h2>
+<a id="ab55e2326187e9af6323efbaeee36e401" name="ab55e2326187e9af6323efbaeee36e401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab55e2326187e9af6323efbaeee36e401">&#9670;&#160;</a></span>request_launch_app</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,7 +211,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void tde::widgets::AppItem::request_launch_app </td>
+          <td class="memname">void tde::widgets::AppButton::request_launch_app </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;&#160;</td>
           <td class="paramname"><em>app</em></td><td>)</td>
@@ -241,14 +235,14 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8e38e98c3c1882236a67ef6de56433cc" name="a8e38e98c3c1882236a67ef6de56433cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e38e98c3c1882236a67ef6de56433cc">&#9670;&#160;</a></span>to_app_info()</h2>
+<a id="a87705dac48e8928f9897eed9258c702a" name="a87705dac48e8928f9897eed9258c702a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87705dac48e8928f9897eed9258c702a">&#9670;&#160;</a></span>to_app_info()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> tde::widgets::AppItem::to_app_info </td>
+          <td class="memname"><a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> tde::widgets::AppButton::to_app_info </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -261,42 +255,16 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a0cbe2866eea735e64acd90715818701c" name="a0cbe2866eea735e64acd90715818701c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cbe2866eea735e64acd90715818701c">&#9670;&#160;</a></span>ICON_SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr int tde::widgets::AppItem::ICON_SIZE</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">    48</div>
-</div><!-- fragment --><p>Default icon size, which is immutable now. </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/tde/widgets/<a class="el" href="appitem_8hpp_source.html">appitem.hpp</a></li>
-<li>src/widgets/<b>appitem.cpp</b></li>
+<li>include/tde/widgets/<a class="el" href="appbutton_8hpp_source.html">appbutton.hpp</a></li>
+<li>src/widgets/<b>appbutton.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>tde</b></li><li class="navelem"><b>widgets</b></li><li class="navelem"><a class="el" href="classtde_1_1widgets_1_1AppItem.html">AppItem</a></li>
+    <li class="navelem"><b>tde</b></li><li class="navelem"><b>widgets</b></li><li class="navelem"><a class="el" href="classtde_1_1widgets_1_1AppButton.html">AppButton</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

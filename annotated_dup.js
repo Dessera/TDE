@@ -11,12 +11,16 @@ var annotated_dup =
         [ "MemoryInfo", "structtde_1_1sys_1_1MemoryInfo.html", null ]
       ] ],
       [ "widgets", null, [
+        [ "app", null, [
+          [ "Container", "classtde_1_1widgets_1_1app_1_1Container.html", null ],
+          [ "Decoration", "classtde_1_1widgets_1_1app_1_1Decoration.html", "classtde_1_1widgets_1_1app_1_1Decoration" ]
+        ] ],
         [ "tray", null, [
           [ "Clock", "classtde_1_1widgets_1_1tray_1_1Clock.html", "classtde_1_1widgets_1_1tray_1_1Clock" ]
         ] ],
-        [ "AppItem", "classtde_1_1widgets_1_1AppItem.html", "classtde_1_1widgets_1_1AppItem" ],
-        [ "AppList", "classtde_1_1widgets_1_1AppList.html", "classtde_1_1widgets_1_1AppList" ],
-        [ "AppListCard", "classtde_1_1widgets_1_1AppListCard.html", "classtde_1_1widgets_1_1AppListCard" ],
+        [ "AppButton", "classtde_1_1widgets_1_1AppButton.html", "classtde_1_1widgets_1_1AppButton" ],
+        [ "AppCard", "classtde_1_1widgets_1_1AppCard.html", "classtde_1_1widgets_1_1AppCard" ],
+        [ "AppCardList", "classtde_1_1widgets_1_1AppCardList.html", "classtde_1_1widgets_1_1AppCardList" ],
         [ "Desktop", "classtde_1_1widgets_1_1Desktop.html", "classtde_1_1widgets_1_1Desktop" ],
         [ "Dock", "classtde_1_1widgets_1_1Dock.html", "classtde_1_1widgets_1_1Dock" ],
         [ "IconFactory", "classtde_1_1widgets_1_1IconFactory.html", null ],
