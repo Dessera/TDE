@@ -3,11 +3,11 @@
 #include <qtversion.h>
 #include <tde/common.hpp>
 #include <tde/config.hpp>
+#include <tde/settings.hpp>
 #include <tde/widgets/icon.hpp>
 #include <tde/widgets/style.hpp>
 
 #include "about.hpp"
-#include "tde/settings.hpp"
 
 AboutWidget::AboutWidget(const tde::DesktopSettings& /*settings*/,
                          QWidget* parent)

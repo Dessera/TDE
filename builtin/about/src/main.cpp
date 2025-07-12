@@ -1,7 +1,7 @@
 #include <qapplication.h>
+#include <tde/app/builder.hpp>
 
 #include "about.hpp"
-#include "tde/app/builder.hpp"
 
 int
 main(int argc, char** argv)

@@ -1,5 +1,5 @@
 /**
- * @file appcard.hpp
+ * @file card.hpp
  * @author Dessera (dessera@qq.com)
  * @brief Application card.
  * @version 0.1.0
@@ -19,15 +19,18 @@
 #include "tde/common.hpp"
 #include "tde/widgets/radioselector.hpp"
 
-namespace tde::widgets {
+namespace tde::widgets::app {
 
 /**
  * @brief Application list card.
  *
  */
-class TDE_PUBLIC AppCard : public QWidget
+class TDE_PUBLIC Card : public QWidget
 {
   Q_OBJECT
+
+public:
+  using AppInfo = tde::app::Info;
 
 private:
   QSize _grid_size;
@@ -39,16 +42,16 @@ public:
    * @param grid_size Size of the app grid.
    * @param parent Parent widget.
    */
-  AppCard(const QSize& grid_size, QWidget* parent = nullptr);
+  Card(const QSize& grid_size, QWidget* parent = nullptr);
 
-  ~AppCard() override = default;
+  ~Card() override = default;
 
   /**
    * @brief Adds an app to the card.
    *
    * @param app Application information.
    */
-  void add_app(const app::Info& app);
+  void add_app(const AppInfo& app);
 
   /**
    * @brief Returns the number of apps in the card.
@@ -83,20 +86,20 @@ signals:
    *
    * @param app Application info.
    */
-  void request_launch_app(const app::Info& app);
+  void request_launch_app(const AppInfo& app);
 };
 
 /**
  * @brief Application list widget, which is a group of AppCard.
  *
  */
-class TDE_PUBLIC AppCardList : public QWidget
+class TDE_PUBLIC CardList : public QWidget
 {
   Q_OBJECT
 
 private:
   QSize _grid_size;
-  QList<AppCard*> _cards;
+  QList<Card*> _cards;
   QStackedWidget* _stack;
   RadioSelector* _sel;
 
@@ -107,9 +110,9 @@ public:
    * @param grid_size Size of the app grid.
    * @param parent Parent widget.
    */
-  AppCardList(const QSize& grid_size, QWidget* parent = nullptr);
+  CardList(const QSize& grid_size, QWidget* parent = nullptr);
 
-  ~AppCardList() override = default;
+  ~CardList() override = default;
 
 private:
   /**
@@ -130,7 +133,7 @@ signals:
    *
    * @param app Application info.
    */
-  void request_launch_app(const app::Info& app);
+  void request_launch_app(const Card::AppInfo& app);
 
 public slots:
   /**
@@ -138,7 +141,7 @@ public slots:
    *
    * @param apps List of apps.
    */
-  void on_apps_changed(const QList<app::Info>& apps);
+  void on_apps_changed(const QList<Card::AppInfo>& apps);
 
 private slots:
   /**

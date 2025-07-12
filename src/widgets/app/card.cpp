@@ -4,14 +4,13 @@
 #include <qstackedwidget.h>
 #include <qwidget.h>
 
-#include "tde/app/info.hpp"
-#include "tde/widgets/appbutton.hpp"
-#include "tde/widgets/appcard.hpp"
+#include "tde/widgets/app/button.hpp"
+#include "tde/widgets/app/card.hpp"
 #include "tde/widgets/radioselector.hpp"
 
-namespace tde::widgets {
+namespace tde::widgets::app {
 
-AppCard::AppCard(const QSize& grid_size, QWidget* parent)
+Card::Card(const QSize& grid_size, QWidget* parent)
   : QWidget{ parent }
   , _grid_size{ grid_size }
 {
@@ -22,7 +21,7 @@ AppCard::AppCard(const QSize& grid_size, QWidget* parent)
 }
 
 void
-AppCard::add_app(const app::Info& app)
+Card::add_app(const AppInfo& app)
 {
   int curr = app_count();
   if (curr >= app_size()) {
@@ -32,16 +31,14 @@ AppCard::add_app(const app::Info& app)
 
   auto* layout = qobject_cast<QGridLayout*>(this->layout());
 
-  auto* app_btn = new AppButton{ app, this };
-  connect(app_btn,
-          &AppButton::request_launch_app,
-          this,
-          &AppCard::request_launch_app);
+  auto* app_btn = new Button{ app, this };
+  connect(
+    app_btn, &Button::request_launch_app, this, &Card::request_launch_app);
   layout->addWidget(
     app_btn, curr / _grid_size.width(), curr % _grid_size.width());
 }
 
-AppCardList::AppCardList(const QSize& grid_size, QWidget* parent)
+CardList::CardList(const QSize& grid_size, QWidget* parent)
   : QWidget{ parent }
   , _grid_size{ grid_size }
   , _stack{ new QStackedWidget{ this } }
@@ -55,22 +52,21 @@ AppCardList::AppCardList(const QSize& grid_size, QWidget* parent)
   layout->addWidget(_stack, 1);
   layout->addWidget(_sel, 0, Qt::AlignHCenter);
 
-  connect(_sel, &RadioSelector::selected, this, &AppCardList::_on_selected);
+  connect(_sel, &RadioSelector::selected, this, &CardList::_on_selected);
 }
 
 void
-AppCardList::_create_card()
+CardList::_create_card()
 {
-  auto* card = new AppCard{ _grid_size, this };
-  connect(
-    card, &AppCard::request_launch_app, this, &AppCardList::request_launch_app);
+  auto* card = new Card{ _grid_size, this };
+  connect(card, &Card::request_launch_app, this, &CardList::request_launch_app);
 
   _stack->addWidget(card);
   _cards.push_back(card);
 }
 
 void
-AppCardList::_clear_cards()
+CardList::_clear_cards()
 {
   for (auto* card : _cards) {
     _stack->removeWidget(card);
@@ -81,7 +77,7 @@ AppCardList::_clear_cards()
 }
 
 void
-AppCardList::on_apps_changed(const QList<app::Info>& apps)
+CardList::on_apps_changed(const QList<Card::AppInfo>& apps)
 {
   auto old_idx = std::max(_stack->currentIndex(), 0);
   int new_idx = 0;
@@ -90,11 +86,11 @@ AppCardList::on_apps_changed(const QList<app::Info>& apps)
 
   _create_card();
   for (const auto& app : apps) {
-    auto* cw = qobject_cast<AppCard*>(_stack->widget(new_idx));
+    auto* cw = qobject_cast<Card*>(_stack->widget(new_idx));
     if (cw->is_full()) {
       _create_card();
       new_idx++;
-      cw = qobject_cast<AppCard*>(_stack->widget(new_idx));
+      cw = qobject_cast<Card*>(_stack->widget(new_idx));
     }
     cw->add_app(app);
   }
@@ -107,7 +103,7 @@ AppCardList::on_apps_changed(const QList<app::Info>& apps)
 }
 
 void
-AppCardList::_on_selected(int index)
+CardList::_on_selected(int index)
 {
   if (index < 0 || index >= _stack->count()) {
     qWarning() << "Invalid index when selecting app list card:" << index;

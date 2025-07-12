@@ -30,6 +30,8 @@ class TDE_PUBLIC Desktop : public QWidget
   Q_OBJECT
 
 public:
+  using AppInfo = tde::app::Info;
+
   constexpr static int DOCK_MARGIN = 5; /**< Margin for dock widget. */
 
   /**
@@ -63,21 +65,21 @@ signals:
    *
    * @param apps List of apps.
    */
-  void apps_changed(const QList<app::Info>& apps);
+  void apps_changed(const QList<AppInfo>& apps);
 
   /**
    * @brief Emitted when dock apps changed.
    *
    * @param apps List of dock apps.
    */
-  void dock_apps_changed(const QList<app::Info>& apps);
+  void dock_apps_changed(const QList<AppInfo>& apps);
 
   /**
    * @brief Emitted when the app is requested to be launched.
    *
    * @param app Application info.
    */
-  void request_launch_app(const app::Info& app);
+  void request_launch_app(const AppInfo& app);
 
 public slots:
   /**
@@ -85,7 +87,7 @@ public slots:
    *
    * @param app Application info.
    */
-  void on_app_start(const app::Info& app);
+  void on_app_start(const AppInfo& app);
 
   /**
    * @brief Called after the app is finished.

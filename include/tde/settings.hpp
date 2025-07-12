@@ -44,8 +44,6 @@ public:
 
   ~DesktopSettings() override = default;
 
-  Q_DISABLE_COPY(DesktopSettings)
-
   /**
    * @brief Get the desktop width.
    *

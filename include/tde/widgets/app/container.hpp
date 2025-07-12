@@ -53,11 +53,7 @@ public:
                            QWidget* parent = nullptr)
   {
     auto* con = new Container{ parent };
-    con->setProperty("class", "tde-app-container");
-
-    auto* layout = new QVBoxLayout{ con };
-    layout->setContentsMargins(0, 0, 0, 0);
-    con->setLayout(layout);
+    auto* layout = qobject_cast<QVBoxLayout*>(con->layout());
 
     layout->addWidget(new Decoration{ app_name, con });
     layout->addWidget(new Wt{ settings, con }, 1);
@@ -71,10 +67,7 @@ private:
    *
    * @param parent Parent widget.
    */
-  Container(QWidget* parent = nullptr)
-    : QWidget{ parent }
-  {
-  }
+  explicit Container(QWidget* parent = nullptr);
 };
 
 }

@@ -16,7 +16,7 @@
 
 #include "tde/app/info.hpp"
 #include "tde/common.hpp"
-#include "tde/widgets/appbutton.hpp"
+#include "tde/widgets/app/button.hpp"
 
 namespace tde::widgets {
 
@@ -28,8 +28,11 @@ class TDE_PUBLIC Dock : public QWidget
 {
   Q_OBJECT
 
+public:
+  using AppInfo = tde::app::Info;
+
 private:
-  QList<AppButton*> _dock_apps;
+  QList<app::Button*> _dock_apps;
 
 public:
   /**
@@ -59,7 +62,7 @@ private:
    *
    * @param app Application info.
    */
-  void _create_app(const app::Info& app);
+  void _create_app(const AppInfo& app);
 
   /**
    * @brief Clear the dock apps.
@@ -73,7 +76,7 @@ signals:
    *
    * @param app Application info.
    */
-  void request_launch_app(const app::Info& app);
+  void request_launch_app(const AppInfo& app);
 
 public slots:
   /**
@@ -81,7 +84,7 @@ public slots:
    *
    * @param apps List of apps.
    */
-  void on_dock_apps_changed(const QList<app::Info>& apps);
+  void on_dock_apps_changed(const QList<AppInfo>& apps);
 };
 
 }

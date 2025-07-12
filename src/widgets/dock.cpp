@@ -1,7 +1,6 @@
 #include <qboxlayout.h>
 #include <qwidget.h>
 
-#include "tde/widgets/appbutton.hpp"
 #include "tde/widgets/dock.hpp"
 
 namespace tde::widgets {
@@ -28,13 +27,15 @@ Dock::_init_ui()
 }
 
 void
-Dock::_create_app(const app::Info& app)
+Dock::_create_app(const AppInfo& app)
 {
-  auto* app_item = new AppButton{ app, this };
+  auto* app_item = new app::Button{ app, this };
   app_item->setToolButtonStyle(Qt::ToolButtonIconOnly);
 
-  connect(
-    app_item, &AppButton::request_launch_app, this, &Dock::request_launch_app);
+  connect(app_item,
+          &app::Button::request_launch_app,
+          this,
+          &Dock::request_launch_app);
 
   layout()->addWidget(app_item);
   _dock_apps.append(app_item);
@@ -51,7 +52,7 @@ Dock::_clear_apps()
 }
 
 void
-Dock::on_dock_apps_changed(const QList<app::Info>& apps)
+Dock::on_dock_apps_changed(const QList<AppInfo>& apps)
 {
   _clear_apps();
 

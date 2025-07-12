@@ -1,5 +1,5 @@
 /**
- * @file appbutton.hpp
+ * @file button.hpp
  * @author Dessera (dessera@qq.com)
  * @brief Application launcher button.
  * @version 0.1.0
@@ -16,28 +16,32 @@
 #include "tde/app/info.hpp"
 #include "tde/common.hpp"
 
-namespace tde::widgets {
+namespace tde::widgets::app {
 
 /**
  * @brief Application launcher button.
  *
  */
-class TDE_PUBLIC AppButton : public QToolButton
+class TDE_PUBLIC Button : public QToolButton
 {
   Q_OBJECT
+
+public:
+  using AppInfo = tde::app::Info;
 
 private:
   QString _exec;
 
 public:
   /**
-   * @brief Construct a new App Button object
+   * @brief Construct a new App Button object.
    *
    * @param app App info.
    * @param parent Parent widget.
    */
-  AppButton(const app::Info& app, QWidget* parent = nullptr);
-  ~AppButton() override = default;
+  Button(const AppInfo& app, QWidget* parent = nullptr);
+
+  ~Button() override = default;
 
   /**
    * @brief Get the exec command.
@@ -49,9 +53,9 @@ public:
   /**
    * @brief Convert the app item to app info.
    *
-   * @return app::Info App info.
+   * @return AppInfo App info.
    */
-  [[nodiscard]] app::Info to_app_info() const;
+  [[nodiscard]] AppInfo to_app_info() const;
 
 signals:
   /**
@@ -59,7 +63,7 @@ signals:
    *
    * @param app App info.
    */
-  void request_launch_app(const app::Info& app);
+  void request_launch_app(const AppInfo& app);
 
 private slots:
   /**

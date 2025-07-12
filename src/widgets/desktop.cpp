@@ -1,7 +1,7 @@
 #include <qboxlayout.h>
 #include <qwidget.h>
 
-#include "tde/widgets/appcard.hpp"
+#include "tde/widgets/app/card.hpp"
 #include "tde/widgets/desktop.hpp"
 #include "tde/widgets/dock.hpp"
 #include "tde/widgets/tray.hpp"
@@ -33,15 +33,15 @@ Desktop::_init_ui(const DesktopSettings& settings)
 
   layout->addWidget(new Tray{ settings, this });
 
-  auto* app_list = new AppCardList{
+  auto* app_list = new app::CardList{
     QSize{ settings.desktop_grid_x(), settings.desktop_grid_y() }, this
   };
   layout->addWidget(app_list, 1);
 
   connect(
-    this, &Desktop::apps_changed, app_list, &AppCardList::on_apps_changed);
+    this, &Desktop::apps_changed, app_list, &app::CardList::on_apps_changed);
   connect(app_list,
-          &AppCardList::request_launch_app,
+          &app::CardList::request_launch_app,
           this,
           &Desktop::request_launch_app);
 
@@ -53,7 +53,7 @@ Desktop::_init_ui(const DesktopSettings& settings)
 }
 
 void
-Desktop::on_app_start(const app::Info& /*app*/)
+Desktop::on_app_start(const AppInfo& /*app*/)
 {
   this->hide();
 }

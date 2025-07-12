@@ -1,4 +1,5 @@
 subdir('about')
+subdir('monitor')
 
 executable(
   'tde',
