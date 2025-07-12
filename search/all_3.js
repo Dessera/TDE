@@ -15,6 +15,6 @@ var searchData=
   ['desktopsettings_12',['desktopsettings',['../classtde_1_1DesktopSettings.html',1,'tde::DesktopSettings'],['../classtde_1_1DesktopSettings.html#a6e07e7a99134c71509fef2ba1cc18451',1,'tde::DesktopSettings::DesktopSettings()']]],
   ['dock_13',['dock',['../classtde_1_1widgets_1_1Dock.html',1,'tde::widgets::Dock'],['../classtde_1_1widgets_1_1Dock.html#affb24eb156d68ac1aa9ec7870b86f4e0',1,'tde::widgets::Dock::Dock()']]],
   ['dock_2ehpp_14',['dock.hpp',['../dock_8hpp.html',1,'']]],
-  ['dock_5fapps_5fchanged_15',['dock_apps_changed',['../classtde_1_1app_1_1Fetcher.html#a90a1af51a97402340683a0db86438872',1,'tde::app::Fetcher::dock_apps_changed()'],['../classtde_1_1widgets_1_1Desktop.html#aae64ce8536e3db72007b29d9dde0745b',1,'tde::widgets::Desktop::dock_apps_changed(const QList&lt; app::Info &gt; &amp;apps)']]],
+  ['dock_5fapps_5fchanged_15',['dock_apps_changed',['../classtde_1_1app_1_1Fetcher.html#a90a1af51a97402340683a0db86438872',1,'tde::app::Fetcher::dock_apps_changed()'],['../classtde_1_1widgets_1_1Desktop.html#a674b9b173b6ed6b35a882c708079a99f',1,'tde::widgets::Desktop::dock_apps_changed(const QList&lt; AppInfo &gt; &amp;apps)']]],
   ['dock_5fmargin_16',['DOCK_MARGIN',['../classtde_1_1widgets_1_1Desktop.html#a5b0880f8432df874fccf2174ba9de42f',1,'tde::widgets::Desktop']]]
 ];

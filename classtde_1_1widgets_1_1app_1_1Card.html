@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TDE: tde::widgets::AppCard Class Reference</title>
+<title>TDE: tde::widgets::app::Card Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classtde_1_1widgets_1_1AppCard.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('classtde_1_1widgets_1_1app_1_1Card.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -96,59 +96,66 @@ $(document).ready(function(){initNavTree('classtde_1_1widgets_1_1AppCard.html','
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classtde_1_1widgets_1_1AppCard-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">tde::widgets::AppCard Class Reference</div></div>
+<a href="classtde_1_1widgets_1_1app_1_1Card-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">tde::widgets::app::Card Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> list card.  
- <a href="classtde_1_1widgets_1_1AppCard.html#details">More...</a></p>
+ <a href="classtde_1_1widgets_1_1app_1_1Card.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="appcard_8hpp_source.html">appcard.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="card_8hpp_source.html">card.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for tde::widgets::AppCard:</div>
+Inheritance diagram for tde::widgets::app::Card:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classtde_1_1widgets_1_1AppCard.png" alt=""/>
+  <img src="classtde_1_1widgets_1_1app_1_1Card.png" alt=""/>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a5adee20266ccb43f898a1104b6d2bfbf" id="r_a5adee20266ccb43f898a1104b6d2bfbf"><td class="memItemLeft" align="right" valign="top"><a id="a5adee20266ccb43f898a1104b6d2bfbf" name="a5adee20266ccb43f898a1104b6d2bfbf"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>AppInfo</b> = <a class="el" href="structtde_1_1app_1_1Info.html">tde::app::Info</a></td></tr>
+<tr class="separator:a5adee20266ccb43f898a1104b6d2bfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:ac90a0509d66c9ec989a59bd59e5a69c2" id="r_ac90a0509d66c9ec989a59bd59e5a69c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppCard.html#ac90a0509d66c9ec989a59bd59e5a69c2">request_launch_app</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;app)</td></tr>
-<tr class="memdesc:ac90a0509d66c9ec989a59bd59e5a69c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the app is requested to be launched.  <br /></td></tr>
-<tr class="separator:ac90a0509d66c9ec989a59bd59e5a69c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a546883e81a403317fd9d97ec87609823" id="r_a546883e81a403317fd9d97ec87609823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1app_1_1Card.html#a546883e81a403317fd9d97ec87609823">request_launch_app</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &amp;app)</td></tr>
+<tr class="memdesc:a546883e81a403317fd9d97ec87609823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the app is requested to be launched.  <br /></td></tr>
+<tr class="separator:a546883e81a403317fd9d97ec87609823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a83bed1fb0a4bfdaecde2bd9ff0183c6e" id="r_a83bed1fb0a4bfdaecde2bd9ff0183c6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppCard.html#a83bed1fb0a4bfdaecde2bd9ff0183c6e">AppCard</a> (const QSize &amp;grid_size, QWidget *parent=nullptr)</td></tr>
-<tr class="memdesc:a83bed1fb0a4bfdaecde2bd9ff0183c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new App Card object.  <br /></td></tr>
-<tr class="separator:a83bed1fb0a4bfdaecde2bd9ff0183c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebe35f57d05d73638c0980ce1b7eb57f" id="r_aebe35f57d05d73638c0980ce1b7eb57f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppCard.html#aebe35f57d05d73638c0980ce1b7eb57f">add_app</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;app)</td></tr>
-<tr class="memdesc:aebe35f57d05d73638c0980ce1b7eb57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an app to the card.  <br /></td></tr>
-<tr class="separator:aebe35f57d05d73638c0980ce1b7eb57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6659bff738b39c1c1157b208e4adad95" id="r_a6659bff738b39c1c1157b208e4adad95"><td class="memItemLeft" align="right" valign="top">TDE_INLINE auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppCard.html#a6659bff738b39c1c1157b208e4adad95">app_count</a> () const</td></tr>
-<tr class="memdesc:a6659bff738b39c1c1157b208e4adad95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of apps in the card.  <br /></td></tr>
-<tr class="separator:a6659bff738b39c1c1157b208e4adad95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c86305d85622cc8ae3aaa5e92beea09" id="r_a1c86305d85622cc8ae3aaa5e92beea09"><td class="memItemLeft" align="right" valign="top">TDE_INLINE auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppCard.html#a1c86305d85622cc8ae3aaa5e92beea09">app_size</a> () const</td></tr>
-<tr class="memdesc:a1c86305d85622cc8ae3aaa5e92beea09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the app grid.  <br /></td></tr>
-<tr class="separator:a1c86305d85622cc8ae3aaa5e92beea09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac591174f977998e0a7d34e1cc72dd456" id="r_ac591174f977998e0a7d34e1cc72dd456"><td class="memItemLeft" align="right" valign="top">TDE_INLINE auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1AppCard.html#ac591174f977998e0a7d34e1cc72dd456">is_full</a> () const</td></tr>
-<tr class="memdesc:ac591174f977998e0a7d34e1cc72dd456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the card is full.  <br /></td></tr>
-<tr class="separator:ac591174f977998e0a7d34e1cc72dd456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a034b3adb3611964e8e68360e400ad928" id="r_a034b3adb3611964e8e68360e400ad928"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1app_1_1Card.html#a034b3adb3611964e8e68360e400ad928">Card</a> (const QSize &amp;grid_size, QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a034b3adb3611964e8e68360e400ad928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new App <a class="el" href="classtde_1_1widgets_1_1app_1_1Card.html" title="Application list card.">Card</a> object.  <br /></td></tr>
+<tr class="separator:a034b3adb3611964e8e68360e400ad928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa551a7f328b864fdf335ea23a1bd488f" id="r_aa551a7f328b864fdf335ea23a1bd488f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1app_1_1Card.html#aa551a7f328b864fdf335ea23a1bd488f">add_app</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &amp;app)</td></tr>
+<tr class="memdesc:aa551a7f328b864fdf335ea23a1bd488f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an app to the card.  <br /></td></tr>
+<tr class="separator:aa551a7f328b864fdf335ea23a1bd488f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f407cbf77bf0ee0dc7271213c4fe6e2" id="r_a5f407cbf77bf0ee0dc7271213c4fe6e2"><td class="memItemLeft" align="right" valign="top">TDE_INLINE auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1app_1_1Card.html#a5f407cbf77bf0ee0dc7271213c4fe6e2">app_count</a> () const</td></tr>
+<tr class="memdesc:a5f407cbf77bf0ee0dc7271213c4fe6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of apps in the card.  <br /></td></tr>
+<tr class="separator:a5f407cbf77bf0ee0dc7271213c4fe6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60bd07cd78c3e17ee7597f3ee150fc80" id="r_a60bd07cd78c3e17ee7597f3ee150fc80"><td class="memItemLeft" align="right" valign="top">TDE_INLINE auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1app_1_1Card.html#a60bd07cd78c3e17ee7597f3ee150fc80">app_size</a> () const</td></tr>
+<tr class="memdesc:a60bd07cd78c3e17ee7597f3ee150fc80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the app grid.  <br /></td></tr>
+<tr class="separator:a60bd07cd78c3e17ee7597f3ee150fc80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c8501d073e83218677804328fc85a53" id="r_a8c8501d073e83218677804328fc85a53"><td class="memItemLeft" align="right" valign="top">TDE_INLINE auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1app_1_1Card.html#a8c8501d073e83218677804328fc85a53">is_full</a> () const</td></tr>
+<tr class="memdesc:a8c8501d073e83218677804328fc85a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the card is full.  <br /></td></tr>
+<tr class="separator:a8c8501d073e83218677804328fc85a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> list card. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a83bed1fb0a4bfdaecde2bd9ff0183c6e" name="a83bed1fb0a4bfdaecde2bd9ff0183c6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83bed1fb0a4bfdaecde2bd9ff0183c6e">&#9670;&#160;</a></span>AppCard()</h2>
+<a id="a034b3adb3611964e8e68360e400ad928" name="a034b3adb3611964e8e68360e400ad928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a034b3adb3611964e8e68360e400ad928">&#9670;&#160;</a></span>Card()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">tde::widgets::AppCard::AppCard </td>
+          <td class="memname">tde::widgets::app::Card::Card </td>
           <td>(</td>
           <td class="paramtype">const QSize &amp;&#160;</td>
           <td class="paramname"><em>grid_size</em>, </td>
@@ -167,7 +174,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new App Card object. </p>
+<p>Construct a new App <a class="el" href="classtde_1_1widgets_1_1app_1_1Card.html" title="Application list card.">Card</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">grid_size</td><td>Size of the app grid. </td></tr>
@@ -179,16 +186,16 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aebe35f57d05d73638c0980ce1b7eb57f" name="aebe35f57d05d73638c0980ce1b7eb57f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebe35f57d05d73638c0980ce1b7eb57f">&#9670;&#160;</a></span>add_app()</h2>
+<a id="aa551a7f328b864fdf335ea23a1bd488f" name="aa551a7f328b864fdf335ea23a1bd488f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa551a7f328b864fdf335ea23a1bd488f">&#9670;&#160;</a></span>add_app()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void tde::widgets::AppCard::add_app </td>
+          <td class="memname">void tde::widgets::app::Card::add_app </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &amp;&#160;</td>
           <td class="paramname"><em>app</em></td><td>)</td>
           <td></td>
         </tr>
@@ -205,8 +212,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6659bff738b39c1c1157b208e4adad95" name="a6659bff738b39c1c1157b208e4adad95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6659bff738b39c1c1157b208e4adad95">&#9670;&#160;</a></span>app_count()</h2>
+<a id="a5f407cbf77bf0ee0dc7271213c4fe6e2" name="a5f407cbf77bf0ee0dc7271213c4fe6e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f407cbf77bf0ee0dc7271213c4fe6e2">&#9670;&#160;</a></span>app_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +222,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TDE_INLINE auto tde::widgets::AppCard::app_count </td>
+          <td class="memname">TDE_INLINE auto tde::widgets::app::Card::app_count </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -233,8 +240,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1c86305d85622cc8ae3aaa5e92beea09" name="a1c86305d85622cc8ae3aaa5e92beea09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c86305d85622cc8ae3aaa5e92beea09">&#9670;&#160;</a></span>app_size()</h2>
+<a id="a60bd07cd78c3e17ee7597f3ee150fc80" name="a60bd07cd78c3e17ee7597f3ee150fc80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60bd07cd78c3e17ee7597f3ee150fc80">&#9670;&#160;</a></span>app_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +250,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TDE_INLINE auto tde::widgets::AppCard::app_size </td>
+          <td class="memname">TDE_INLINE auto tde::widgets::app::Card::app_size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -261,8 +268,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac591174f977998e0a7d34e1cc72dd456" name="ac591174f977998e0a7d34e1cc72dd456"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac591174f977998e0a7d34e1cc72dd456">&#9670;&#160;</a></span>is_full()</h2>
+<a id="a8c8501d073e83218677804328fc85a53" name="a8c8501d073e83218677804328fc85a53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c8501d073e83218677804328fc85a53">&#9670;&#160;</a></span>is_full()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,7 +278,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TDE_INLINE auto tde::widgets::AppCard::is_full </td>
+          <td class="memname">TDE_INLINE auto tde::widgets::app::Card::is_full </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -289,8 +296,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac90a0509d66c9ec989a59bd59e5a69c2" name="ac90a0509d66c9ec989a59bd59e5a69c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac90a0509d66c9ec989a59bd59e5a69c2">&#9670;&#160;</a></span>request_launch_app</h2>
+<a id="a546883e81a403317fd9d97ec87609823" name="a546883e81a403317fd9d97ec87609823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546883e81a403317fd9d97ec87609823">&#9670;&#160;</a></span>request_launch_app</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -299,9 +306,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void tde::widgets::AppCard::request_launch_app </td>
+          <td class="memname">void tde::widgets::app::Card::request_launch_app </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structtde_1_1app_1_1Info.html">app::Info</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &amp;&#160;</td>
           <td class="paramname"><em>app</em></td><td>)</td>
           <td></td>
         </tr>
@@ -324,15 +331,15 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/tde/widgets/<a class="el" href="appcard_8hpp_source.html">appcard.hpp</a></li>
-<li>src/widgets/<b>appcard.cpp</b></li>
+<li>include/tde/widgets/app/<a class="el" href="card_8hpp_source.html">card.hpp</a></li>
+<li>src/widgets/app/<b>card.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>tde</b></li><li class="navelem"><b>widgets</b></li><li class="navelem"><a class="el" href="classtde_1_1widgets_1_1AppCard.html">AppCard</a></li>
+    <li class="navelem"><b>tde</b></li><li class="navelem"><b>widgets</b></li><li class="navelem"><b>app</b></li><li class="navelem"><a class="el" href="classtde_1_1widgets_1_1app_1_1Card.html">Card</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

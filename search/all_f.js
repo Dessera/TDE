@@ -6,7 +6,7 @@ var searchData=
   ['tde_5forganization_3',['TDE_ORGANIZATION',['../config_8hpp.html#a59996ceac4297ad6e6207da451d48f83',1,'tde::config']]],
   ['tde_5fversion_4',['TDE_VERSION',['../config_8hpp.html#abd8afc5a699d86b221d73de490c4a72a',1,'tde::config']]],
   ['time_5fupdate_5finterval_5',['TIME_UPDATE_INTERVAL',['../classtde_1_1widgets_1_1tray_1_1Clock.html#a49cf4403f912a569848224eb745a9524',1,'tde::widgets::tray::Clock']]],
-  ['to_5fapp_5finfo_6',['to_app_info',['../classtde_1_1widgets_1_1AppButton.html#a87705dac48e8928f9897eed9258c702a',1,'tde::widgets::AppButton']]],
+  ['to_5fapp_5finfo_6',['to_app_info',['../classtde_1_1widgets_1_1app_1_1Button.html#adec15c9bc995df3752aa86ae6c36b0db',1,'tde::widgets::app::Button']]],
   ['todos_7',['Todos',['../md_README.html#autotoc_md1',1,'']]],
   ['tray_8',['tray',['../classtde_1_1widgets_1_1Tray.html',1,'tde::widgets::Tray'],['../classtde_1_1widgets_1_1Tray.html#a1b2a070b3bac8e3704f99f1c5c818f1a',1,'tde::widgets::Tray::Tray()']]],
   ['tray_2ehpp_9',['tray.hpp',['../tray_8hpp.html',1,'']]],

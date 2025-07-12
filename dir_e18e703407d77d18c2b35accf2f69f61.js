@@ -2,8 +2,6 @@ var dir_e18e703407d77d18c2b35accf2f69f61 =
 [
     [ "app", "dir_8df9221f5cb31ef2abdcf4ac074307a8.html", "dir_8df9221f5cb31ef2abdcf4ac074307a8" ],
     [ "tray", "dir_7a87219c9954511aacfe71631d4e0e2c.html", "dir_7a87219c9954511aacfe71631d4e0e2c" ],
-    [ "appbutton.hpp", "appbutton_8hpp.html", "appbutton_8hpp" ],
-    [ "appcard.hpp", "appcard_8hpp.html", "appcard_8hpp" ],
     [ "desktop.hpp", "desktop_8hpp.html", "desktop_8hpp" ],
     [ "dock.hpp", "dock_8hpp.html", "dock_8hpp" ],
     [ "icon.hpp", "icon_8hpp.html", "icon_8hpp" ],

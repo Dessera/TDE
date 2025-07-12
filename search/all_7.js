@@ -7,5 +7,5 @@ var searchData=
   ['icontype_4',['IconType',['../icon_8hpp.html#a16bfa8db7e60d0df19eb40e144f747b9',1,'tde::widgets']]],
   ['info_5',['Info',['../structtde_1_1app_1_1Info.html',1,'tde::app']]],
   ['info_2ehpp_6',['info.hpp',['../info_8hpp.html',1,'']]],
-  ['is_5ffull_7',['is_full',['../classtde_1_1widgets_1_1AppCard.html#ac591174f977998e0a7d34e1cc72dd456',1,'tde::widgets::AppCard']]]
+  ['is_5ffull_7',['is_full',['../classtde_1_1widgets_1_1app_1_1Card.html#a8c8501d073e83218677804328fc85a53',1,'tde::widgets::app::Card']]]
 ];
