@@ -107,23 +107,26 @@ $(document).ready(function(){initNavTree('memory_8hpp_source.html',''); initResi
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span>tde::sys {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structtde_1_1sys_1_1MemoryInfo.html">   24</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structtde_1_1sys_1_1MemoryInfo.html">MemoryInfo</a></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  std::uintptr_t total{ 0 };</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  std::uintptr_t free{ 0 };</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  std::uintptr_t swap_total{ 0 };</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  std::uintptr_t swap_free{ 0 };</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="memory_8hpp.html#a05a65927796b97bb7eee548a1a07806e">   20</a></span><span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="memory_8hpp.html#a05a65927796b97bb7eee548a1a07806e">SYS_MEMORY_FILE</a> =</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="stringliteral">&quot;/proc/meminfo&quot;</span>; </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structtde_1_1sys_1_1MemoryStatus.html">   27</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structtde_1_1sys_1_1MemoryStatus.html">MemoryStatus</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  std::uintptr_t total{ 0 };</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  std::uintptr_t free{ 0 };</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  std::uintptr_t swap_total{ 0 };</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  std::uintptr_t swap_free{ 0 };</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>TDE_PUBLIC <a class="code hl_struct" href="structtde_1_1sys_1_1MemoryInfo.html">MemoryInfo</a></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><a class="code hl_function" href="memory_8hpp.html#a4ebd4fee7de5f3d444edda90a2affa3e">query_memory_info</a>();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>TDE_PUBLIC <a class="code hl_struct" href="structtde_1_1sys_1_1MemoryStatus.html">MemoryStatus</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><a class="code hl_function" href="memory_8hpp.html#a218fef3958036abed2e4b42081f3dee6">query_memory_status</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 <div class="ttc" id="acommon_8hpp_html"><div class="ttname"><a href="common_8hpp.html">common.hpp</a></div><div class="ttdoc">Some utility macros.</div></div>
-<div class="ttc" id="amemory_8hpp_html_a4ebd4fee7de5f3d444edda90a2affa3e"><div class="ttname"><a href="memory_8hpp.html#a4ebd4fee7de5f3d444edda90a2affa3e">tde::sys::query_memory_info</a></div><div class="ttdeci">TDE_PUBLIC MemoryInfo query_memory_info()</div><div class="ttdoc">Query memory info.</div><div class="ttdef"><b>Definition</b> memory.cpp:28</div></div>
-<div class="ttc" id="astructtde_1_1sys_1_1MemoryInfo_html"><div class="ttname"><a href="structtde_1_1sys_1_1MemoryInfo.html">tde::sys::MemoryInfo</a></div><div class="ttdoc">Memory info.</div><div class="ttdef"><b>Definition</b> memory.hpp:25</div></div>
+<div class="ttc" id="amemory_8hpp_html_a05a65927796b97bb7eee548a1a07806e"><div class="ttname"><a href="memory_8hpp.html#a05a65927796b97bb7eee548a1a07806e">tde::sys::SYS_MEMORY_FILE</a></div><div class="ttdeci">constexpr const char * SYS_MEMORY_FILE</div><div class="ttdef"><b>Definition</b> memory.hpp:20</div></div>
+<div class="ttc" id="amemory_8hpp_html_a218fef3958036abed2e4b42081f3dee6"><div class="ttname"><a href="memory_8hpp.html#a218fef3958036abed2e4b42081f3dee6">tde::sys::query_memory_status</a></div><div class="ttdeci">TDE_PUBLIC MemoryStatus query_memory_status()</div><div class="ttdoc">Query memory status.</div><div class="ttdef"><b>Definition</b> memory.cpp:27</div></div>
+<div class="ttc" id="astructtde_1_1sys_1_1MemoryStatus_html"><div class="ttname"><a href="structtde_1_1sys_1_1MemoryStatus.html">tde::sys::MemoryStatus</a></div><div class="ttdoc">Memory status.</div><div class="ttdef"><b>Definition</b> memory.hpp:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

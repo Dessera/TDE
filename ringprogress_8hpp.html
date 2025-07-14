@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TDE: include/tde/sys/memory.hpp File Reference</title>
+<title>TDE: include/tde/widgets/ringprogress.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('memory_8hpp.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('ringprogress_8hpp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -96,96 +96,37 @@ $(document).ready(function(){initNavTree('memory_8hpp.html',''); initResizable()
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">memory.hpp File Reference</div></div>
+<a href="#nested-classes">Classes</a>  </div>
+  <div class="headertitle"><div class="title">ringprogress.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Memory status utility.  
+<p>Simple ring progress bar widget.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;qwidget.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="common_8hpp_source.html">tde/common.hpp</a>&quot;</code><br />
 </div>
-<p><a href="memory_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="ringprogress_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtde_1_1sys_1_1MemoryStatus.html">tde::sys::MemoryStatus</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory status.  <a href="structtde_1_1sys_1_1MemoryStatus.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1RingProgress.html">tde::widgets::RingProgress</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple ring progress bar widget.  <a href="classtde_1_1widgets_1_1RingProgress.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a218fef3958036abed2e4b42081f3dee6" id="r_a218fef3958036abed2e4b42081f3dee6"><td class="memItemLeft" align="right" valign="top">TDE_PUBLIC <a class="el" href="structtde_1_1sys_1_1MemoryStatus.html">MemoryStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8hpp.html#a218fef3958036abed2e4b42081f3dee6">tde::sys::query_memory_status</a> ()</td></tr>
-<tr class="memdesc:a218fef3958036abed2e4b42081f3dee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query memory status.  <br /></td></tr>
-<tr class="separator:a218fef3958036abed2e4b42081f3dee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a05a65927796b97bb7eee548a1a07806e" id="r_a05a65927796b97bb7eee548a1a07806e"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8hpp.html#a05a65927796b97bb7eee548a1a07806e">tde::sys::SYS_MEMORY_FILE</a></td></tr>
-<tr class="separator:a05a65927796b97bb7eee548a1a07806e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Memory status utility. </p>
+<div class="textblock"><p>Simple ring progress bar widget. </p>
 <dl class="section author"><dt>Author</dt><dd>Dessera (<a href="#" onclick="location.href='mai'+'lto:'+'des'+'se'+'ra@'+'qq'+'.co'+'m'; return false;">desse<span class="obfuscator">.nosp@m.</span>ra@q<span class="obfuscator">.nosp@m.</span>q.com</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2025-07-05</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025-07-13</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 Dessera </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a218fef3958036abed2e4b42081f3dee6" name="a218fef3958036abed2e4b42081f3dee6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a218fef3958036abed2e4b42081f3dee6">&#9670;&#160;</a></span>query_memory_status()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">MemoryStatus tde::sys::query_memory_status </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Query memory status. </p>
-<dl class="section return"><dt>Returns</dt><dd>MemoryInfo Memory status. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a05a65927796b97bb7eee548a1a07806e" name="a05a65927796b97bb7eee548a1a07806e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05a65927796b97bb7eee548a1a07806e">&#9670;&#160;</a></span>SYS_MEMORY_FILE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr const char* tde::sys::SYS_MEMORY_FILE</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">  <span class="stringliteral">&quot;/proc/meminfo&quot;</span></div>
-</div><!-- fragment --><p>Memory information file. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_7c6737cf2788ee9787105746f540bd39.html">tde</a></li><li class="navelem"><a class="el" href="dir_e59cab385e9a7f676aab68bbb11a1041.html">sys</a></li><li class="navelem"><a class="el" href="memory_8hpp.html">memory.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_7c6737cf2788ee9787105746f540bd39.html">tde</a></li><li class="navelem"><a class="el" href="dir_e18e703407d77d18c2b35accf2f69f61.html">widgets</a></li><li class="navelem"><a class="el" href="ringprogress_8hpp.html">ringprogress.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

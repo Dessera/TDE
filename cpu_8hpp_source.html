@@ -101,32 +101,65 @@ $(document).ready(function(){initNavTree('cpu_8hpp_source.html',''); initResizab
 <a href="cpu_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="common_8hpp.html">tde/common.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span>tde::sys {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structtde_1_1sys_1_1CPUInfo.html">   24</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structtde_1_1sys_1_1CPUInfo.html">CPUInfo</a></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  std::time_t user{ 0 };</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  std::time_t nice{ 0 };</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  std::time_t system{ 0 };</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  std::time_t idle{ 0 };</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  std::time_t iowait{ 0 };</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  std::time_t irq{ 0 };</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  std::time_t softirq{ 0 };</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;qlist.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;qstring.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="common_8hpp.html">tde/common.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span>tde::sys {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="cpu_8hpp.html#afe59d0421bad335925f349378b57d20f">   23</a></span><span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="cpu_8hpp.html#afe59d0421bad335925f349378b57d20f">SYS_CPU_STATUS_FILE</a> =</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="stringliteral">&quot;/proc/stat&quot;</span>; </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="cpu_8hpp.html#a021e360fd7d40e9d787f273ae8582bc4">   26</a></span><span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="cpu_8hpp.html#a021e360fd7d40e9d787f273ae8582bc4">SYS_CPU_INFO_FILE</a> =</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="stringliteral">&quot;/proc/cpuinfo&quot;</span>; </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structtde_1_1sys_1_1CPUStatus.html">   33</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structtde_1_1sys_1_1CPUStatus.html">CPUStatus</a></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  std::time_t user{ 0 };</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  std::time_t nice{ 0 };</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  std::time_t system{ 0 };</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  std::time_t idle{ 0 };</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  std::time_t iowait{ 0 };</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  std::time_t irq{ 0 };</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  std::time_t softirq{ 0 };</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  std::time_t steal{ 0 };</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  std::time_t guest{ 0 };</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  std::time_t guest_nice{ 0 };</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>TDE_PUBLIC <a class="code hl_struct" href="structtde_1_1sys_1_1CPUInfo.html">CPUInfo</a></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><a class="code hl_function" href="cpu_8hpp.html#a7b6c5366ef983969ebba60d56847df56">query_cpu_info</a>();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structtde_1_1sys_1_1CPUInfo.html">   52</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structtde_1_1sys_1_1CPUInfo.html">CPUInfo</a></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  std::size_t processor{ 0 };</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  QString model_name;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>TDE_PUBLIC <a class="code hl_struct" href="structtde_1_1sys_1_1CPUStatus.html">CPUStatus</a></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><a class="code hl_function" href="cpu_8hpp.html#ae4d309732dee23360c27f0ce10036455">query_cpu_status</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>TDE_PUBLIC <span class="keywordtype">double</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><a class="code hl_function" href="cpu_8hpp.html#ac5dc476477c601a3828c6879f9275660">get_cpu_usage</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1sys_1_1CPUStatus.html">CPUStatus</a>&amp; prev, <span class="keyword">const</span> <a class="code hl_struct" href="structtde_1_1sys_1_1CPUStatus.html">CPUStatus</a>&amp; curr);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>TDE_PUBLIC QList&lt;CPUInfo&gt;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><a class="code hl_function" href="cpu_8hpp.html#a88bb384447316264a057ce8b22ed57d2">query_cpu_info</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>TDE_PUBLIC QString</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><a class="code hl_function" href="cpu_8hpp.html#a551fed00ecf36b7d77e5cd3f6a673ff2">get_cpu_info_summary</a>(<span class="keyword">const</span> QList&lt;CPUInfo&gt;&amp; cpu_info);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
 <div class="ttc" id="acommon_8hpp_html"><div class="ttname"><a href="common_8hpp.html">common.hpp</a></div><div class="ttdoc">Some utility macros.</div></div>
-<div class="ttc" id="acpu_8hpp_html_a7b6c5366ef983969ebba60d56847df56"><div class="ttname"><a href="cpu_8hpp.html#a7b6c5366ef983969ebba60d56847df56">tde::sys::query_cpu_info</a></div><div class="ttdeci">TDE_PUBLIC CPUInfo query_cpu_info()</div><div class="ttdoc">Query CPU info.</div><div class="ttdef"><b>Definition</b> cpu.cpp:12</div></div>
-<div class="ttc" id="astructtde_1_1sys_1_1CPUInfo_html"><div class="ttname"><a href="structtde_1_1sys_1_1CPUInfo.html">tde::sys::CPUInfo</a></div><div class="ttdoc">CPU info.</div><div class="ttdef"><b>Definition</b> cpu.hpp:25</div></div>
+<div class="ttc" id="acpu_8hpp_html_a021e360fd7d40e9d787f273ae8582bc4"><div class="ttname"><a href="cpu_8hpp.html#a021e360fd7d40e9d787f273ae8582bc4">tde::sys::SYS_CPU_INFO_FILE</a></div><div class="ttdeci">constexpr const char * SYS_CPU_INFO_FILE</div><div class="ttdef"><b>Definition</b> cpu.hpp:26</div></div>
+<div class="ttc" id="acpu_8hpp_html_a551fed00ecf36b7d77e5cd3f6a673ff2"><div class="ttname"><a href="cpu_8hpp.html#a551fed00ecf36b7d77e5cd3f6a673ff2">tde::sys::get_cpu_info_summary</a></div><div class="ttdeci">TDE_PUBLIC QString get_cpu_info_summary(const QList&lt; CPUInfo &gt; &amp;cpu_info)</div><div class="ttdoc">Summarize CPU info.</div><div class="ttdef"><b>Definition</b> cpu.cpp:114</div></div>
+<div class="ttc" id="acpu_8hpp_html_a88bb384447316264a057ce8b22ed57d2"><div class="ttname"><a href="cpu_8hpp.html#a88bb384447316264a057ce8b22ed57d2">tde::sys::query_cpu_info</a></div><div class="ttdeci">TDE_PUBLIC QList&lt; CPUInfo &gt; query_cpu_info()</div><div class="ttdoc">Query CPU info.</div><div class="ttdef"><b>Definition</b> cpu.cpp:74</div></div>
+<div class="ttc" id="acpu_8hpp_html_ac5dc476477c601a3828c6879f9275660"><div class="ttname"><a href="cpu_8hpp.html#ac5dc476477c601a3828c6879f9275660">tde::sys::get_cpu_usage</a></div><div class="ttdeci">TDE_PUBLIC double get_cpu_usage(const CPUStatus &amp;prev, const CPUStatus &amp;curr)</div><div class="ttdoc">Get the CPU Usage.</div><div class="ttdef"><b>Definition</b> cpu.cpp:54</div></div>
+<div class="ttc" id="acpu_8hpp_html_ae4d309732dee23360c27f0ce10036455"><div class="ttname"><a href="cpu_8hpp.html#ae4d309732dee23360c27f0ce10036455">tde::sys::query_cpu_status</a></div><div class="ttdeci">TDE_PUBLIC CPUStatus query_cpu_status()</div><div class="ttdoc">Query CPU info.</div><div class="ttdef"><b>Definition</b> cpu.cpp:12</div></div>
+<div class="ttc" id="acpu_8hpp_html_afe59d0421bad335925f349378b57d20f"><div class="ttname"><a href="cpu_8hpp.html#afe59d0421bad335925f349378b57d20f">tde::sys::SYS_CPU_STATUS_FILE</a></div><div class="ttdeci">constexpr const char * SYS_CPU_STATUS_FILE</div><div class="ttdef"><b>Definition</b> cpu.hpp:23</div></div>
+<div class="ttc" id="astructtde_1_1sys_1_1CPUInfo_html"><div class="ttname"><a href="structtde_1_1sys_1_1CPUInfo.html">tde::sys::CPUInfo</a></div><div class="ttdoc">CPU info, only limited to model name and processor number for convenience.</div><div class="ttdef"><b>Definition</b> cpu.hpp:53</div></div>
+<div class="ttc" id="astructtde_1_1sys_1_1CPUStatus_html"><div class="ttname"><a href="structtde_1_1sys_1_1CPUStatus.html">tde::sys::CPUStatus</a></div><div class="ttdoc">CPU status.</div><div class="ttdef"><b>Definition</b> cpu.hpp:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

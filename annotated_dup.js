@@ -8,7 +8,8 @@ var annotated_dup =
       ] ],
       [ "sys", null, [
         [ "CPUInfo", "structtde_1_1sys_1_1CPUInfo.html", null ],
-        [ "MemoryInfo", "structtde_1_1sys_1_1MemoryInfo.html", null ]
+        [ "CPUStatus", "structtde_1_1sys_1_1CPUStatus.html", null ],
+        [ "MemoryStatus", "structtde_1_1sys_1_1MemoryStatus.html", null ]
       ] ],
       [ "widgets", null, [
         [ "app", null, [
@@ -25,6 +26,7 @@ var annotated_dup =
         [ "Dock", "classtde_1_1widgets_1_1Dock.html", "classtde_1_1widgets_1_1Dock" ],
         [ "IconFactory", "classtde_1_1widgets_1_1IconFactory.html", null ],
         [ "RadioSelector", "classtde_1_1widgets_1_1RadioSelector.html", "classtde_1_1widgets_1_1RadioSelector" ],
+        [ "RingProgress", "classtde_1_1widgets_1_1RingProgress.html", "classtde_1_1widgets_1_1RingProgress" ],
         [ "StyleFactory", "classtde_1_1widgets_1_1StyleFactory.html", null ],
         [ "Tray", "classtde_1_1widgets_1_1Tray.html", "classtde_1_1widgets_1_1Tray" ]
       ] ],

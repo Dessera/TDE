@@ -97,45 +97,133 @@ $(document).ready(function(){initNavTree('cpu_8hpp.html',''); initResizable(); }
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">cpu.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>CPU info utility.  
+<p>CPU status utility.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;ctime&gt;</code><br />
+<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;qlist.h&gt;</code><br />
+<code>#include &lt;qstring.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="common_8hpp_source.html">tde/common.hpp</a>&quot;</code><br />
 </div>
 <p><a href="cpu_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtde_1_1sys_1_1CPUStatus.html">tde::sys::CPUStatus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU status.  <a href="structtde_1_1sys_1_1CPUStatus.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtde_1_1sys_1_1CPUInfo.html">tde::sys::CPUInfo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU info.  <a href="structtde_1_1sys_1_1CPUInfo.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU info, only limited to model name and processor number for convenience.  <a href="structtde_1_1sys_1_1CPUInfo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7b6c5366ef983969ebba60d56847df56" id="r_a7b6c5366ef983969ebba60d56847df56"><td class="memItemLeft" align="right" valign="top">TDE_PUBLIC <a class="el" href="structtde_1_1sys_1_1CPUInfo.html">CPUInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8hpp.html#a7b6c5366ef983969ebba60d56847df56">tde::sys::query_cpu_info</a> ()</td></tr>
-<tr class="memdesc:a7b6c5366ef983969ebba60d56847df56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query CPU info.  <br /></td></tr>
-<tr class="separator:a7b6c5366ef983969ebba60d56847df56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d309732dee23360c27f0ce10036455" id="r_ae4d309732dee23360c27f0ce10036455"><td class="memItemLeft" align="right" valign="top">TDE_PUBLIC <a class="el" href="structtde_1_1sys_1_1CPUStatus.html">CPUStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8hpp.html#ae4d309732dee23360c27f0ce10036455">tde::sys::query_cpu_status</a> ()</td></tr>
+<tr class="memdesc:ae4d309732dee23360c27f0ce10036455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query CPU info.  <br /></td></tr>
+<tr class="separator:ae4d309732dee23360c27f0ce10036455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5dc476477c601a3828c6879f9275660" id="r_ac5dc476477c601a3828c6879f9275660"><td class="memItemLeft" align="right" valign="top">TDE_PUBLIC double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8hpp.html#ac5dc476477c601a3828c6879f9275660">tde::sys::get_cpu_usage</a> (const <a class="el" href="structtde_1_1sys_1_1CPUStatus.html">CPUStatus</a> &amp;prev, const <a class="el" href="structtde_1_1sys_1_1CPUStatus.html">CPUStatus</a> &amp;curr)</td></tr>
+<tr class="memdesc:ac5dc476477c601a3828c6879f9275660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the CPU Usage.  <br /></td></tr>
+<tr class="separator:ac5dc476477c601a3828c6879f9275660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88bb384447316264a057ce8b22ed57d2" id="r_a88bb384447316264a057ce8b22ed57d2"><td class="memItemLeft" align="right" valign="top">TDE_PUBLIC QList&lt; <a class="el" href="structtde_1_1sys_1_1CPUInfo.html">CPUInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8hpp.html#a88bb384447316264a057ce8b22ed57d2">tde::sys::query_cpu_info</a> ()</td></tr>
+<tr class="memdesc:a88bb384447316264a057ce8b22ed57d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query CPU info.  <br /></td></tr>
+<tr class="separator:a88bb384447316264a057ce8b22ed57d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a551fed00ecf36b7d77e5cd3f6a673ff2" id="r_a551fed00ecf36b7d77e5cd3f6a673ff2"><td class="memItemLeft" align="right" valign="top">TDE_PUBLIC QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8hpp.html#a551fed00ecf36b7d77e5cd3f6a673ff2">tde::sys::get_cpu_info_summary</a> (const QList&lt; <a class="el" href="structtde_1_1sys_1_1CPUInfo.html">CPUInfo</a> &gt; &amp;cpu_info)</td></tr>
+<tr class="memdesc:a551fed00ecf36b7d77e5cd3f6a673ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summarize CPU info.  <br /></td></tr>
+<tr class="separator:a551fed00ecf36b7d77e5cd3f6a673ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:afe59d0421bad335925f349378b57d20f" id="r_afe59d0421bad335925f349378b57d20f"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8hpp.html#afe59d0421bad335925f349378b57d20f">tde::sys::SYS_CPU_STATUS_FILE</a></td></tr>
+<tr class="separator:afe59d0421bad335925f349378b57d20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a021e360fd7d40e9d787f273ae8582bc4" id="r_a021e360fd7d40e9d787f273ae8582bc4"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpu_8hpp.html#a021e360fd7d40e9d787f273ae8582bc4">tde::sys::SYS_CPU_INFO_FILE</a></td></tr>
+<tr class="separator:a021e360fd7d40e9d787f273ae8582bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>CPU info utility. </p>
+<div class="textblock"><p>CPU status utility. </p>
 <dl class="section author"><dt>Author</dt><dd>Dessera (<a href="#" onclick="location.href='mai'+'lto:'+'des'+'se'+'ra@'+'qq'+'.co'+'m'; return false;">desse<span class="obfuscator">.nosp@m.</span>ra@q<span class="obfuscator">.nosp@m.</span>q.com</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025-07-05</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2025 Dessera </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a7b6c5366ef983969ebba60d56847df56" name="a7b6c5366ef983969ebba60d56847df56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b6c5366ef983969ebba60d56847df56">&#9670;&#160;</a></span>query_cpu_info()</h2>
+<a id="a551fed00ecf36b7d77e5cd3f6a673ff2" name="a551fed00ecf36b7d77e5cd3f6a673ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a551fed00ecf36b7d77e5cd3f6a673ff2">&#9670;&#160;</a></span>get_cpu_info_summary()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CPUInfo tde::sys::query_cpu_info </td>
+          <td class="memname">QString tde::sys::get_cpu_info_summary </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; <a class="el" href="structtde_1_1sys_1_1CPUInfo.html">CPUInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cpu_info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Summarize CPU info. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpu_info</td><td>CPU info. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>QString Summary of CPU info. </dd></dl>
+
+</div>
+</div>
+<a id="ac5dc476477c601a3828c6879f9275660" name="ac5dc476477c601a3828c6879f9275660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5dc476477c601a3828c6879f9275660">&#9670;&#160;</a></span>get_cpu_usage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double tde::sys::get_cpu_usage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structtde_1_1sys_1_1CPUStatus.html">CPUStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>prev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtde_1_1sys_1_1CPUStatus.html">CPUStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>curr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the CPU Usage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prev</td><td>Previous CPU status. </td></tr>
+    <tr><td class="paramname">curr</td><td>Current CPU status. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double CPU usage. </dd></dl>
+
+</div>
+</div>
+<a id="a88bb384447316264a057ce8b22ed57d2" name="a88bb384447316264a057ce8b22ed57d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88bb384447316264a057ce8b22ed57d2">&#9670;&#160;</a></span>query_cpu_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt; CPUInfo &gt; tde::sys::query_cpu_info </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -144,7 +232,78 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Query CPU info. </p>
-<dl class="section return"><dt>Returns</dt><dd>CPUInfo CPU info. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>QList&lt;CPUInfo&gt; CPU info of each processor. </dd></dl>
+
+</div>
+</div>
+<a id="ae4d309732dee23360c27f0ce10036455" name="ae4d309732dee23360c27f0ce10036455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4d309732dee23360c27f0ce10036455">&#9670;&#160;</a></span>query_cpu_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPUStatus tde::sys::query_cpu_status </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Query CPU info. </p>
+<dl class="section return"><dt>Returns</dt><dd>CPUStatus CPU info. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a021e360fd7d40e9d787f273ae8582bc4" name="a021e360fd7d40e9d787f273ae8582bc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a021e360fd7d40e9d787f273ae8582bc4">&#9670;&#160;</a></span>SYS_CPU_INFO_FILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* tde::sys::SYS_CPU_INFO_FILE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">  <span class="stringliteral">&quot;/proc/cpuinfo&quot;</span></div>
+</div><!-- fragment --><p>CPU info file. </p>
+
+</div>
+</div>
+<a id="afe59d0421bad335925f349378b57d20f" name="afe59d0421bad335925f349378b57d20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe59d0421bad335925f349378b57d20f">&#9670;&#160;</a></span>SYS_CPU_STATUS_FILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* tde::sys::SYS_CPU_STATUS_FILE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">  <span class="stringliteral">&quot;/proc/stat&quot;</span></div>
+</div><!-- fragment --><p>CPU status file. </p>
 
 </div>
 </div>

@@ -4,5 +4,8 @@ var searchData=
   ['radioselector_2ehpp_1',['radioselector.hpp',['../radioselector_8hpp.html',1,'']]],
   ['refresh_2',['refresh',['../classtde_1_1app_1_1Fetcher.html#a7ca8c4fbe84b115f4383679cb08fc341',1,'tde::app::Fetcher']]],
   ['request_5flaunch_5fapp_3',['request_launch_app',['../classtde_1_1widgets_1_1app_1_1Button.html#afcf771790b55970eeae2816181fbd348',1,'tde::widgets::app::Button::request_launch_app()'],['../classtde_1_1widgets_1_1app_1_1Card.html#a546883e81a403317fd9d97ec87609823',1,'tde::widgets::app::Card::request_launch_app()'],['../classtde_1_1widgets_1_1app_1_1CardList.html#ac8954ccccb73e10c514860ecae52c396',1,'tde::widgets::app::CardList::request_launch_app()'],['../classtde_1_1widgets_1_1Desktop.html#aa7cb4c2e290a4d510df53b22b6b6f71b',1,'tde::widgets::Desktop::request_launch_app()'],['../classtde_1_1widgets_1_1Dock.html#a6b499b8d778f0dd19bcc21dc293293bf',1,'tde::widgets::Dock::request_launch_app()']]],
-  ['run_4',['run',['../builder_8hpp.html#a07e340a5ca163c6e5fd1bff4696cc264',1,'tde::app']]]
+  ['ring_5fwidth_4',['RING_WIDTH',['../classtde_1_1widgets_1_1RingProgress.html#a6bb2fcbdc39ef284302e7f013da38fd4',1,'tde::widgets::RingProgress']]],
+  ['ringprogress_5',['ringprogress',['../classtde_1_1widgets_1_1RingProgress.html',1,'tde::widgets::RingProgress'],['../classtde_1_1widgets_1_1RingProgress.html#a55723fe015d7a04b4f6a6846859cfb1d',1,'tde::widgets::RingProgress::RingProgress()']]],
+  ['ringprogress_2ehpp_6',['ringprogress.hpp',['../ringprogress_8hpp.html',1,'']]],
+  ['run_7',['run',['../builder_8hpp.html#a07e340a5ca163c6e5fd1bff4696cc264',1,'tde::app']]]
 ];

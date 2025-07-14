@@ -13,8 +13,9 @@ var searchData=
   ['desktop_5ftitle_10',['desktop_title',['../classtde_1_1DesktopSettings.html#a53247471174206fb2f272788f1dde1da',1,'tde::DesktopSettings']]],
   ['desktop_5fwidth_11',['desktop_width',['../classtde_1_1DesktopSettings.html#a416500d54124bc8dc078f436e72444d9',1,'tde::DesktopSettings']]],
   ['desktopsettings_12',['desktopsettings',['../classtde_1_1DesktopSettings.html',1,'tde::DesktopSettings'],['../classtde_1_1DesktopSettings.html#a6e07e7a99134c71509fef2ba1cc18451',1,'tde::DesktopSettings::DesktopSettings()']]],
-  ['dock_13',['dock',['../classtde_1_1widgets_1_1Dock.html',1,'tde::widgets::Dock'],['../classtde_1_1widgets_1_1Dock.html#affb24eb156d68ac1aa9ec7870b86f4e0',1,'tde::widgets::Dock::Dock()']]],
-  ['dock_2ehpp_14',['dock.hpp',['../dock_8hpp.html',1,'']]],
-  ['dock_5fapps_5fchanged_15',['dock_apps_changed',['../classtde_1_1app_1_1Fetcher.html#a90a1af51a97402340683a0db86438872',1,'tde::app::Fetcher::dock_apps_changed()'],['../classtde_1_1widgets_1_1Desktop.html#a674b9b173b6ed6b35a882c708079a99f',1,'tde::widgets::Desktop::dock_apps_changed(const QList&lt; AppInfo &gt; &amp;apps)']]],
-  ['dock_5fmargin_16',['DOCK_MARGIN',['../classtde_1_1widgets_1_1Desktop.html#a5b0880f8432df874fccf2174ba9de42f',1,'tde::widgets::Desktop']]]
+  ['direction_13',['direction',['../classtde_1_1widgets_1_1RingProgress.html#a798a888694ed3a510c8764a82d62594b',1,'tde::widgets::RingProgress::Direction'],['../classtde_1_1widgets_1_1RingProgress.html#a1518502febae6b5b70e67caab4166953',1,'tde::widgets::RingProgress::direction() const']]],
+  ['dock_14',['dock',['../classtde_1_1widgets_1_1Dock.html',1,'tde::widgets::Dock'],['../classtde_1_1widgets_1_1Dock.html#affb24eb156d68ac1aa9ec7870b86f4e0',1,'tde::widgets::Dock::Dock()']]],
+  ['dock_2ehpp_15',['dock.hpp',['../dock_8hpp.html',1,'']]],
+  ['dock_5fapps_5fchanged_16',['dock_apps_changed',['../classtde_1_1app_1_1Fetcher.html#a90a1af51a97402340683a0db86438872',1,'tde::app::Fetcher::dock_apps_changed()'],['../classtde_1_1widgets_1_1Desktop.html#a674b9b173b6ed6b35a882c708079a99f',1,'tde::widgets::Desktop::dock_apps_changed(const QList&lt; AppInfo &gt; &amp;apps)']]],
+  ['dock_5fmargin_17',['DOCK_MARGIN',['../classtde_1_1widgets_1_1Desktop.html#a5b0880f8432df874fccf2174ba9de42f',1,'tde::widgets::Desktop']]]
 ];

@@ -11,5 +11,6 @@ var searchData=
   ['container_2ehpp_8',['container.hpp',['../container_8hpp.html',1,'']]],
   ['cpu_2ehpp_9',['cpu.hpp',['../cpu_8hpp.html',1,'']]],
   ['cpuinfo_10',['CPUInfo',['../structtde_1_1sys_1_1CPUInfo.html',1,'tde::sys']]],
-  ['create_11',['create',['../classtde_1_1widgets_1_1app_1_1Container.html#ab9226d156c692338532bcac1931f5267',1,'tde::widgets::app::Container']]]
+  ['cpustatus_11',['CPUStatus',['../structtde_1_1sys_1_1CPUStatus.html',1,'tde::sys']]],
+  ['create_12',['create',['../classtde_1_1widgets_1_1app_1_1Container.html#ab9226d156c692338532bcac1931f5267',1,'tde::widgets::app::Container']]]
 ];
