@@ -1,7 +1,7 @@
 /**
  * @file memory.hpp
  * @author Dessera (dessera@qq.com)
- * @brief Memory info utility.
+ * @brief Memory status utility.
  * @version 0.1.0
  * @date 2025-07-05
  *
@@ -17,11 +17,14 @@
 
 namespace tde::sys {
 
+constexpr const char* SYS_MEMORY_FILE =
+  "/proc/meminfo"; /**< Memory information file. */
+
 /**
- * @brief Memory info.
+ * @brief Memory status.
  *
  */
-struct MemoryInfo
+struct MemoryStatus
 {
   std::uintptr_t total{ 0 };
   std::uintptr_t free{ 0 };
@@ -30,11 +33,11 @@ struct MemoryInfo
 };
 
 /**
- * @brief Query memory info.
+ * @brief Query memory status.
  *
- * @return MemoryInfo Memory info.
+ * @return MemoryInfo Memory status.
  */
-TDE_PUBLIC MemoryInfo
-query_memory_info();
+TDE_PUBLIC MemoryStatus
+query_memory_status();
 
 }

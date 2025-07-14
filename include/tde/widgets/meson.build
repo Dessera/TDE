@@ -7,5 +7,6 @@ lib_qt_moc_src += files(
   'desktop.hpp',
   'dock.hpp',
   'radioselector.hpp',
+  'ringprogress.hpp',
   'tray.hpp',
 )

@@ -8,6 +8,7 @@ lib_src += files(
   'dock.cpp',
   'icon.cpp',
   'radioselector.cpp',
+  'ringprogress.cpp',
   'style.cpp',
   'tray.cpp',
 )

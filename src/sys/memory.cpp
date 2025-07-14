@@ -2,7 +2,6 @@
 #include <qdebug.h>
 #include <qfile.h>
 
-#include "tde/config.hpp"
 #include "tde/sys/memory.hpp"
 
 namespace {
@@ -24,18 +23,18 @@ _get_value_from_buffer(const QString& buffer)
 
 namespace tde::sys {
 
-MemoryInfo
-query_memory_info()
+MemoryStatus
+query_memory_status()
 {
-  auto file = QFile{ config::SYS_MEMORY_FILE };
+  auto file = QFile{ SYS_MEMORY_FILE };
 
   if (!file.open(QIODevice::ReadOnly)) {
     qWarning("Failed to open %s, memory info will be unavailable",
-             config::SYS_MEMORY_FILE);
+             SYS_MEMORY_FILE);
     return {};
   }
 
-  auto res = MemoryInfo{};
+  auto res = MemoryStatus{};
 
   auto in = QTextStream{ &file };
   auto buffer = QString{};

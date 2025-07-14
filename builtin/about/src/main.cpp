@@ -1,4 +1,3 @@
-#include <qapplication.h>
 #include <tde/app/builder.hpp>
 
 #include "about.hpp"
