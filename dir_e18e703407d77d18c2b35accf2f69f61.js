@@ -7,6 +7,7 @@ var dir_e18e703407d77d18c2b35accf2f69f61 =
     [ "icon.hpp", "icon_8hpp.html", "icon_8hpp" ],
     [ "radioselector.hpp", "radioselector_8hpp.html", "radioselector_8hpp" ],
     [ "ringprogress.hpp", "ringprogress_8hpp.html", "ringprogress_8hpp" ],
+    [ "router.hpp", "router_8hpp.html", "router_8hpp" ],
     [ "style.hpp", "style_8hpp.html", "style_8hpp" ],
     [ "tray.hpp", "tray_8hpp.html", "tray_8hpp" ]
 ];

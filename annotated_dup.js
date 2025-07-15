@@ -27,6 +27,8 @@ var annotated_dup =
         [ "IconFactory", "classtde_1_1widgets_1_1IconFactory.html", null ],
         [ "RadioSelector", "classtde_1_1widgets_1_1RadioSelector.html", "classtde_1_1widgets_1_1RadioSelector" ],
         [ "RingProgress", "classtde_1_1widgets_1_1RingProgress.html", "classtde_1_1widgets_1_1RingProgress" ],
+        [ "Router", "classtde_1_1widgets_1_1Router.html", "classtde_1_1widgets_1_1Router" ],
+        [ "RouterMenu", "classtde_1_1widgets_1_1RouterMenu.html", "classtde_1_1widgets_1_1RouterMenu" ],
         [ "StyleFactory", "classtde_1_1widgets_1_1StyleFactory.html", null ],
         [ "Tray", "classtde_1_1widgets_1_1Tray.html", "classtde_1_1widgets_1_1Tray" ]
       ] ],
