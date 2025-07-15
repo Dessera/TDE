@@ -2,6 +2,7 @@
     <qresource prefix="/tde">
         <file>icons/default.svg</file>
         <file>icons/help-about.svg</file>
+        <file>icons/office-chart-pie.svg</file>
         <file>icons/window-close.svg</file>
         <file>styles/default.qss</file>
     </qresource>

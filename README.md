@@ -12,8 +12,8 @@ WIP.
 - [ ] Builtin apps
   - [ ] Filesystem browser
   - [ ] Process manager
-  - [ ] System monitor
-  - [ ] About
+  - [x] System monitor
+  - [x] About
   - [ ] File reader
   - [ ] Screenshot
 - [ ] External apps

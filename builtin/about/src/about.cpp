@@ -13,6 +13,8 @@ AboutWidget::AboutWidget(const tde::DesktopSettings& /*settings*/,
                          QWidget* parent)
   : QWidget{ parent }
 {
+  setProperty("class", "tde-application");
+
   auto* layout = new QVBoxLayout{ this };
   layout->setContentsMargins(10, 10, 10, 10);
   layout->setSpacing(10);

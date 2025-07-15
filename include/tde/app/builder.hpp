@@ -44,6 +44,7 @@ run(const QString& app_name, int argc, char** argv)
 
   auto* app_con = AppContainer::create<Wt>(app_name, settings);
   tde_defer(delete app_con);
+
   app_con->show();
 
   return QApplication::exec();

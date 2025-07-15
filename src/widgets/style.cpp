@@ -42,6 +42,7 @@ StyleFactory::_read_qss(const QString& file, QString& buffer)
   }
 
   buffer.append(f.readAll());
+  buffer.append('\n');
 
   qInfo() << "Load stylesheet:" << file;
 }

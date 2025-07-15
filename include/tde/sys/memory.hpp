@@ -40,4 +40,10 @@ struct MemoryStatus
 TDE_PUBLIC MemoryStatus
 query_memory_status();
 
+TDE_INLINE double
+bytes_to_gb(std::uintptr_t bytes)
+{
+  return static_cast<double>(bytes) / 1024 / 1024 / 1024;
+}
+
 }

@@ -28,6 +28,7 @@ enum class IconType : uint8_t
 {
   DEFAULT,
   HELP_ABOUT,
+  OFFICE_CHART_PIE,
   WINDOW_CLOSE,
 };
 
@@ -42,6 +43,7 @@ public:
     { IconType::DEFAULT, ":/tde/icons/default.svg" },
     { IconType::HELP_ABOUT, ":/tde/icons/help-about.svg" },
     { IconType::WINDOW_CLOSE, ":/tde/icons/window-close.svg" },
+    { IconType::OFFICE_CHART_PIE, ":/tde/icons/office-chart-pie.svg" },
   }; /**< Icon map. */
 
   /**

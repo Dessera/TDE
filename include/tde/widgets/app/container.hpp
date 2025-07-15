@@ -53,8 +53,10 @@ public:
                            QWidget* parent = nullptr)
   {
     auto* con = new Container{ parent };
-    auto* layout = qobject_cast<QVBoxLayout*>(con->layout());
 
+    con->resize(settings.desktop_width(), settings.desktop_height());
+
+    auto* layout = qobject_cast<QVBoxLayout*>(con->layout());
     layout->addWidget(new Decoration{ app_name, con });
     layout->addWidget(new Wt{ settings, con }, 1);
 
