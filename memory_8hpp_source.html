@@ -122,7 +122,13 @@ $(document).ready(function(){initNavTree('memory_8hpp_source.html',''); initResi
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>TDE_PUBLIC <a class="code hl_struct" href="structtde_1_1sys_1_1MemoryStatus.html">MemoryStatus</a></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><a class="code hl_function" href="memory_8hpp.html#a218fef3958036abed2e4b42081f3dee6">query_memory_status</a>();</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>TDE_INLINE <span class="keywordtype">double</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>bytes_to_gb(std::uintptr_t bytes)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(bytes) / 1024 / 1024 / 1024;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
 <div class="ttc" id="acommon_8hpp_html"><div class="ttname"><a href="common_8hpp.html">common.hpp</a></div><div class="ttdoc">Some utility macros.</div></div>
 <div class="ttc" id="amemory_8hpp_html_a05a65927796b97bb7eee548a1a07806e"><div class="ttname"><a href="memory_8hpp.html#a05a65927796b97bb7eee548a1a07806e">tde::sys::SYS_MEMORY_FILE</a></div><div class="ttdeci">constexpr const char * SYS_MEMORY_FILE</div><div class="ttdef"><b>Definition</b> memory.hpp:20</div></div>
 <div class="ttc" id="amemory_8hpp_html_a218fef3958036abed2e4b42081f3dee6"><div class="ttname"><a href="memory_8hpp.html#a218fef3958036abed2e4b42081f3dee6">tde::sys::query_memory_status</a></div><div class="ttdeci">TDE_PUBLIC MemoryStatus query_memory_status()</div><div class="ttdoc">Query memory status.</div><div class="ttdef"><b>Definition</b> memory.cpp:27</div></div>

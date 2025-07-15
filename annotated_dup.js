@@ -37,5 +37,7 @@ var annotated_dup =
     ] ],
     [ "AboutHeaderWidget", "classAboutHeaderWidget.html", "classAboutHeaderWidget" ],
     [ "AboutWidget", "classAboutWidget.html", "classAboutWidget" ],
-    [ "Monitor", "classMonitor.html", null ]
+    [ "Monitor", "classMonitor.html", "classMonitor" ],
+    [ "ResourceMonitor", "classResourceMonitor.html", "classResourceMonitor" ],
+    [ "ResourceUsageMonitor", "classResourceUsageMonitor.html", "classResourceUsageMonitor" ]
 ];

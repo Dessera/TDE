@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TDE: Monitor Class Reference</title>
+<title>TDE: ResourceUsageMonitor Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classMonitor.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('classResourceUsageMonitor.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -97,61 +97,60 @@ $(document).ready(function(){initNavTree('classMonitor.html',''); initResizable(
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classMonitor-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Monitor Class Reference</div></div>
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="classResourceUsageMonitor-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">ResourceUsageMonitor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classMonitor.html" title="Monitor main widget.">Monitor</a> main widget.  
- <a href="classMonitor.html#details">More...</a></p>
+<p>Resource usage monitor.  
+ <a href="classResourceUsageMonitor.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="monitor_8hpp_source.html">monitor.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="resource__monitor_8hpp_source.html">resource_monitor.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Monitor:</div>
+Inheritance diagram for ResourceUsageMonitor:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classMonitor.png" alt=""/>
+  <img src="classResourceUsageMonitor.png" alt=""/>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac399a9b9165db2dca3a19650975684df" id="r_ac399a9b9165db2dca3a19650975684df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMonitor.html#ac399a9b9165db2dca3a19650975684df">Monitor</a> (const <a class="el" href="classtde_1_1DesktopSettings.html">tde::DesktopSettings</a> &amp;settings, QWidget *parent=nullptr)</td></tr>
-<tr class="memdesc:ac399a9b9165db2dca3a19650975684df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classMonitor.html" title="Monitor main widget.">Monitor</a> object.  <br /></td></tr>
-<tr class="separator:ac399a9b9165db2dca3a19650975684df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada05446f75604848bb6c9834b85e7711" id="r_ada05446f75604848bb6c9834b85e7711"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceUsageMonitor.html#ada05446f75604848bb6c9834b85e7711">ResourceUsageMonitor</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:ada05446f75604848bb6c9834b85e7711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Resource Usage <a class="el" href="classMonitor.html" title="Monitor main widget.">Monitor</a> object.  <br /></td></tr>
+<tr class="separator:ada05446f75604848bb6c9834b85e7711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a9c4f2ffe6dc101dbb0f8af45dfdab" id="r_a59a9c4f2ffe6dc101dbb0f8af45dfdab"><td class="memItemLeft" align="right" valign="top"><a id="a59a9c4f2ffe6dc101dbb0f8af45dfdab" name="a59a9c4f2ffe6dc101dbb0f8af45dfdab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>refresh</b> ()</td></tr>
+<tr class="memdesc:a59a9c4f2ffe6dc101dbb0f8af45dfdab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh the resource monitor. <br /></td></tr>
+<tr class="separator:a59a9c4f2ffe6dc101dbb0f8af45dfdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a526cae25f95c50e6717ebc27b42a34aa" id="r_a526cae25f95c50e6717ebc27b42a34aa"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResourceUsageMonitor.html#a526cae25f95c50e6717ebc27b42a34aa">REFRESH_INTERVAL</a></td></tr>
+<tr class="separator:a526cae25f95c50e6717ebc27b42a34aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classMonitor.html" title="Monitor main widget.">Monitor</a> main widget. </p>
+<div class="textblock"><p>Resource usage monitor. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac399a9b9165db2dca3a19650975684df" name="ac399a9b9165db2dca3a19650975684df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac399a9b9165db2dca3a19650975684df">&#9670;&#160;</a></span>Monitor()</h2>
+<a id="ada05446f75604848bb6c9834b85e7711" name="ada05446f75604848bb6c9834b85e7711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada05446f75604848bb6c9834b85e7711">&#9670;&#160;</a></span>ResourceUsageMonitor()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Monitor::Monitor </td>
+          <td class="memname">ResourceUsageMonitor::ResourceUsageMonitor </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classtde_1_1DesktopSettings.html">tde::DesktopSettings</a> &amp;&#160;</td>
-          <td class="paramname"><em>settings</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="classMonitor.html" title="Monitor main widget.">Monitor</a> object. </p>
+<p>Construct a new Resource Usage <a class="el" href="classMonitor.html" title="Monitor main widget.">Monitor</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">settings</td><td>Desktop settings. </td></tr>
     <tr><td class="paramname">parent</td><td>Parent widget. </td></tr>
   </table>
   </dd>
@@ -159,16 +158,42 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a526cae25f95c50e6717ebc27b42a34aa" name="a526cae25f95c50e6717ebc27b42a34aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a526cae25f95c50e6717ebc27b42a34aa">&#9670;&#160;</a></span>REFRESH_INTERVAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int ResourceUsageMonitor::REFRESH_INTERVAL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    1000</div>
+</div><!-- fragment --><p>Refresh interval in milliseconds. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>builtin/monitor/include/<a class="el" href="monitor_8hpp_source.html">monitor.hpp</a></li>
-<li>builtin/monitor/src/<b>monitor.cpp</b></li>
+<li>builtin/monitor/include/<a class="el" href="resource__monitor_8hpp_source.html">resource_monitor.hpp</a></li>
+<li>builtin/monitor/src/<b>resource_monitor.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="classMonitor.html">Monitor</a></li>
+    <li class="navelem"><a class="el" href="classResourceUsageMonitor.html">ResourceUsageMonitor</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

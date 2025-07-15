@@ -26,6 +26,8 @@ var hierarchy =
       [ "AboutHeaderWidget", "classAboutHeaderWidget.html", null ],
       [ "AboutWidget", "classAboutWidget.html", null ],
       [ "Monitor", "classMonitor.html", null ],
+      [ "ResourceMonitor", "classResourceMonitor.html", null ],
+      [ "ResourceUsageMonitor", "classResourceUsageMonitor.html", null ],
       [ "tde::widgets::Desktop", "classtde_1_1widgets_1_1Desktop.html", null ],
       [ "tde::widgets::Dock", "classtde_1_1widgets_1_1Dock.html", null ],
       [ "tde::widgets::RadioSelector", "classtde_1_1widgets_1_1RadioSelector.html", null ],
