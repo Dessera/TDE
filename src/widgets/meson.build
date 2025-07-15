@@ -9,6 +9,7 @@ lib_src += files(
   'icon.cpp',
   'radioselector.cpp',
   'ringprogress.cpp',
+  'router.cpp',
   'style.cpp',
   'tray.cpp',
 )

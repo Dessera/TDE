@@ -1,5 +1,10 @@
+/* Common */
+QWidget {
+  color: #FFFFFF;
+}
+/* END Common */
+
 .tde-desktop {
-  margin: 0px;
   background-color: #68A7D0;
 }
 
@@ -15,6 +20,7 @@
 .tde-app-button {
   padding: 0px;
   border-style: flat;
+  qproperty-iconSize: 48px;
 }
 
 .tde-app-button:hover {
@@ -53,6 +59,32 @@
   background-color: #C27275;
 }
 /* END TDE Application Decoration */
+
+/* TDE Application */
+.tde-application {
+  background-color: #303446;
+}
+/* END TDE Application */
+
+/* TDE Application Router */
+.tde-router-menu {
+  background-color: #292C3C;
+}
+
+.tde-router-menu-button {
+  padding: 0px;
+  border-style: flat;
+  qproperty-iconSize: 20px;
+}
+
+.tde-router-menu-button:hover {
+  background-color: #B49CA6;
+}
+
+.tde-router-menu-button:pressed {
+  background-color: #9E858E;
+}
+/* END TDE Application Router */
 
 .tde-radio-selector-button {
   outline: none;

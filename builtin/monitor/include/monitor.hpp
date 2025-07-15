@@ -11,7 +11,6 @@ class Monitor : public QWidget
 
 private:
   QTimer* _tim;
-  tde::widgets::RingProgress* _ring;
 
 public:
   Monitor(const tde::DesktopSettings& settings, QWidget* parent = nullptr);
