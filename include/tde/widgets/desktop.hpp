@@ -55,13 +55,6 @@ public:
 
 private:
   /**
-   * @brief Initialize desktop.
-   *
-   * @param settings Desktop settings.
-   */
-  void _init(const DesktopSettings& settings);
-
-  /**
    * @brief Initialize UI components.
    *
    * @param settings Desktop settings.

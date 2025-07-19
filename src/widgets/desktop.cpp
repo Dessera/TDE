@@ -12,19 +12,10 @@ Desktop::Desktop(const DesktopSettings& settings, QWidget* parent)
   : QWidget{ parent }
   , _app_fetcher{ settings.desktop_app_path() }
 {
-  _init(settings);
+  setProperty("class", "tde-desktop");
   _init_ui(settings);
 
   _app_fetcher.refresh();
-}
-
-void
-Desktop::_init(const DesktopSettings& settings)
-{
-  setWindowTitle(settings.desktop_title());
-  resize(settings.desktop_width(), settings.desktop_height());
-
-  setProperty("class", "tde-desktop");
 }
 
 void
@@ -36,6 +27,7 @@ Desktop::_init_ui(const DesktopSettings& settings)
 
   layout->addWidget(new Tray{ settings, this });
 
+  // TODO: New Card component to upgrade this :|
   auto* app_list = new app::CardList{
     QSize{ settings.desktop_grid_x(), settings.desktop_grid_y() }, this
   };

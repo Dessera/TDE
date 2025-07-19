@@ -1,9 +1,11 @@
 <RCC>
     <qresource prefix="/tde">
         <file>icons/default.svg</file>
+        <file>icons/folder-build.svg</file>
         <file>icons/help-about.svg</file>
         <file>icons/office-chart-pie.svg</file>
         <file>icons/window-close.svg</file>
+
         <file>styles/application.qss</file>
         <file>styles/components.qss</file>
         <file>styles/desktop.qss</file>

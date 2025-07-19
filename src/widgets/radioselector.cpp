@@ -9,8 +9,6 @@ namespace tde::widgets {
 RadioSelector::RadioSelector(QWidget* parent)
   : QWidget{ parent }
 {
-  setProperty("class", "tde-radio-selector");
-
   auto* layout = new QHBoxLayout{ this };
   setLayout(layout);
 }

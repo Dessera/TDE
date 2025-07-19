@@ -56,7 +56,7 @@ public:
 
   static TDE_INLINE bool scope_contains(Scope scope, Scope target)
   {
-    return static_cast<uint8_t>(scope) | static_cast<uint8_t>(target);
+    return static_cast<uint8_t>(scope) & static_cast<uint8_t>(target);
   }
 };
 

@@ -11,7 +11,6 @@
 
 #pragma once
 
-#include <qlabel.h>
 #include <qwidget.h>
 #include <tde/settings.hpp>
 
@@ -27,37 +26,9 @@ public:
   /**
    * @brief Construct a new About Widget object.
    *
-   * @param parent Parent object.
+   * @param parent Parent widget.
    */
   About(const tde::DesktopSettings& settings, QWidget* parent = nullptr);
 
   ~About() override = default;
-
-private:
-  /**
-   * @brief Create a header label.
-   *
-   * @param text Text of the label.
-   * @return QLabel* Created label.
-   */
-  QLabel* _header(const QString& text);
-};
-
-/**
- * @brief About header widget.
- *
- */
-class AboutHeaderWidget : public QWidget
-{
-  Q_OBJECT
-
-public:
-  /**
-   * @brief Construct a new About Header Widget object.
-   *
-   * @param parent Parent object.
-   */
-  AboutHeaderWidget(QWidget* parent = nullptr);
-
-  ~AboutHeaderWidget() override = default;
 };

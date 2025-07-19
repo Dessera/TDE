@@ -1,29 +1,72 @@
-/* TDE Components */
-
-.tde-title {
-  font-size: 16px;
-  font-weight: bold;
+* {
+  color: #FFFFFF;
 }
 
-.tde-radio-selector>QRadioButton {
+tde--widgets--text--H1, 
+tde--widgets--text--H2,
+tde--widgets--text--H3,
+tde--widgets--text--H4,
+tde--widgets--text--H5,
+tde--widgets--text--H6 {
+    font-weight: bold;
+    margin: 0.2em 0;
+}
+
+tde--widgets--text--H1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+tde--widgets--text--H2 {
+    font-size: 28px;
+    letter-spacing: -0.25px;
+}
+
+tde--widgets--text--H3 {
+    font-size: 24px;
+}
+
+tde--widgets--text--H4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+tde--widgets--text--H5 {
+    font-size: 18px;
+}
+
+tde--widgets--text--H6 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #AAAAAA;
+}
+
+tde--widgets--HDelimiter {
+  border-bottom: 1px solid #666666;
+}
+
+tde--widgets--VDelimiter {
+  border-right: 1px solid #666666;
+}
+
+tde--widgets--RadioSelector>QRadioButton {
   outline: none;
 }
 
-.tde-radio-selector>QRadioButton::indicator {
+tde--widgets--RadioSelector>QRadioButton::indicator {
   background-color: rgba(136, 136, 136, 0.5);
   border-radius: 6px;
   width: 12px;
   height: 12px;
 }
 
-.tde-radio-selector>QRadioButton::indicator:checked,
-.tde-radio-selector>QRadioButton::indicator:pressed {
+tde--widgets--RadioSelector>QRadioButton::indicator:checked,
+tde--widgets--RadioSelector>QRadioButton::indicator:pressed {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.tde-ringprogress {
+tde--widgets--RingProgress {
   background-color: #292C3C;
   qproperty-chunk_color: #EEBEBE;
 }
-
-/* END TDE Components */

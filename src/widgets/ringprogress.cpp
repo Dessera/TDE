@@ -5,12 +5,6 @@
 
 namespace tde::widgets {
 
-RingProgress::RingProgress(QWidget* parent)
-  : QWidget{ parent }
-{
-  setProperty("class", "tde-ringprogress");
-}
-
 void
 RingProgress::paintEvent(QPaintEvent* /*event*/)
 {

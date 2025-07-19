@@ -66,7 +66,10 @@ public:
    *
    * @param parent Parent widget.
    */
-  explicit RingProgress(QWidget* parent = nullptr);
+  explicit RingProgress(QWidget* parent = nullptr)
+    : QWidget{ parent }
+  {
+  }
 
   ~RingProgress() override = default;
 

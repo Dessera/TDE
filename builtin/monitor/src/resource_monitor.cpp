@@ -2,6 +2,7 @@
 #include <qlabel.h>
 #include <tde/sys/cpu.hpp>
 #include <tde/sys/memory.hpp>
+#include <tde/widgets/text/header.hpp>
 
 #include "resource_monitor.hpp"
 
@@ -77,16 +78,14 @@ void
 ResourceMonitor::_create_cpu_info()
 {
   using namespace tde::sys;
+  using namespace tde::widgets::text;
 
   auto* _layout = qobject_cast<QVBoxLayout*>(layout());
 
   auto cpus = query_cpu_info();
   auto cpu_summary = get_cpu_info_summary(cpus);
 
-  auto* cpu_header = new QLabel{ "CPUs:", this };
-  cpu_header->setProperty("class", "tde-title");
-  _layout->addWidget(cpu_header);
-
+  _layout->addWidget(new H4{ "CPUs:", this });
   _layout->addWidget(new QLabel{ cpu_summary, this });
 }
 
@@ -94,15 +93,13 @@ void
 ResourceMonitor::_create_mem_info()
 {
   using namespace tde::sys;
+  using namespace tde::widgets::text;
 
   auto* _layout = qobject_cast<QVBoxLayout*>(layout());
 
   auto mem_info = query_memory_status();
 
-  auto* mem_header = new QLabel{ "Memory:", this };
-  mem_header->setProperty("class", "tde-title");
-  _layout->addWidget(mem_header);
-
+  _layout->addWidget(new H4{ "Memory:", this });
   _layout->addWidget(
     new QLabel{ QString{ "Physical / Swap: %1 GB / %2 GB" }
                   .arg(bytes_to_gb(mem_info.total), 0, 'f', 2)

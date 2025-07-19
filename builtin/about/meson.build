@@ -2,10 +2,14 @@ tde_about_inc = include_directories('include')
 
 tde_about_moc_src = files(
   'include/about.hpp',
+  'include/buildinfo.hpp',
+  'include/description.hpp',
 )
 
 tde_about_src = files(
   'src/about.cpp',
+  'src/buildinfo.cpp',
+  'src/description.cpp',
   'src/main.cpp',
 )
 

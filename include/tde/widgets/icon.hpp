@@ -28,6 +28,7 @@ enum class IconType : uint8_t
 {
   DEFAULT,
   HELP_ABOUT,
+  FOLDER_BUILD,
   OFFICE_CHART_PIE,
   WINDOW_CLOSE,
 };
@@ -42,6 +43,7 @@ public:
   inline static const QMap<IconType, QString> ICON_MAP = {
     { IconType::DEFAULT, ":/tde/icons/default.svg" },
     { IconType::HELP_ABOUT, ":/tde/icons/help-about.svg" },
+    { IconType::FOLDER_BUILD, ":/tde/icons/folder-build.svg" },
     { IconType::WINDOW_CLOSE, ":/tde/icons/window-close.svg" },
     { IconType::OFFICE_CHART_PIE, ":/tde/icons/office-chart-pie.svg" },
   }; /**< Icon map. */
