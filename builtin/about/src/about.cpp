@@ -5,16 +5,12 @@
 #include <tde/config.hpp>
 #include <tde/settings.hpp>
 #include <tde/widgets/icon.hpp>
-#include <tde/widgets/style.hpp>
 
 #include "about.hpp"
 
-AboutWidget::AboutWidget(const tde::DesktopSettings& /*settings*/,
-                         QWidget* parent)
+About::About(const tde::DesktopSettings& /*settings*/, QWidget* parent)
   : QWidget{ parent }
 {
-  setProperty("class", "tde-application");
-
   auto* layout = new QVBoxLayout{ this };
   layout->setContentsMargins(10, 10, 10, 10);
   layout->setSpacing(10);
@@ -45,7 +41,7 @@ AboutWidget::AboutWidget(const tde::DesktopSettings& /*settings*/,
 }
 
 QLabel*
-AboutWidget::_header(const QString& text)
+About::_header(const QString& text)
 {
   auto* label = new QLabel{ text, this };
   label->setProperty("class", "tde-title");

@@ -35,6 +35,8 @@ class TDE_PUBLIC RingProgress : public QWidget
   Q_PROPERTY(QString text READ text WRITE set_text)
   Q_PROPERTY(bool text_visible READ text_visible WRITE set_text_visible)
 
+  Q_PROPERTY(QColor chunk_color READ chunk_color WRITE set_chunk_color)
+
 public:
   constexpr static int RING_WIDTH = 20; /**< Progress ring width. */
 
@@ -56,13 +58,15 @@ private:
   QString _text;
   bool _text_visible{ true };
 
+  QColor _chunk_color{ palette().color(QPalette::Highlight) };
+
 public:
   /**
    * @brief Construct a new Ring Progress object.
    *
    * @param parent Parent widget.
    */
-  RingProgress(QWidget* parent = nullptr);
+  explicit RingProgress(QWidget* parent = nullptr);
 
   ~RingProgress() override = default;
 
@@ -152,6 +156,20 @@ public:
    * @param visible True if the text is visible.
    */
   void set_text_visible(bool visible);
+
+  /**
+   * @brief Get the chunk color.
+   *
+   * @return const QColor& Chunk color.
+   */
+  [[nodiscard]] TDE_INLINE auto& chunk_color() const { return _chunk_color; }
+
+  /**
+   * @brief Set the chunk color.
+   *
+   * @param color Chunk color.
+   */
+  void set_chunk_color(const QColor& color);
 
 private:
   /**

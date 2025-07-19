@@ -56,7 +56,6 @@ QToolButton*
 RouterMenu::_create_button(const Item& item)
 {
   auto* button = new QToolButton{ this };
-  button->setProperty("class", "tde-router-menu-button");
 
   button->setText(item.name);
   button->setIcon(item.icon);

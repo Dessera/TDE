@@ -1,0 +1,33 @@
+/* Common */
+* {
+  color: #FFFFFF;
+}
+
+/* END Common */
+
+.tde-desktop {
+  background-color: #68A7D0;
+  /* border-image: url(:/tde/wallpaper.png)0 0 0 0 stretch stretch; */
+}
+
+.tde-dock {
+  background-color: #282D3D;
+  border-radius: 5px;
+}
+
+.tde-tray {
+  background-color: #2B2C3C;
+}
+
+.tde-app-button {
+  border-style: flat;
+  qproperty-iconSize: 48px;
+}
+
+.tde-app-button:hover {
+  background-color: #B49CA6;
+}
+
+.tde-app-button:pressed {
+  background-color: #9E858E;
+}

@@ -15,7 +15,9 @@
 #include <qprocess.h>
 #include <qwidget.h>
 
+#include "tde/app/fetcher.hpp"
 #include "tde/app/info.hpp"
+#include "tde/app/launcher.hpp"
 #include "tde/common.hpp"
 #include "tde/settings.hpp"
 
@@ -31,9 +33,16 @@ class TDE_PUBLIC Desktop : public QWidget
 
 public:
   using AppInfo = tde::app::Info;
+  using AppFetcher = tde::app::Fetcher;
+  using AppLauncher = tde::app::Launcher;
 
   constexpr static int DOCK_MARGIN = 5; /**< Margin for dock widget. */
 
+private:
+  AppFetcher _app_fetcher;
+  AppLauncher _app_launcher;
+
+public:
   /**
    * @brief Construct a new Desktop object.
    *
@@ -58,44 +67,6 @@ private:
    * @param settings Desktop settings.
    */
   void _init_ui(const DesktopSettings& settings);
-
-signals:
-  /**
-   * @brief Emitted when apps changed.
-   *
-   * @param apps List of apps.
-   */
-  void apps_changed(const QList<AppInfo>& apps);
-
-  /**
-   * @brief Emitted when dock apps changed.
-   *
-   * @param apps List of dock apps.
-   */
-  void dock_apps_changed(const QList<AppInfo>& apps);
-
-  /**
-   * @brief Emitted when the app is requested to be launched.
-   *
-   * @param app Application info.
-   */
-  void request_launch_app(const AppInfo& app);
-
-public slots:
-  /**
-   * @brief Called before the app is launched.
-   *
-   * @param app Application info.
-   */
-  void on_app_start(const AppInfo& app);
-
-  /**
-   * @brief Called after the app is finished.
-   *
-   * @param code Exit code.
-   * @param status Exit status.
-   */
-  void on_app_finish(int code, QProcess::ExitStatus status);
 };
 
 }

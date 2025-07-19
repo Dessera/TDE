@@ -11,43 +11,90 @@
 
 #pragma once
 
-#include <qapplication.h>
 #include <qstring.h>
 
-#include "tde/common.hpp"
+#include "tde/assets/styles.hpp"
 #include "tde/settings.hpp"
 #include "tde/widgets/app/container.hpp"
-#include "tde/widgets/style.hpp"
 
 namespace tde::app {
 
 /**
- * @brief Run a tde application.
+ * @brief Check if class is a root widget.
  *
- * @tparam Wt Application widget type.
- * @param app_name Application name.
- * @param argc Argument count.
- * @param argv Argument vector.
- * @return int Exit code.
+ * @tparam Wt Class derived from QWidget.
  */
 template<typename Wt>
-int
-run(const QString& app_name, int argc, char** argv)
+using IsRootWidget = std::enable_if_t<
+  std::is_base_of_v<QWidget, Wt> &&
+  std::is_constructible_v<Wt, const DesktopSettings&, QWidget*>>;
+
+/**
+ * @brief Root widget builder.
+ *
+ * @tparam Wt Class derived from QWidget.
+ */
+template<typename Wt, typename = IsRootWidget<Wt>>
+class Builder
 {
-  using widgets::StyleFactory;
+public:
+  using Styles = assets::Styles;
   using AppContainer = widgets::app::Container;
 
-  auto app = QApplication{ argc, argv };
-  DesktopSettings settings;
+private:
+  Styles::Scope _scope{ Styles::Scope::ALL };
+  QString _name{ "TDE App" };
+  bool _decoration{ true };
 
-  app.setStyleSheet(StyleFactory::generate_qss(settings));
+public:
+  /**
+   * @brief Set style scope.
+   *
+   * @param scope Style scope.
+   * @return Builder<Wt> Current builder.
+   */
+  Builder<Wt> with_scope(Styles::Scope scope)
+  {
+    _scope = scope;
+    return *this;
+  }
 
-  auto* app_con = AppContainer::create<Wt>(app_name, settings);
-  tde_defer(delete app_con);
+  /**
+   * @brief Set app name.
+   *
+   * @param name App name.
+   * @return Builder<Wt> Current builder.
+   */
+  Builder<Wt> with_name(QString name)
+  {
+    _name = std::move(name);
+    return *this;
+  }
 
-  app_con->show();
+  /**
+   * @brief Set decoration visibility.
+   *
+   * @param decoration Decoration visibility.
+   * @return Builder<Wt> Current builder.
+   */
+  Builder<Wt> with_decoration(bool decoration)
+  {
+    _decoration = decoration;
+    return *this;
+  }
 
-  return QApplication::exec();
-}
+  /**
+   * @brief Build widget.
+   *
+   * @return AppContainer Application widget wrapper.
+   */
+  AppContainer build()
+  {
+    auto* settings = new DesktopSettings{};
+    auto* root = new Wt{ *settings, nullptr };
+
+    return AppContainer{ _scope, _name, _decoration, settings, root };
+  }
+};
 
 }

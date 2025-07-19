@@ -1,8 +1,7 @@
 /**
  * @file container.hpp
  * @author Dessera (dessera@qq.com)
- * @brief Utility class for creating a container for an application (with
- * decoration).
+ * @brief TDE application wrapper.
  * @version 0.1.0
  * @date 2025-07-09
  *
@@ -17,14 +16,14 @@
 #include <qwidget.h>
 #include <type_traits>
 
+#include "tde/assets/styles.hpp"
 #include "tde/common.hpp"
 #include "tde/settings.hpp"
-#include "tde/widgets/app/decoration.hpp"
 
 namespace tde::widgets::app {
 
 /**
- * @brief A container for an application (with decoration).
+ * @brief TDE application wrapper.
  *
  */
 class TDE_PUBLIC Container : public QWidget
@@ -32,44 +31,21 @@ class TDE_PUBLIC Container : public QWidget
   Q_OBJECT
 
 public:
-  ~Container() override = default;
+  using Styles = assets::Styles;
 
-  /**
-   * @brief Create a new container for an application.
-   *
-   * @tparam Wt Application widget type, required to be a QWidget subclass, and
-   * constructible with DesktopSettings and QWidget*.
-   * @param app_name Application name.
-   * @param settings Desktop settings.
-   * @param parent Parent widget.
-   * @return Container* New container.
-   */
-  template<typename Wt,
-           typename = std::enable_if_t<
-             std::is_base_of_v<QWidget, Wt> &&
-             std::is_constructible_v<Wt, const DesktopSettings&, QWidget*>>>
-  static Container* create(const QString& app_name,
-                           const DesktopSettings& settings,
-                           QWidget* parent = nullptr)
-  {
-    auto* con = new Container{ parent };
-
-    con->resize(settings.desktop_width(), settings.desktop_height());
-
-    auto* layout = qobject_cast<QVBoxLayout*>(con->layout());
-    layout->addWidget(new Decoration{ app_name, con });
-    layout->addWidget(new Wt{ settings, con }, 1);
-
-    return con;
-  }
-
-private:
   /**
    * @brief Construct a new Container object.
    *
    * @param parent Parent widget.
    */
-  explicit Container(QWidget* parent = nullptr);
+  Container(Styles::Scope scope,
+            const QString& name,
+            bool decoration,
+            DesktopSettings* settings,
+            QWidget* root,
+            QWidget* parent = nullptr);
+
+  ~Container() override = default;
 };
 
 }

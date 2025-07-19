@@ -12,8 +12,6 @@ Monitor::Monitor(const tde::DesktopSettings& /*settings*/, QWidget* parent)
   using tde::widgets::IconFactory;
   using tde::widgets::IconType;
 
-  setProperty("class", "tde-application");
-
   auto* layout = new QVBoxLayout{ this };
   layout->setContentsMargins(0, 0, 0, 0);
   setLayout(layout);

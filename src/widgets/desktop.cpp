@@ -10,9 +10,12 @@ namespace tde::widgets {
 
 Desktop::Desktop(const DesktopSettings& settings, QWidget* parent)
   : QWidget{ parent }
+  , _app_fetcher{ settings.desktop_app_path() }
 {
   _init(settings);
   _init_ui(settings);
+
+  _app_fetcher.refresh();
 }
 
 void
@@ -38,30 +41,26 @@ Desktop::_init_ui(const DesktopSettings& settings)
   };
   layout->addWidget(app_list, 1);
 
-  connect(
-    this, &Desktop::apps_changed, app_list, &app::CardList::on_apps_changed);
+  connect(&_app_fetcher,
+          &AppFetcher::apps_changed,
+          app_list,
+          &app::CardList::on_apps_changed);
   connect(app_list,
           &app::CardList::request_launch_app,
-          this,
-          &Desktop::request_launch_app);
+          &_app_launcher,
+          &AppLauncher::on_request_launch_app);
 
   auto* dock = new Dock{ this };
   layout->addWidget(dock, 0, Qt::AlignHCenter | Qt::AlignBottom);
 
-  connect(this, &Desktop::dock_apps_changed, dock, &Dock::on_dock_apps_changed);
-  connect(dock, &Dock::request_launch_app, this, &Desktop::request_launch_app);
-}
-
-void
-Desktop::on_app_start(const AppInfo& /*app*/)
-{
-  this->hide();
-}
-
-void
-Desktop::on_app_finish(int /*code*/, QProcess::ExitStatus /*status*/)
-{
-  this->show();
+  connect(&_app_fetcher,
+          &AppFetcher::dock_apps_changed,
+          dock,
+          &Dock::on_dock_apps_changed);
+  connect(dock,
+          &Dock::request_launch_app,
+          &_app_launcher,
+          &AppLauncher::on_request_launch_app);
 }
 
 }

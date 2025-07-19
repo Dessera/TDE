@@ -8,6 +8,7 @@ namespace tde::widgets {
 RingProgress::RingProgress(QWidget* parent)
   : QWidget{ parent }
 {
+  setProperty("class", "tde-ringprogress");
 }
 
 void
@@ -80,6 +81,15 @@ RingProgress::set_text_visible(bool visible)
   }
 }
 
+void
+RingProgress::set_chunk_color(const QColor& color)
+{
+  if (color != _chunk_color) {
+    _chunk_color = color;
+    update();
+  }
+}
+
 QRectF
 RingProgress::_find_center_rect(const QRectF& rect) const
 {
@@ -113,7 +123,7 @@ void
 RingProgress::_draw_ring_progress(QPainter& painter, const QRectF& rect) const
 {
   auto progress_pen = QPen{};
-  progress_pen.setColor(palette().color(QPalette::Highlight));
+  progress_pen.setColor(_chunk_color);
   progress_pen.setWidth(RING_WIDTH);
   progress_pen.setJoinStyle(Qt::RoundJoin);
   progress_pen.setCapStyle(Qt::RoundCap);

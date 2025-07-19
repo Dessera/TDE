@@ -9,6 +9,8 @@ namespace tde::widgets {
 RadioSelector::RadioSelector(QWidget* parent)
   : QWidget{ parent }
 {
+  setProperty("class", "tde-radio-selector");
+
   auto* layout = new QHBoxLayout{ this };
   setLayout(layout);
 }
@@ -17,10 +19,9 @@ void
 RadioSelector::_create_button()
 {
   auto* button = new QRadioButton{ this };
-  button->setProperty("class", "tde-radio-selector-button");
 
   connect(
-    button, &QRadioButton::released, this, &RadioSelector::on_button_released);
+    button, &QRadioButton::clicked, this, &RadioSelector::on_button_clicked);
 
   layout()->addWidget(button);
   _buttons.push_back(button);
@@ -58,7 +59,7 @@ RadioSelector::set_current(int index)
 }
 
 void
-RadioSelector::on_button_released()
+RadioSelector::on_button_clicked()
 {
   auto* button = qobject_cast<QRadioButton*>(sender());
 

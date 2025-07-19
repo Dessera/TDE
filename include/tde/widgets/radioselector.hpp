@@ -76,10 +76,10 @@ signals:
 
 private slots:
   /**
-   * @brief Emit the selected signal when a radio button is released.
+   * @brief Emit the selected signal when a radio button is clicked.
    *
    */
-  void on_button_released();
+  void on_button_clicked();
 };
 
 }

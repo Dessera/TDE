@@ -19,7 +19,7 @@
  * @brief About main widget.
  *
  */
-class AboutWidget : public QWidget
+class About : public QWidget
 {
   Q_OBJECT
 
@@ -29,9 +29,9 @@ public:
    *
    * @param parent Parent object.
    */
-  AboutWidget(const tde::DesktopSettings& settings, QWidget* parent = nullptr);
+  About(const tde::DesktopSettings& settings, QWidget* parent = nullptr);
 
-  ~AboutWidget() override = default;
+  ~About() override = default;
 
 private:
   /**
