@@ -96,13 +96,14 @@ $(document).ready(function(){initNavTree('classtde_1_1widgets_1_1app_1_1Containe
 
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classtde_1_1widgets_1_1app_1_1Container-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">tde::widgets::app::Container Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A container for an application (with decoration).  
+<p>TDE application wrapper.  
  <a href="classtde_1_1widgets_1_1app_1_1Container.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="container_8hpp_source.html">container.hpp</a>&gt;</code></p>
@@ -113,38 +114,56 @@ Inheritance diagram for tde::widgets::app::Container:</div>
   <img src="classtde_1_1widgets_1_1app_1_1Container.png" alt=""/>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab9226d156c692338532bcac1931f5267" id="r_ab9226d156c692338532bcac1931f5267"><td class="memTemplParams" colspan="2">template&lt;typename Wt , typename  = std::enable_if_t&lt;             std::is_base_of_v&lt;QWidget, Wt&gt; &amp;&amp;             std::is_constructible_v&lt;Wt, const DesktopSettings&amp;, QWidget*&gt;&gt;&gt; </td></tr>
-<tr class="memitem:ab9226d156c692338532bcac1931f5267"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classtde_1_1widgets_1_1app_1_1Container.html">Container</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1app_1_1Container.html#ab9226d156c692338532bcac1931f5267">create</a> (const QString &amp;app_name, const <a class="el" href="classtde_1_1DesktopSettings.html">DesktopSettings</a> &amp;settings, QWidget *parent=nullptr)</td></tr>
-<tr class="memdesc:ab9226d156c692338532bcac1931f5267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new container for an application.  <br /></td></tr>
-<tr class="separator:ab9226d156c692338532bcac1931f5267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ab6b63b656cd65c606ab440890dfb3cc4" id="r_ab6b63b656cd65c606ab440890dfb3cc4"><td class="memItemLeft" align="right" valign="top"><a id="ab6b63b656cd65c606ab440890dfb3cc4" name="ab6b63b656cd65c606ab440890dfb3cc4"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Styles</b> = assets::Styles</td></tr>
+<tr class="separator:ab6b63b656cd65c606ab440890dfb3cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a49e5b52e10303ae5791c445f2f47e28b" id="r_a49e5b52e10303ae5791c445f2f47e28b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1app_1_1Container.html#a49e5b52e10303ae5791c445f2f47e28b">Container</a> (Styles::Scope scope, const QString &amp;name, bool decoration, <a class="el" href="classtde_1_1DesktopSettings.html">DesktopSettings</a> *settings, QWidget *root, QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a49e5b52e10303ae5791c445f2f47e28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classtde_1_1widgets_1_1app_1_1Container.html" title="TDE application wrapper.">Container</a> object.  <br /></td></tr>
+<tr class="separator:a49e5b52e10303ae5791c445f2f47e28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A container for an application (with decoration). </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab9226d156c692338532bcac1931f5267" name="ab9226d156c692338532bcac1931f5267"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9226d156c692338532bcac1931f5267">&#9670;&#160;</a></span>create()</h2>
+<div class="textblock"><p>TDE application wrapper. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a49e5b52e10303ae5791c445f2f47e28b" name="a49e5b52e10303ae5791c445f2f47e28b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49e5b52e10303ae5791c445f2f47e28b">&#9670;&#160;</a></span>Container()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Wt , typename  = std::enable_if_t&lt;             std::is_base_of_v&lt;QWidget, Wt&gt; &amp;&amp;             std::is_constructible_v&lt;Wt, const DesktopSettings&amp;, QWidget*&gt;&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classtde_1_1widgets_1_1app_1_1Container.html">Container</a> * tde::widgets::app::Container::create </td>
+          <td class="memname">tde::widgets::app::Container::Container </td>
           <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>app_name</em>, </td>
+          <td class="paramtype">Styles::Scope&#160;</td>
+          <td class="paramname"><em>scope</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classtde_1_1DesktopSettings.html">DesktopSettings</a> &amp;&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>decoration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtde_1_1DesktopSettings.html">DesktopSettings</a> *&#160;</td>
           <td class="paramname"><em>settings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -158,29 +177,15 @@ template&lt;typename Wt , typename  = std::enable_if_t&lt;             std::is_b
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Create a new container for an application. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Wt</td><td><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> widget type, required to be a QWidget subclass, and constructible with <a class="el" href="classtde_1_1DesktopSettings.html" title="Desktop settings.">DesktopSettings</a> and QWidget*. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Construct a new <a class="el" href="classtde_1_1widgets_1_1app_1_1Container.html" title="TDE application wrapper.">Container</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">app_name</td><td><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> name. </td></tr>
-    <tr><td class="paramname">settings</td><td><a class="el" href="classtde_1_1widgets_1_1Desktop.html" title="Desktop widget, which is the root of UI.">Desktop</a> settings. </td></tr>
     <tr><td class="paramname">parent</td><td>Parent widget. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Container* New container. </dd></dl>
 
 </div>
 </div>

@@ -5,8 +5,10 @@ var classtde_1_1widgets_1_1RingProgress =
       [ "COUNTER_CLOCKWISE", "classtde_1_1widgets_1_1RingProgress.html#a798a888694ed3a510c8764a82d62594ba3ee5f41e38164502bc9d7e7a5627bc33", null ]
     ] ],
     [ "RingProgress", "classtde_1_1widgets_1_1RingProgress.html#a55723fe015d7a04b4f6a6846859cfb1d", null ],
+    [ "chunk_color", "classtde_1_1widgets_1_1RingProgress.html#a476a3595688d10ef387fe6b15e376e67", null ],
     [ "direction", "classtde_1_1widgets_1_1RingProgress.html#a1518502febae6b5b70e67caab4166953", null ],
     [ "maximum", "classtde_1_1widgets_1_1RingProgress.html#af88c4a67647a808b16eaacd73f6c71e3", null ],
+    [ "set_chunk_color", "classtde_1_1widgets_1_1RingProgress.html#afae89577724265153eafdb8974455d0d", null ],
     [ "set_direction", "classtde_1_1widgets_1_1RingProgress.html#a15455f800a8b72b30531ff318366f8e4", null ],
     [ "set_maximum", "classtde_1_1widgets_1_1RingProgress.html#ae6e9bfdcdfa07c8b937fae053164120c", null ],
     [ "set_start_angle", "classtde_1_1widgets_1_1RingProgress.html#ac25eedfe1efcea05cb8f7d8c7853e097", null ],

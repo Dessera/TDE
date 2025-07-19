@@ -12,5 +12,5 @@ var searchData=
   ['desktopsettings_9',['DesktopSettings',['../classtde_1_1DesktopSettings.html#a6e07e7a99134c71509fef2ba1cc18451',1,'tde::DesktopSettings']]],
   ['direction_10',['direction',['../classtde_1_1widgets_1_1RingProgress.html#a1518502febae6b5b70e67caab4166953',1,'tde::widgets::RingProgress']]],
   ['dock_11',['Dock',['../classtde_1_1widgets_1_1Dock.html#affb24eb156d68ac1aa9ec7870b86f4e0',1,'tde::widgets::Dock']]],
-  ['dock_5fapps_5fchanged_12',['dock_apps_changed',['../classtde_1_1app_1_1Fetcher.html#a90a1af51a97402340683a0db86438872',1,'tde::app::Fetcher::dock_apps_changed()'],['../classtde_1_1widgets_1_1Desktop.html#a674b9b173b6ed6b35a882c708079a99f',1,'tde::widgets::Desktop::dock_apps_changed()']]]
+  ['dock_5fapps_5fchanged_12',['dock_apps_changed',['../classtde_1_1app_1_1Fetcher.html#a90a1af51a97402340683a0db86438872',1,'tde::app::Fetcher']]]
 ];

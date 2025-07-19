@@ -1,5 +1,5 @@
 var about_8hpp =
 [
-    [ "AboutWidget", "classAboutWidget.html", "classAboutWidget" ],
+    [ "About", "classAbout.html", "classAbout" ],
     [ "AboutHeaderWidget", "classAboutHeaderWidget.html", "classAboutHeaderWidget" ]
 ];

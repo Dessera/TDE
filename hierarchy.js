@@ -1,14 +1,12 @@
 var hierarchy =
 [
+    [ "tde::app::Builder< Wt, typename >", "classtde_1_1app_1_1Builder.html", null ],
     [ "tde::sys::CPUInfo", "structtde_1_1sys_1_1CPUInfo.html", null ],
     [ "tde::sys::CPUStatus", "structtde_1_1sys_1_1CPUStatus.html", null ],
     [ "tde::widgets::IconFactory", "classtde_1_1widgets_1_1IconFactory.html", null ],
     [ "tde::app::Info", "structtde_1_1app_1_1Info.html", null ],
     [ "tde::widgets::RouterMenu::Item", "structtde_1_1widgets_1_1RouterMenu_1_1Item.html", null ],
     [ "tde::sys::MemoryStatus", "structtde_1_1sys_1_1MemoryStatus.html", null ],
-    [ "QApplication", null, [
-      [ "tde::Application", "classtde_1_1Application.html", null ]
-    ] ],
     [ "QLabel", null, [
       [ "tde::widgets::tray::Clock", "classtde_1_1widgets_1_1tray_1_1Clock.html", null ]
     ] ],
@@ -23,8 +21,8 @@ var hierarchy =
       [ "tde::widgets::app::Button", "classtde_1_1widgets_1_1app_1_1Button.html", null ]
     ] ],
     [ "QWidget", null, [
+      [ "About", "classAbout.html", null ],
       [ "AboutHeaderWidget", "classAboutHeaderWidget.html", null ],
-      [ "AboutWidget", "classAboutWidget.html", null ],
       [ "Monitor", "classMonitor.html", null ],
       [ "ResourceMonitor", "classResourceMonitor.html", null ],
       [ "ResourceUsageMonitor", "classResourceUsageMonitor.html", null ],
@@ -39,6 +37,5 @@ var hierarchy =
       [ "tde::widgets::app::CardList", "classtde_1_1widgets_1_1app_1_1CardList.html", null ],
       [ "tde::widgets::app::Container", "classtde_1_1widgets_1_1app_1_1Container.html", null ],
       [ "tde::widgets::app::Decoration", "classtde_1_1widgets_1_1app_1_1Decoration.html", null ]
-    ] ],
-    [ "tde::widgets::StyleFactory", "classtde_1_1widgets_1_1StyleFactory.html", null ]
+    ] ]
 ];

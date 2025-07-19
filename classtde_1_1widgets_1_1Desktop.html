@@ -97,8 +97,6 @@ $(document).ready(function(){initNavTree('classtde_1_1widgets_1_1Desktop.html','
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-slots">Public Slots</a> &#124;
-<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classtde_1_1widgets_1_1Desktop-members.html">List of all members</a>  </div>
@@ -122,27 +120,12 @@ Public Types</h2></td></tr>
 <tr class="memitem:ac22ebe1c77b42c4fe0ebe31f2d852c59" id="r_ac22ebe1c77b42c4fe0ebe31f2d852c59"><td class="memItemLeft" align="right" valign="top"><a id="ac22ebe1c77b42c4fe0ebe31f2d852c59" name="ac22ebe1c77b42c4fe0ebe31f2d852c59"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>AppInfo</b> = <a class="el" href="structtde_1_1app_1_1Info.html">tde::app::Info</a></td></tr>
 <tr class="separator:ac22ebe1c77b42c4fe0ebe31f2d852c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
-Public Slots</h2></td></tr>
-<tr class="memitem:a07553f6c7f410296c2f170b9d4b2e55a" id="r_a07553f6c7f410296c2f170b9d4b2e55a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Desktop.html#a07553f6c7f410296c2f170b9d4b2e55a">on_app_start</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &amp;app)</td></tr>
-<tr class="memdesc:a07553f6c7f410296c2f170b9d4b2e55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the app is launched.  <br /></td></tr>
-<tr class="separator:a07553f6c7f410296c2f170b9d4b2e55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fd0d7d0504682f7fd0b261eb3d692ec" id="r_a7fd0d7d0504682f7fd0b261eb3d692ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Desktop.html#a7fd0d7d0504682f7fd0b261eb3d692ec">on_app_finish</a> (int code, QProcess::ExitStatus status)</td></tr>
-<tr class="memdesc:a7fd0d7d0504682f7fd0b261eb3d692ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after the app is finished.  <br /></td></tr>
-<tr class="separator:a7fd0d7d0504682f7fd0b261eb3d692ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
-Signals</h2></td></tr>
-<tr class="memitem:a1e7a0aaf9820e4e96e804931ac34f9e1" id="r_a1e7a0aaf9820e4e96e804931ac34f9e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Desktop.html#a1e7a0aaf9820e4e96e804931ac34f9e1">apps_changed</a> (const QList&lt; <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &gt; &amp;apps)</td></tr>
-<tr class="memdesc:a1e7a0aaf9820e4e96e804931ac34f9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when apps changed.  <br /></td></tr>
-<tr class="separator:a1e7a0aaf9820e4e96e804931ac34f9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a674b9b173b6ed6b35a882c708079a99f" id="r_a674b9b173b6ed6b35a882c708079a99f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Desktop.html#a674b9b173b6ed6b35a882c708079a99f">dock_apps_changed</a> (const QList&lt; <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &gt; &amp;apps)</td></tr>
-<tr class="memdesc:a674b9b173b6ed6b35a882c708079a99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when dock apps changed.  <br /></td></tr>
-<tr class="separator:a674b9b173b6ed6b35a882c708079a99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7cb4c2e290a4d510df53b22b6b6f71b" id="r_aa7cb4c2e290a4d510df53b22b6b6f71b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtde_1_1widgets_1_1Desktop.html#aa7cb4c2e290a4d510df53b22b6b6f71b">request_launch_app</a> (const <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &amp;app)</td></tr>
-<tr class="memdesc:aa7cb4c2e290a4d510df53b22b6b6f71b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the app is requested to be launched.  <br /></td></tr>
-<tr class="separator:aa7cb4c2e290a4d510df53b22b6b6f71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f0745e80687c5a1e6533c99e015295" id="r_ad6f0745e80687c5a1e6533c99e015295"><td class="memItemLeft" align="right" valign="top"><a id="ad6f0745e80687c5a1e6533c99e015295" name="ad6f0745e80687c5a1e6533c99e015295"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>AppFetcher</b> = <a class="el" href="classtde_1_1app_1_1Fetcher.html">tde::app::Fetcher</a></td></tr>
+<tr class="separator:ad6f0745e80687c5a1e6533c99e015295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb88d629040a7a41e5612ee20c7b49e5" id="r_acb88d629040a7a41e5612ee20c7b49e5"><td class="memItemLeft" align="right" valign="top"><a id="acb88d629040a7a41e5612ee20c7b49e5" name="acb88d629040a7a41e5612ee20c7b49e5"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>AppLauncher</b> = <a class="el" href="classtde_1_1app_1_1Launcher.html">tde::app::Launcher</a></td></tr>
+<tr class="separator:acb88d629040a7a41e5612ee20c7b49e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -189,188 +172,6 @@ Static Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">settings</td><td><a class="el" href="classtde_1_1widgets_1_1Desktop.html" title="Desktop widget, which is the root of UI.">Desktop</a> settings. </td></tr>
     <tr><td class="paramname">parent</td><td>Parent widget. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1e7a0aaf9820e4e96e804931ac34f9e1" name="a1e7a0aaf9820e4e96e804931ac34f9e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e7a0aaf9820e4e96e804931ac34f9e1">&#9670;&#160;</a></span>apps_changed</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tde::widgets::Desktop::apps_changed </td>
-          <td>(</td>
-          <td class="paramtype">const QList&lt; <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>apps</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Emitted when apps changed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">apps</td><td>List of apps. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a674b9b173b6ed6b35a882c708079a99f" name="a674b9b173b6ed6b35a882c708079a99f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a674b9b173b6ed6b35a882c708079a99f">&#9670;&#160;</a></span>dock_apps_changed</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tde::widgets::Desktop::dock_apps_changed </td>
-          <td>(</td>
-          <td class="paramtype">const QList&lt; <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>apps</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Emitted when dock apps changed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">apps</td><td>List of dock apps. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a7fd0d7d0504682f7fd0b261eb3d692ec" name="a7fd0d7d0504682f7fd0b261eb3d692ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fd0d7d0504682f7fd0b261eb3d692ec">&#9670;&#160;</a></span>on_app_finish</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tde::widgets::Desktop::on_app_finish </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>code</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">QProcess::ExitStatus&#160;</td>
-          <td class="paramname"><em>status</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Called after the app is finished. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">code</td><td>Exit code. </td></tr>
-    <tr><td class="paramname">status</td><td>Exit status. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a07553f6c7f410296c2f170b9d4b2e55a" name="a07553f6c7f410296c2f170b9d4b2e55a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07553f6c7f410296c2f170b9d4b2e55a">&#9670;&#160;</a></span>on_app_start</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tde::widgets::Desktop::on_app_start </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>app</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Called before the app is launched. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">app</td><td><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> info. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa7cb4c2e290a4d510df53b22b6b6f71b" name="aa7cb4c2e290a4d510df53b22b6b6f71b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7cb4c2e290a4d510df53b22b6b6f71b">&#9670;&#160;</a></span>request_launch_app</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tde::widgets::Desktop::request_launch_app </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structtde_1_1app_1_1Info.html">AppInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>app</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Emitted when the app is requested to be launched. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">app</td><td><a class="el" href="classtde_1_1Application.html" title="Application for managing UI and other features.">Application</a> info. </td></tr>
   </table>
   </dd>
 </dl>
