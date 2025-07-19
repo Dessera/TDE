@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['memorystatus_0',['MemoryStatus',['../structtde_1_1sys_1_1MemoryStatus.html',1,'tde::sys']]],
-  ['monitor_1',['Monitor',['../classMonitor.html',1,'']]]
+  ['launcher_0',['Launcher',['../classtde_1_1app_1_1Launcher.html',1,'tde::app']]]
 ];

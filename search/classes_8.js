@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['radioselector_0',['RadioSelector',['../classtde_1_1widgets_1_1RadioSelector.html',1,'tde::widgets']]],
-  ['resourcemonitor_1',['ResourceMonitor',['../classResourceMonitor.html',1,'']]],
-  ['resourceusagemonitor_2',['ResourceUsageMonitor',['../classResourceUsageMonitor.html',1,'']]],
-  ['ringprogress_3',['RingProgress',['../classtde_1_1widgets_1_1RingProgress.html',1,'tde::widgets']]],
-  ['router_4',['Router',['../classtde_1_1widgets_1_1Router.html',1,'tde::widgets']]],
-  ['routermenu_5',['RouterMenu',['../classtde_1_1widgets_1_1RouterMenu.html',1,'tde::widgets']]]
+  ['memorystatus_0',['MemoryStatus',['../structtde_1_1sys_1_1MemoryStatus.html',1,'tde::sys']]],
+  ['monitor_1',['Monitor',['../classMonitor.html',1,'']]]
 ];

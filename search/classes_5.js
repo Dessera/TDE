@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['iconfactory_0',['IconFactory',['../classtde_1_1widgets_1_1IconFactory.html',1,'tde::widgets']]],
-  ['info_1',['Info',['../structtde_1_1app_1_1Info.html',1,'tde::app']]],
-  ['item_2',['Item',['../structtde_1_1widgets_1_1RouterMenu_1_1Item.html',1,'tde::widgets::RouterMenu']]]
+  ['h1_0',['H1',['../classtde_1_1widgets_1_1text_1_1H1.html',1,'tde::widgets::text']]],
+  ['h2_1',['H2',['../classtde_1_1widgets_1_1text_1_1H2.html',1,'tde::widgets::text']]],
+  ['h3_2',['H3',['../classtde_1_1widgets_1_1text_1_1H3.html',1,'tde::widgets::text']]],
+  ['h4_3',['H4',['../classtde_1_1widgets_1_1text_1_1H4.html',1,'tde::widgets::text']]],
+  ['h5_4',['H5',['../classtde_1_1widgets_1_1text_1_1H5.html',1,'tde::widgets::text']]],
+  ['h6_5',['H6',['../classtde_1_1widgets_1_1text_1_1H6.html',1,'tde::widgets::text']]],
+  ['hdelimiter_6',['HDelimiter',['../classtde_1_1widgets_1_1HDelimiter.html',1,'tde::widgets']]]
 ];

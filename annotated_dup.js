@@ -20,22 +20,33 @@ var annotated_dup =
           [ "Container", "classtde_1_1widgets_1_1app_1_1Container.html", "classtde_1_1widgets_1_1app_1_1Container" ],
           [ "Decoration", "classtde_1_1widgets_1_1app_1_1Decoration.html", "classtde_1_1widgets_1_1app_1_1Decoration" ]
         ] ],
+        [ "text", null, [
+          [ "H1", "classtde_1_1widgets_1_1text_1_1H1.html", null ],
+          [ "H2", "classtde_1_1widgets_1_1text_1_1H2.html", null ],
+          [ "H3", "classtde_1_1widgets_1_1text_1_1H3.html", null ],
+          [ "H4", "classtde_1_1widgets_1_1text_1_1H4.html", null ],
+          [ "H5", "classtde_1_1widgets_1_1text_1_1H5.html", null ],
+          [ "H6", "classtde_1_1widgets_1_1text_1_1H6.html", null ]
+        ] ],
         [ "tray", null, [
           [ "Clock", "classtde_1_1widgets_1_1tray_1_1Clock.html", "classtde_1_1widgets_1_1tray_1_1Clock" ]
         ] ],
         [ "Desktop", "classtde_1_1widgets_1_1Desktop.html", "classtde_1_1widgets_1_1Desktop" ],
         [ "Dock", "classtde_1_1widgets_1_1Dock.html", "classtde_1_1widgets_1_1Dock" ],
+        [ "HDelimiter", "classtde_1_1widgets_1_1HDelimiter.html", null ],
         [ "IconFactory", "classtde_1_1widgets_1_1IconFactory.html", null ],
         [ "RadioSelector", "classtde_1_1widgets_1_1RadioSelector.html", "classtde_1_1widgets_1_1RadioSelector" ],
         [ "RingProgress", "classtde_1_1widgets_1_1RingProgress.html", "classtde_1_1widgets_1_1RingProgress" ],
         [ "Router", "classtde_1_1widgets_1_1Router.html", "classtde_1_1widgets_1_1Router" ],
         [ "RouterMenu", "classtde_1_1widgets_1_1RouterMenu.html", "classtde_1_1widgets_1_1RouterMenu" ],
-        [ "Tray", "classtde_1_1widgets_1_1Tray.html", "classtde_1_1widgets_1_1Tray" ]
+        [ "Tray", "classtde_1_1widgets_1_1Tray.html", "classtde_1_1widgets_1_1Tray" ],
+        [ "VDelimiter", "classtde_1_1widgets_1_1VDelimiter.html", null ]
       ] ],
       [ "DesktopSettings", "classtde_1_1DesktopSettings.html", "classtde_1_1DesktopSettings" ]
     ] ],
     [ "About", "classAbout.html", "classAbout" ],
-    [ "AboutHeaderWidget", "classAboutHeaderWidget.html", "classAboutHeaderWidget" ],
+    [ "BuildInfo", "classBuildInfo.html", "classBuildInfo" ],
+    [ "Description", "classDescription.html", "classDescription" ],
     [ "Monitor", "classMonitor.html", "classMonitor" ],
     [ "ResourceMonitor", "classResourceMonitor.html", "classResourceMonitor" ],
     [ "ResourceUsageMonitor", "classResourceUsageMonitor.html", "classResourceUsageMonitor" ]
