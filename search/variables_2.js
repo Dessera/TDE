@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['refresh_5finterval_0',['REFRESH_INTERVAL',['../classResourceUsageMonitor.html#a526cae25f95c50e6717ebc27b42a34aa',1,'ResourceUsageMonitor']]],
-  ['ring_5fwidth_1',['RING_WIDTH',['../classtde_1_1widgets_1_1RingProgress.html#a6bb2fcbdc39ef284302e7f013da38fd4',1,'tde::widgets::RingProgress']]]
+  ['sys_5fcpu_5finfo_5ffile_0',['SYS_CPU_INFO_FILE',['../cpu_8hpp.html#a021e360fd7d40e9d787f273ae8582bc4',1,'tde::sys']]],
+  ['sys_5fcpu_5fstatus_5ffile_1',['SYS_CPU_STATUS_FILE',['../cpu_8hpp.html#afe59d0421bad335925f349378b57d20f',1,'tde::sys']]],
+  ['sys_5fmemory_5ffile_2',['SYS_MEMORY_FILE',['../memory_8hpp.html#a05a65927796b97bb7eee548a1a07806e',1,'tde::sys']]]
 ];

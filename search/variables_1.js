@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['icon_5fmap_0',['ICON_MAP',['../classtde_1_1widgets_1_1IconFactory.html#a476fc30b90c1913caebb9cb2554c2e9d',1,'tde::widgets::IconFactory']]]
+  ['refresh_5finterval_0',['REFRESH_INTERVAL',['../classResourceUsageMonitor.html#a526cae25f95c50e6717ebc27b42a34aa',1,'ResourceUsageMonitor']]],
+  ['ring_5fwidth_1',['RING_WIDTH',['../classtde_1_1widgets_1_1RingProgress.html#a6bb2fcbdc39ef284302e7f013da38fd4',1,'tde::widgets::RingProgress']]]
 ];

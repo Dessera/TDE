@@ -34,7 +34,6 @@ var annotated_dup =
         [ "Desktop", "classtde_1_1widgets_1_1Desktop.html", "classtde_1_1widgets_1_1Desktop" ],
         [ "Dock", "classtde_1_1widgets_1_1Dock.html", "classtde_1_1widgets_1_1Dock" ],
         [ "HDelimiter", "classtde_1_1widgets_1_1HDelimiter.html", null ],
-        [ "IconFactory", "classtde_1_1widgets_1_1IconFactory.html", null ],
         [ "RadioSelector", "classtde_1_1widgets_1_1RadioSelector.html", "classtde_1_1widgets_1_1RadioSelector" ],
         [ "RingProgress", "classtde_1_1widgets_1_1RingProgress.html", "classtde_1_1widgets_1_1RingProgress" ],
         [ "Router", "classtde_1_1widgets_1_1Router.html", "classtde_1_1widgets_1_1Router" ],

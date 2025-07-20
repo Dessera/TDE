@@ -3,7 +3,6 @@ var hierarchy =
     [ "tde::app::Builder< Wt, typename >", "classtde_1_1app_1_1Builder.html", null ],
     [ "tde::sys::CPUInfo", "structtde_1_1sys_1_1CPUInfo.html", null ],
     [ "tde::sys::CPUStatus", "structtde_1_1sys_1_1CPUStatus.html", null ],
-    [ "tde::widgets::IconFactory", "classtde_1_1widgets_1_1IconFactory.html", null ],
     [ "tde::app::Info", "structtde_1_1app_1_1Info.html", null ],
     [ "tde::widgets::RouterMenu::Item", "structtde_1_1widgets_1_1RouterMenu_1_1Item.html", null ],
     [ "tde::sys::MemoryStatus", "structtde_1_1sys_1_1MemoryStatus.html", null ],

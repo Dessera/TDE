@@ -6,7 +6,6 @@ var dir_e18e703407d77d18c2b35accf2f69f61 =
     [ "delimiter.hpp", "delimiter_8hpp_source.html", null ],
     [ "desktop.hpp", "desktop_8hpp.html", "desktop_8hpp" ],
     [ "dock.hpp", "dock_8hpp.html", "dock_8hpp" ],
-    [ "icon.hpp", "icon_8hpp.html", "icon_8hpp" ],
     [ "radioselector.hpp", "radioselector_8hpp.html", "radioselector_8hpp" ],
     [ "ringprogress.hpp", "ringprogress_8hpp.html", "ringprogress_8hpp" ],
     [ "router.hpp", "router_8hpp.html", "router_8hpp" ],

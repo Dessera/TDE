@@ -1,19 +1,16 @@
 var searchData=
 [
-  ['selected_0',['selected',['../classtde_1_1widgets_1_1RadioSelector.html#af45f3831ea35b7c424c010521217c2ce',1,'tde::widgets::RadioSelector']]],
-  ['set_5fchunk_5fcolor_1',['set_chunk_color',['../classtde_1_1widgets_1_1RingProgress.html#afae89577724265153eafdb8974455d0d',1,'tde::widgets::RingProgress']]],
-  ['set_5fcount_2',['set_count',['../classtde_1_1widgets_1_1RadioSelector.html#a6e97a3072b7af7f9224542afc1178267',1,'tde::widgets::RadioSelector']]],
-  ['set_5fcurrent_3',['set_current',['../classtde_1_1widgets_1_1RadioSelector.html#afe2c34f3153c17a631e2775eb7324e84',1,'tde::widgets::RadioSelector']]],
-  ['set_5fcurrent_5fview_4',['set_current_view',['../classtde_1_1widgets_1_1Router.html#a44ee1bc96e61decc0aa9aae9d1968b4b',1,'tde::widgets::Router']]],
-  ['set_5fdirection_5',['set_direction',['../classtde_1_1widgets_1_1RingProgress.html#a15455f800a8b72b30531ff318366f8e4',1,'tde::widgets::RingProgress']]],
-  ['set_5fmaximum_6',['set_maximum',['../classtde_1_1widgets_1_1RingProgress.html#ae6e9bfdcdfa07c8b937fae053164120c',1,'tde::widgets::RingProgress']]],
-  ['set_5fstart_5fangle_7',['set_start_angle',['../classtde_1_1widgets_1_1RingProgress.html#ac25eedfe1efcea05cb8f7d8c7853e097',1,'tde::widgets::RingProgress']]],
-  ['set_5ftext_8',['set_text',['../classtde_1_1widgets_1_1RingProgress.html#ae72be0b0247c5673a49d6fbd332a8fe9',1,'tde::widgets::RingProgress']]],
-  ['set_5ftext_5fvisible_9',['set_text_visible',['../classtde_1_1widgets_1_1RingProgress.html#a89e6011c88a971a50b16d4abca0da4c9',1,'tde::widgets::RingProgress']]],
-  ['set_5fvalue_10',['set_value',['../classtde_1_1widgets_1_1RingProgress.html#a9ee6b68387ec9ac52b3e385259236489',1,'tde::widgets::RingProgress']]],
-  ['settings_2ehpp_11',['settings.hpp',['../settings_8hpp.html',1,'']]],
-  ['start_5fangle_12',['start_angle',['../classtde_1_1widgets_1_1RingProgress.html#a11692e70ec603c712048b25a53c9264c',1,'tde::widgets::RingProgress']]],
-  ['sys_5fcpu_5finfo_5ffile_13',['SYS_CPU_INFO_FILE',['../cpu_8hpp.html#a021e360fd7d40e9d787f273ae8582bc4',1,'tde::sys']]],
-  ['sys_5fcpu_5fstatus_5ffile_14',['SYS_CPU_STATUS_FILE',['../cpu_8hpp.html#afe59d0421bad335925f349378b57d20f',1,'tde::sys']]],
-  ['sys_5fmemory_5ffile_15',['SYS_MEMORY_FILE',['../memory_8hpp.html#a05a65927796b97bb7eee548a1a07806e',1,'tde::sys']]]
+  ['tde_0',['TDE',['../md_README.html',1,'']]],
+  ['tde_5fname_1',['TDE_NAME',['../config_8hpp.html#a9231f15d585f06cfe553b6b008f2a37c',1,'tde::config']]],
+  ['tde_5fname_5fcapitalized_2',['TDE_NAME_CAPITALIZED',['../config_8hpp.html#a2e2469abf01df163920e2612c7e03f2f',1,'tde::config']]],
+  ['tde_5forganization_3',['TDE_ORGANIZATION',['../config_8hpp.html#a59996ceac4297ad6e6207da451d48f83',1,'tde::config']]],
+  ['tde_5fversion_4',['TDE_VERSION',['../config_8hpp.html#abd8afc5a699d86b221d73de490c4a72a',1,'tde::config']]],
+  ['text_5',['text',['../classtde_1_1widgets_1_1RingProgress.html#afc8403d21c1ac72b5e38df19ae924b90',1,'tde::widgets::RingProgress']]],
+  ['text_5fvisible_6',['text_visible',['../classtde_1_1widgets_1_1RingProgress.html#a696f3b26991c15a0669888b6dea01342',1,'tde::widgets::RingProgress']]],
+  ['time_5fupdate_5finterval_7',['TIME_UPDATE_INTERVAL',['../classtde_1_1widgets_1_1tray_1_1Clock.html#a49cf4403f912a569848224eb745a9524',1,'tde::widgets::tray::Clock']]],
+  ['to_5fapp_5finfo_8',['to_app_info',['../classtde_1_1widgets_1_1app_1_1Button.html#adec15c9bc995df3752aa86ae6c36b0db',1,'tde::widgets::app::Button']]],
+  ['todos_9',['Todos',['../md_README.html#autotoc_md1',1,'']]],
+  ['tray_10',['tray',['../classtde_1_1widgets_1_1Tray.html',1,'tde::widgets::Tray'],['../classtde_1_1widgets_1_1Tray.html#a1b2a070b3bac8e3704f99f1c5c818f1a',1,'tde::widgets::Tray::Tray()']]],
+  ['tray_2ehpp_11',['tray.hpp',['../tray_8hpp.html',1,'']]],
+  ['tray_5ftime_5fformat_12',['tray_time_format',['../classtde_1_1DesktopSettings.html#a13dcabe89d13d4c0dd102b1f73997ec0',1,'tde::DesktopSettings']]]
 ];
