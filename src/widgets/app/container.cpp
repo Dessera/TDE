@@ -5,7 +5,7 @@
 
 namespace tde::widgets::app {
 
-Container::Container(Styles::Scope scope,
+Container::Container(StyleScope scope,
                      const QString& name,
                      bool decoration,
                      DesktopSettings* settings,
@@ -21,7 +21,7 @@ Container::Container(Styles::Scope scope,
   setWindowTitle(name);
   resize(settings->desktop_width(), settings->desktop_height());
 
-  setStyleSheet(Styles::generate(scope, settings->desktop_qss_path()));
+  setStyleSheet(assets::styles::generate(scope, settings->desktop_qss_path()));
 
   auto* layout = new QVBoxLayout{ this };
   layout->setContentsMargins(0, 0, 0, 0);

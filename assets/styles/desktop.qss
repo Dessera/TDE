@@ -14,6 +14,7 @@ tde--widgets--Tray {
 
 tde--widgets--app--Button {
   border-style: flat;
+  border-radius: 5px;
   qproperty-iconSize: 48px;
 }
 

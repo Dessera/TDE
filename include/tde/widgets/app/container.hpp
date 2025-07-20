@@ -31,14 +31,14 @@ class TDE_PUBLIC Container : public QWidget
   Q_OBJECT
 
 public:
-  using Styles = assets::Styles;
+  using StyleScope = assets::styles::Scope;
 
   /**
    * @brief Construct a new Container object.
    *
    * @param parent Parent widget.
    */
-  Container(Styles::Scope scope,
+  Container(StyleScope scope,
             const QString& name,
             bool decoration,
             DesktopSettings* settings,

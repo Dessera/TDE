@@ -6,52 +6,46 @@
 #include "tde/assets/icons.hpp"
 #include "tde/common.hpp"
 
+namespace tde::assets::icons {
+
 namespace {
 
-class IconsHelper
-{
-private:
-  using IconType = tde::assets::Icons::Type;
-
-  inline static const QMap<IconType, QString> ICONS_MAP = {
-    { IconType::DEFAULT, ":/tde/icons/default.svg" },
-    { IconType::FOLDER_BUILD, ":/tde/icons/folder-build.svg" },
-    { IconType::HELP_ABOUT, ":/tde/icons/help-about.svg" },
-    { IconType::OFFICE_CHART_PIE, ":/tde/icons/office-chart-pie.svg" },
-    { IconType::WINDOW_CLOSE, ":/tde/icons/window-close.svg" },
-  };
-
-public:
-  static TDE_INLINE QString icon_type_to_path(IconType type)
-  {
-    return ICONS_MAP[type];
-  }
+const QMap<Type, QString> ICONS_MAP = {
+  { Type::DEFAULT, ":/tde/icons/default.svg" },
+  { Type::FOLDER_BUILD, ":/tde/icons/folder-build.svg" },
+  { Type::HELP_ABOUT, ":/tde/icons/help-about.svg" },
+  { Type::OFFICE_CHART_PIE, ":/tde/icons/office-chart-pie.svg" },
+  { Type::WINDOW_CLOSE, ":/tde/icons/window-close.svg" },
 };
 
-}
-
-namespace tde::assets {
-
-QIcon
-Icons::icon(Type type)
+TDE_INLINE QString
+_icon_type_to_path(Type type)
 {
-  return icon(IconsHelper::icon_type_to_path(type));
+  return ICONS_MAP[type];
+}
+
 }
 
 QIcon
-Icons::icon(const QString& name)
+icon(Type type)
+{
+  return icon(_icon_type_to_path(type));
+}
+
+QIcon
+icon(const QString& name)
 {
   return QIcon{ name };
 }
 
 QPixmap
-Icons::pixmap(Type type)
+pixmap(Type type)
 {
-  return pixmap(IconsHelper::icon_type_to_path(type));
+  return pixmap(_icon_type_to_path(type));
 }
 
 QPixmap
-Icons::pixmap(const QString& name)
+pixmap(const QString& name)
 {
   return QPixmap{ name };
 }

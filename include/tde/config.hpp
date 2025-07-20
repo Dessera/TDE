@@ -20,11 +20,6 @@ constexpr const char* TDE_ORGANIZATION =
 constexpr const char* TDE_NAME =
   "tde"; /**< Name of the application, used to locate the config path. */
 
-constexpr const char* TDE_NAME_CAPITALIZED =
-  "TDE"; /**< Capitalized name of the application. */
-
 constexpr const char* TDE_VERSION = "0.1.0"; /**< Version of the application. */
-
-constexpr int APP_ICON_SIZE = 32;
 
 }

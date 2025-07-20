@@ -6,25 +6,27 @@
 
 #include "tde/common.hpp"
 
-namespace tde::assets {
+namespace tde::assets::icons {
 
-class TDE_PUBLIC Icons
+enum class Type : uint8_t
 {
-public:
-  enum class Type : uint8_t
-  {
-    DEFAULT,
-    FOLDER_BUILD,
-    HELP_ABOUT,
-    OFFICE_CHART_PIE,
-    WINDOW_CLOSE,
-  };
-
-  static QIcon icon(Type type);
-  static QIcon icon(const QString& name);
-
-  static QPixmap pixmap(Type type);
-  static QPixmap pixmap(const QString& name);
+  DEFAULT,
+  FOLDER_BUILD,
+  HELP_ABOUT,
+  OFFICE_CHART_PIE,
+  WINDOW_CLOSE,
 };
+
+TDE_PUBLIC QIcon
+icon(Type type);
+
+TDE_PUBLIC QIcon
+icon(const QString& name);
+
+TDE_PUBLIC QPixmap
+pixmap(Type type);
+
+TDE_PUBLIC QPixmap
+pixmap(const QString& name);
 
 }

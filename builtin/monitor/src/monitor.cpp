@@ -9,14 +9,14 @@
 Monitor::Monitor(const tde::DesktopSettings& /*settings*/, QWidget* parent)
   : QWidget{ parent }
 {
-  using tde::assets::Icons;
+  namespace icons = tde::assets::icons;
 
   auto* layout = new QVBoxLayout{ this };
   layout->setContentsMargins(0, 0, 0, 0);
   setLayout(layout);
 
   auto* router = new tde::widgets::Router{ this };
-  router->add({ "Resources", Icons::icon(Icons::Type::OFFICE_CHART_PIE) },
+  router->add({ "Resources", icons::icon(icons::Type::OFFICE_CHART_PIE) },
               new ResourceMonitor{ this });
 
   layout->addWidget(router);

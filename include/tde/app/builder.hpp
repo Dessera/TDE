@@ -38,11 +38,11 @@ template<typename Wt, typename = IsRootWidget<Wt>>
 class Builder
 {
 public:
-  using Styles = assets::Styles;
+  using StyleScope = assets::styles::Scope;
   using AppContainer = widgets::app::Container;
 
 private:
-  Styles::Scope _scope{ Styles::Scope::ALL };
+  StyleScope _scope{ StyleScope::ALL };
   QString _name{ "TDE App" };
   bool _decoration{ true };
 
@@ -53,7 +53,7 @@ public:
    * @param scope Style scope.
    * @return Builder<Wt> Current builder.
    */
-  Builder<Wt> with_scope(Styles::Scope scope)
+  Builder<Wt> with_scope(StyleScope scope)
   {
     _scope = scope;
     return *this;

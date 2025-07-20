@@ -10,7 +10,7 @@
 About::About(const tde::DesktopSettings& /*settings*/, QWidget* parent)
   : QWidget{ parent }
 {
-  using tde::assets::Icons;
+  namespace icons = tde::assets::icons;
 
   auto* layout = new QVBoxLayout{ this };
   layout->setContentsMargins(0, 0, 0, 0);
@@ -18,10 +18,10 @@ About::About(const tde::DesktopSettings& /*settings*/, QWidget* parent)
 
   auto* router = new tde::widgets::Router{ this };
 
-  router->add({ "Description", Icons::icon(Icons::Type::HELP_ABOUT) },
+  router->add({ "Description", icons::icon(icons::Type::HELP_ABOUT) },
               new Description{ this });
 
-  router->add({ "Build", Icons::icon(Icons::Type::FOLDER_BUILD) },
+  router->add({ "Build", icons::icon(icons::Type::FOLDER_BUILD) },
               new BuildInfo{ this });
 
   layout->addWidget(router);

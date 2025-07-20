@@ -8,6 +8,7 @@ tde--widgets--app--Decoration > tde--widgets--text--H6 {
 
 tde--widgets--app--Decoration > QToolButton {
   border-style: flat;
+  border-radius: 5px;
   qproperty-iconSize: 20px;
 }
 
@@ -33,7 +34,8 @@ tde--widgets--RouterMenu {
 
 tde--widgets--RouterMenu>QToolButton {
   border-style: flat;
-  qproperty-iconSize: 20px;
+  border-radius: 5px;
+  qproperty-iconSize: 24px;
 }
 
 tde--widgets--RouterMenu>QToolButton:hover {

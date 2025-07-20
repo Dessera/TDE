@@ -1,7 +1,6 @@
 #include <qsize.h>
 #include <qwidget.h>
 
-#include "tde/config.hpp"
 #include "tde/widgets/app/button.hpp"
 
 namespace tde::widgets::app {
@@ -11,7 +10,6 @@ Button::Button(const AppInfo& app, QWidget* parent)
   , _exec{ app.exec }
 {
   setIcon(QIcon{ app.icon });
-  setIconSize(QSize{ config::APP_ICON_SIZE, config::APP_ICON_SIZE });
 
   setText(app.name);
   setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
