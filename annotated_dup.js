@@ -8,6 +8,9 @@ var annotated_dup =
         [ "Launcher", "classtde_1_1app_1_1Launcher.html", "classtde_1_1app_1_1Launcher" ]
       ] ],
       [ "sys", null, [
+        [ "fs", null, [
+          [ "Usage", "structtde_1_1sys_1_1fs_1_1Usage.html", null ]
+        ] ],
         [ "CPUInfo", "structtde_1_1sys_1_1CPUInfo.html", null ],
         [ "CPUStatus", "structtde_1_1sys_1_1CPUStatus.html", null ],
         [ "MemoryStatus", "structtde_1_1sys_1_1MemoryStatus.html", null ]

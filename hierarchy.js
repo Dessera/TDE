@@ -45,5 +45,6 @@ var hierarchy =
       [ "tde::widgets::app::CardList", "classtde_1_1widgets_1_1app_1_1CardList.html", null ],
       [ "tde::widgets::app::Container", "classtde_1_1widgets_1_1app_1_1Container.html", null ],
       [ "tde::widgets::app::Decoration", "classtde_1_1widgets_1_1app_1_1Decoration.html", null ]
-    ] ]
+    ] ],
+    [ "tde::sys::fs::Usage", "structtde_1_1sys_1_1fs_1_1Usage.html", null ]
 ];

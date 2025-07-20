@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vdelimiter_0',['VDelimiter',['../classtde_1_1widgets_1_1VDelimiter.html',1,'tde::widgets']]]
+  ['usage_0',['Usage',['../structtde_1_1sys_1_1fs_1_1Usage.html',1,'tde::sys::fs']]]
 ];
