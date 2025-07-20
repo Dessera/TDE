@@ -16,8 +16,6 @@ Button::Button(const AppInfo& app, QWidget* parent)
   setText(app.name);
   setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
-  setProperty("class", "tde-app-button");
-
   connect(this, &QToolButton::clicked, this, &Button::_on_clicked);
 }
 

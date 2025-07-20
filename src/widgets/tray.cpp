@@ -17,7 +17,6 @@ void
 Tray::_init(const DesktopSettings& /*settings*/)
 {
   setAttribute(Qt::WA_StyledBackground);
-  setProperty("class", "tde-tray");
 }
 
 void

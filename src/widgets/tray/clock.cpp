@@ -10,8 +10,6 @@ Clock::Clock(QString format, QWidget* parent)
   , _format(std::move(format))
   , _timer{ new QTimer{ this } }
 {
-  setProperty("class", "tde-tray-clock");
-
   connect(_timer, &QTimer::timeout, this, &Clock::_on_timeout);
   _timer->start(TIME_UPDATE_INTERVAL);
 

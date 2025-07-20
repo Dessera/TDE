@@ -6,7 +6,6 @@ lib_src += files(
   'tray/clock.cpp',
   'desktop.cpp',
   'dock.cpp',
-  'icon.cpp',
   'radioselector.cpp',
   'ringprogress.cpp',
   'router.cpp',

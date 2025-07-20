@@ -16,7 +16,6 @@ void
 Dock::_init()
 {
   setAttribute(Qt::WA_StyledBackground);
-  setProperty("class", "tde-dock");
 }
 
 void

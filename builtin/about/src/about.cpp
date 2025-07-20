@@ -1,6 +1,6 @@
 #include <qboxlayout.h>
+#include <tde/assets/icons.hpp>
 #include <tde/settings.hpp>
-#include <tde/widgets/icon.hpp>
 #include <tde/widgets/router.hpp>
 
 #include "about.hpp"
@@ -10,8 +10,7 @@
 About::About(const tde::DesktopSettings& /*settings*/, QWidget* parent)
   : QWidget{ parent }
 {
-  using tde::widgets::IconFactory;
-  using tde::widgets::IconType;
+  using tde::assets::Icons;
 
   auto* layout = new QVBoxLayout{ this };
   layout->setContentsMargins(0, 0, 0, 0);
@@ -19,10 +18,10 @@ About::About(const tde::DesktopSettings& /*settings*/, QWidget* parent)
 
   auto* router = new tde::widgets::Router{ this };
 
-  router->add({ "Description", IconFactory::icon(IconType::HELP_ABOUT) },
+  router->add({ "Description", Icons::icon(Icons::Type::HELP_ABOUT) },
               new Description{ this });
 
-  router->add({ "Build", IconFactory::icon(IconType::FOLDER_BUILD) },
+  router->add({ "Build", Icons::icon(Icons::Type::FOLDER_BUILD) },
               new BuildInfo{ this });
 
   layout->addWidget(router);

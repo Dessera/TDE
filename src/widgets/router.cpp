@@ -9,7 +9,6 @@ namespace tde::widgets {
 RouterMenu::RouterMenu(QWidget* parent)
   : QWidget{ parent }
 {
-  setProperty("class", "tde-router-menu");
   setAttribute(Qt::WA_StyledBackground, true);
 
   auto* layout = new QVBoxLayout{ this };
@@ -81,8 +80,6 @@ Router::Router(QWidget* parent)
   , _rlinks{ new RouterMenu{ this } }
   , _rviews{ new QStackedWidget{ this } }
 {
-  setProperty("class", "tde-router");
-
   auto* layout = new QHBoxLayout{ this };
   layout->setContentsMargins(0, 0, 0, 0);
   setLayout(layout);

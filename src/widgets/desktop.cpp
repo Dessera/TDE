@@ -12,7 +12,6 @@ Desktop::Desktop(const DesktopSettings& settings, QWidget* parent)
   : QWidget{ parent }
   , _app_fetcher{ settings.desktop_app_path() }
 {
-  setProperty("class", "tde-desktop");
   _init_ui(settings);
 
   _app_fetcher.refresh();

@@ -4,27 +4,24 @@
 #include <qtoolbutton.h>
 
 #include "tde/widgets/app/decoration.hpp"
+#include "tde/widgets/text/header.hpp"
 
 namespace tde::widgets::app {
 
 Decoration::Decoration(const QString& app_name, QWidget* parent)
   : QWidget{ parent }
 {
-  setProperty("class", "tde-app-decoration");
   setAttribute(Qt::WA_StyledBackground, true);
 
   auto* layout = new QHBoxLayout{ this };
   setLayout(layout);
 
-  auto* app_name_label = new QLabel{ app_name, this };
-  app_name_label->setProperty("class", "tde-app-decoration-text");
-  layout->addWidget(app_name_label);
+  layout->addWidget(new text::H6{ app_name, this });
 
   layout->addStretch(1);
 
   auto* close_btn = new QToolButton{ this };
-  close_btn->setProperty(
-    "class", "tde-app-decoration-button tde-app-decoration-close-button");
+  close_btn->setProperty("class", "tde-close-button");
   layout->addWidget(close_btn);
 
   connect(close_btn,

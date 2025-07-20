@@ -14,8 +14,6 @@ Card::Card(const QSize& grid_size, QWidget* parent)
   : QWidget{ parent }
   , _grid_size{ grid_size }
 {
-  setProperty("class", "tde-app-card");
-
   auto* layout = new QGridLayout{ this };
   setLayout(layout);
 }
@@ -44,8 +42,6 @@ CardList::CardList(const QSize& grid_size, QWidget* parent)
   , _stack{ new QStackedWidget{ this } }
   , _sel{ new RadioSelector{ this } }
 {
-  setProperty("class", "tde-app-list");
-
   auto* layout = new QVBoxLayout{ this };
   setLayout(layout);
 

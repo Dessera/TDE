@@ -1,26 +1,26 @@
-.tde-desktop {
+tde--widgets--Desktop {
   background-color: #68A7D0;
   /* border-image: url(:/tde/wallpaper.png)0 0 0 0 stretch stretch; */
 }
 
-.tde-dock {
+tde--widgets--Dock {
   background-color: #282D3D;
   border-radius: 5px;
 }
 
-.tde-tray {
+tde--widgets--Tray {
   background-color: #2B2C3C;
 }
 
-.tde-app-button {
+tde--widgets--app--Button {
   border-style: flat;
   qproperty-iconSize: 48px;
 }
 
-.tde-app-button:hover {
+tde--widgets--app--Button:hover {
   background-color: #B49CA6;
 }
 
-.tde-app-button:pressed {
+tde--widgets--app--Button:pressed {
   background-color: #9E858E;
 }

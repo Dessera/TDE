@@ -13,8 +13,6 @@ Container::Container(Styles::Scope scope,
                      QWidget* parent)
   : QWidget{ parent }
 {
-  setProperty("class", "tde-app-container");
-
   settings->setParent(this);
 
   root->setParent(this);
